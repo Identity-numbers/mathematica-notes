@@ -1,0 +1,84 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2371,         76]
+NotebookOptionsPosition[      1650,         55]
+NotebookOutlinePosition[      1985,         70]
+CellTagsIndexPosition[      1942,         67]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Burrito Matrix", "Title"]], "Text",
+ CellChangeTimes->{{3.809449003325663*^9, 
+  3.809449007752912*^9}},ExpressionUUID->"5625e1d3-7814-4458-8378-\
+06d12509f0de"],
+
+Cell[CellGroupData[{
+
+Cell["About", "Subtitle",
+ CellChangeTimes->{{3.8094490879954233`*^9, 
+  3.809449089161694*^9}},ExpressionUUID->"ee197135-e06e-4e8a-95bd-\
+833260d85158"],
+
+Cell["\<\
+A Burrito Matrix n is a matrix of size nn, where the first row in the matrix \
+is cut in half, second half reversed and let slide between the first part and \
+thus defining the second row.\
+\>", "Text",
+ CellChangeTimes->{{3.809449263566389*^9, 
+  3.809449347670019*^9}},ExpressionUUID->"1e4ede6d-6d3e-4d94-90ea-\
+4219f77f75c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code to generate a Burrito Matrix", "Subtitle",
+ CellChangeTimes->{{3.8094492304472933`*^9, 
+  3.80944924111112*^9}},ExpressionUUID->"9e273dc3-4f3a-4378-87af-\
+ed7a9655334d"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.809448960209655*^9, 
+  3.809448988138369*^9}},ExpressionUUID->"54f822bb-0b6d-469d-b57d-\
+78e7a1808193"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 554}, {97, Automatic}},
+FrontEndVersion->"12.0 for Linux ARM (32-bit) (June 23, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 185, 3, 74, "Text",ExpressionUUID->"5625e1d3-7814-4458-8378-06d12509f0de"],
+Cell[CellGroupData[{
+Cell[768, 27, 153, 3, 54, "Subtitle",ExpressionUUID->"ee197135-e06e-4e8a-95bd-833260d85158"],
+Cell[924, 32, 338, 7, 60, "Text",ExpressionUUID->"1e4ede6d-6d3e-4d94-90ea-4219f77f75c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1299, 44, 180, 3, 54, "Subtitle",ExpressionUUID->"9e273dc3-4f3a-4378-87af-ed7a9655334d"],
+Cell[1482, 49, 152, 3, 31, "Input",ExpressionUUID->"54f822bb-0b6d-469d-b57d-78e7a1808193"]
+}, Open  ]]
+}
+]
+*)
+
