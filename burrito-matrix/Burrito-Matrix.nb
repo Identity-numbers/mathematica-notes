@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26340,        804]
-NotebookOptionsPosition[     20213,        688]
-NotebookOutlinePosition[     20549,        703]
-CellTagsIndexPosition[     20506,        700]
+NotebookDataLength[     27694,        843]
+NotebookOptionsPosition[     21120,        719]
+NotebookOutlinePosition[     21456,        734]
+CellTagsIndexPosition[     21413,        731]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -683,6 +683,37 @@ Cell[BoxData[
 In[26]:=",ExpressionUUID->"b5806408-4846-4723-8e71-976bf9032938"]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Append", "Subsection",
+ CellChangeTimes->{{3.8095820106855717`*^9, 
+  3.809582013146125*^9}},ExpressionUUID->"d1345a74-a8b2-40cc-a8cd-\
+0d52de591799"],
+
+Cell["https://reference.wolfram.com/language/ref/Append.html", "Text",
+ CellChangeTimes->{
+  3.809582021365571*^9},ExpressionUUID->"e9f5f485-cfc1-4a76-ab3b-\
+41e960643ee5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Append", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.809582028564237*^9},
+ CellLabel->"In[27]:=",ExpressionUUID->"c6e247d4-2c3c-4d68-adfb-40dc0b824e2c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"a", ",", "b", ",", "c", ",", "d", ",", "x"}], "}"}]], "Output",
+ CellChangeTimes->{3.809582029993209*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"2d5eab45-5287-4349-ae59-029324dc6b07"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -803,6 +834,14 @@ Cell[19498, 660, 219, 6, 25, "Print",ExpressionUUID->"8c4fe167-3138-48e5-8826-57
 Cell[19720, 668, 219, 6, 25, "Print",ExpressionUUID->"48d5abd8-335e-4440-b4b1-bbe028123d68"],
 Cell[19942, 676, 219, 6, 25, "Print",ExpressionUUID->"b5806408-4846-4723-8e71-976bf9032938"]
 }, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20222, 689, 156, 3, 55, "Subsection",ExpressionUUID->"d1345a74-a8b2-40cc-a8cd-0d52de591799"],
+Cell[20381, 694, 172, 3, 36, "Text",ExpressionUUID->"e9f5f485-cfc1-4a76-ab3b-41e960643ee5"],
+Cell[CellGroupData[{
+Cell[20578, 701, 275, 7, 31, "Input",ExpressionUUID->"c6e247d4-2c3c-4d68-adfb-40dc0b824e2c"],
+Cell[20856, 710, 224, 4, 35, "Output",ExpressionUUID->"2d5eab45-5287-4349-ae59-029324dc6b07"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

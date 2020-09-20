@@ -1,0 +1,139 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4341,        131]
+NotebookOptionsPosition[      3103,         99]
+NotebookOutlinePosition[      3467,        115]
+CellTagsIndexPosition[      3424,        112]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Box Cameras - Deconvolve", "Title",
+ CellChangeTimes->{{3.809607109156425*^9, 3.809607121327362*^9}, {
+  3.8096071634575377`*^9, 3.809607171117262*^9}, {3.809608081256357*^9, 
+  3.809608085919252*^9}},ExpressionUUID->"a2430832-ed66-41f3-abf5-\
+fdbe4af91dcb"],
+
+Cell["", "Author",
+ CellChangeTimes->{{3.809607349119417*^9, 3.809607373417581*^9}, 
+   3.809607431038796*^9},ExpressionUUID->"fec60952-b711-4fc1-84c0-\
+88823435cd0e"],
+
+Cell[CellGroupData[{
+
+Cell["Images that should work", "Section",
+ CellChangeTimes->{{3.809607227118867*^9, 3.809607235661335*^9}, {
+  3.809607448954322*^9, 
+  3.8096074527468863`*^9}},ExpressionUUID->"ef9f4d45-9d55-4c80-9ed3-\
+6f90389c5ba5"],
+
+Cell[CellGroupData[{
+
+Cell["Box Cameras ", "ItemNumbered",
+ CellChangeTimes->{{3.8096077533626738`*^9, 3.809607757427565*^9}, {
+  3.809607793568933*^9, 3.809607796217332*^9}, {3.809608378218539*^9, 
+  3.8096083782189007`*^9}},ExpressionUUID->"1c5dd5b5-2ea5-4da2-99e5-\
+d452d0395b61"],
+
+Cell["Pinhole cameras", "ItemNumbered",
+ CellChangeTimes->{{3.8096077533626738`*^9, 3.809607757427565*^9}, {
+  3.809607793568933*^9, 3.809607796217332*^9}, {3.809608378851861*^9, 
+  3.809608386513967*^9}},ExpressionUUID->"0b971162-05e5-4605-b7cf-\
+567e3d8558c5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Helpfiles Mathematica", "Section",
+ CellChangeTimes->{{3.809607264127741*^9, 
+  3.809607274566482*^9}},ExpressionUUID->"f951098b-c1f3-42e1-a6c9-\
+c1b2f6097903"],
+
+Cell["\<\
+ImageDeconvolve
+https://reference.wolfram.com/language/ref/ImageDeconvolve.html
+
+GaussianMatrix
+https://reference.wolfram.com/language/ref/GaussianMatrix.html\
+\>", "Text",
+ CellChangeTimes->{{3.809607546550255*^9, 3.809607571644273*^9}, {
+  3.809607642723062*^9, 
+  3.809607653233836*^9}},ExpressionUUID->"8e2ff0e8-3cb5-46fb-91b6-\
+755804debadf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["References and Resources", "Section",
+ CellChangeTimes->{{3.80960730518228*^9, 
+  3.8096073118362427`*^9}},ExpressionUUID->"20308a7c-4e40-4ac1-a60e-\
+612c9d58ee84"],
+
+Cell["\<\
+Early Photographers
+John Jabez Edwin Mayall, photographer 1860 (for example William Turner)
+John William Draper 1839/40
+Roger Fenton 1855
+Alvin Langdon Coburn (for example Mark Twain)\
+\>", "Text",
+ CellChangeTimes->{{3.8096080375989122`*^9, 3.809608066103882*^9}, {
+  3.809608176922764*^9, 3.809608205233511*^9}, {3.8096082435726547`*^9, 
+  3.809608271790722*^9}, {3.809608333663911*^9, 
+  3.809608351950934*^9}},ExpressionUUID->"e1efdd77-d369-4096-a61b-\
+543b3d0b66f9"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 99}, {Automatic, 97}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"12.0 for Linux ARM (32-bit) (June 23, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 264, 4, 119, "Title",ExpressionUUID->"a2430832-ed66-41f3-abf5-fdbe4af91dcb"],
+Cell[847, 28, 167, 3, 39, "Author",ExpressionUUID->"fec60952-b711-4fc1-84c0-88823435cd0e"],
+Cell[CellGroupData[{
+Cell[1039, 35, 219, 4, 83, "Section",ExpressionUUID->"ef9f4d45-9d55-4c80-9ed3-6f90389c5ba5"],
+Cell[CellGroupData[{
+Cell[1283, 43, 261, 4, 40, "ItemNumbered",ExpressionUUID->"1c5dd5b5-2ea5-4da2-99e5-d452d0395b61"],
+Cell[1547, 49, 262, 4, 40, "ItemNumbered",ExpressionUUID->"0b971162-05e5-4605-b7cf-567e3d8558c5"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1858, 59, 166, 3, 83, "Section",ExpressionUUID->"f951098b-c1f3-42e1-a6c9-c1b2f6097903"],
+Cell[2027, 64, 357, 10, 158, "Text",ExpressionUUID->"8e2ff0e8-3cb5-46fb-91b6-755804debadf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2421, 79, 170, 3, 83, "Section",ExpressionUUID->"20308a7c-4e40-4ac1-a60e-612c9d58ee84"],
+Cell[2594, 84, 481, 11, 158, "Text",ExpressionUUID->"e1efdd77-d369-4096-a61b-543b3d0b66f9"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
