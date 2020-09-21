@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38338,       1084]
-NotebookOptionsPosition[     30683,        942]
-NotebookOutlinePosition[     31017,        957]
-CellTagsIndexPosition[     30974,        954]
+NotebookDataLength[     44644,       1242]
+NotebookOptionsPosition[     36367,       1087]
+NotebookOutlinePosition[     36701,       1102]
+CellTagsIndexPosition[     36658,       1099]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -729,6 +729,13 @@ a9e6c2056c60"],
 
 Cell[CellGroupData[{
 
+Cell["First stub", "Subsection",
+ CellChangeTimes->{{3.809684755994299*^9, 
+  3.809684759994009*^9}},ExpressionUUID->"25ddd2c4-38cc-4212-8d8e-\
+1c75dbe049ed"],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Do", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -801,7 +808,15 @@ Cell[BoxData[
   "During evaluation of \
 In[3]:=",ExpressionUUID->"a4977621-65f4-411c-9328-a479cb50120c"]
 }, Open  ]]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sum of Identity Numbers n in Burrito Matrix size nn", "Subsection",
+ CellChangeTimes->{{3.8096846978484373`*^9, 
+  3.80968472355204*^9}},ExpressionUUID->"dff49a59-7e0e-4014-ac4f-\
+be2a14b20e2b"],
 
 Cell[CellGroupData[{
 
@@ -938,6 +953,136 @@ Cell[BoxData[
   "During evaluation of \
 In[105]:=",ExpressionUUID->"b61333a9-ea47-4b5c-93b0-33ed15357d2c"]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Abs Sum of traveldistance in identity number of Burrito Matrix n\
+\>", "Subsection",
+ CellChangeTimes->{{3.809684907455583*^9, 
+  3.809684928915105*^9}},ExpressionUUID->"ad16a7cb-cb8f-49d9-8453-\
+dc251a1ef3b1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{
+   RowBox[{"count", " ", "=", " ", "50"}], ";", "\[IndentingNewLine]", 
+   RowBox[{"AbsSumTravelIdNumber", " ", "=", " ", 
+    RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"Do", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"a", " ", "=", " ", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1", ",", "k"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"m", " ", "=", 
+        RowBox[{"{", "a", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Do", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"(", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"c", " ", "=", 
+            RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"b", " ", "=", " ", 
+            RowBox[{"Partition", "[", 
+             RowBox[{"a", ",", 
+              RowBox[{"k", "/", "2"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           
+           RowBox[{"d", " ", "=", " ", 
+            RowBox[{"Reverse", "[", 
+             RowBox[{"b", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{"(", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"AppendTo", "[", 
+                RowBox[{"c", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"b", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"1", ",", "l"}], "]"}], "]"}], "}"}]}], "]"}], 
+               ";", "\[IndentingNewLine]", 
+               RowBox[{"AppendTo", "[", 
+                RowBox[{"c", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"d", "[", 
+                   RowBox[{"[", "l", "]"}], "]"}], "}"}]}], "]"}], ";"}], 
+              "\[IndentingNewLine]", ")"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{"l", ",", "1", ",", 
+               RowBox[{"k", "/", "2"}], ",", "1"}], "}"}]}], "]"}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"a", " ", "=", " ", 
+            RowBox[{"Flatten", "[", "c", "]"}]}], ";", "\[IndentingNewLine]", 
+           
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"m", ",", "a"}], "]"}], ";"}], "\[IndentingNewLine]", 
+          ")"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "1", ",", 
+           RowBox[{"k", "-", "1"}], ",", "1"}], "}"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"idNumber", " ", "=", " ", 
+        RowBox[{"m", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "2"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"absSum", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Do", "[", 
+        RowBox[{
+         RowBox[{"(", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"absSum", " ", "+=", " ", 
+            RowBox[{"Abs", "[", 
+             RowBox[{
+              RowBox[{"idNumber", "[", 
+               RowBox[{"[", "q", "]"}], "]"}], " ", "-", " ", 
+              RowBox[{"idNumber", "[", 
+               RowBox[{"[", 
+                RowBox[{"q", "+", "1"}], "]"}], "]"}]}], "]"}]}], ";"}], 
+          "\[IndentingNewLine]", ")"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "1", ",", 
+           RowBox[{
+            RowBox[{"Length", "[", "idNumber", "]"}], "-", "1"}], ",", "1"}], 
+          "}"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"AbsSumTravelIdNumber", ",", " ", "absSum"}], "]"}], ";"}], 
+      "\[IndentingNewLine]", ")"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "2", ",", "count", ",", "2"}], "}"}]}], "]"}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "AbsSumTravelIdNumber", "]"}], ";"}], 
+  "\[IndentingNewLine]", ")"}]], "Input",
+ CellChangeTimes->{{3.8096849817679577`*^9, 3.809685030666904*^9}, {
+   3.809685065355632*^9, 3.809685266625325*^9}, {3.809685307760296*^9, 
+   3.8096853951258383`*^9}, 3.809685449220894*^9},
+ CellLabel->
+  "In[115]:=",ExpressionUUID->"6a23e8cb-9a4a-4fec-a12f-9aa214e8823d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "4", ",", "10", ",", "23", ",", "30", ",", "44", ",", "68", ",", 
+   "84", ",", "99", ",", "144", ",", "150", ",", "184", ",", "204", ",", 
+   "264", ",", "290", ",", "330", ",", "374", ",", "420", ",", "497", ",", 
+   "520", ",", "574", ",", "671", ",", "633", ",", "794", ",", "648"}], 
+  "}"}]], "Print",
+ CellChangeTimes->{{3.809685023023431*^9, 3.809685031256771*^9}, {
+   3.809685204558646*^9, 3.809685226970292*^9}, 3.8096852809672413`*^9, 
+   3.809685314911086*^9, {3.809685387998242*^9, 3.809685396609518*^9}, {
+   3.809685450214753*^9, 3.809685476026764*^9}},
+ CellLabel->
+  "During evaluation of \
+In[115]:=",ExpressionUUID->"497341fc-0fe1-4b22-952c-71b440c4402a"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 911},
@@ -1072,18 +1217,31 @@ Cell[20934, 712, 224, 4, 35, "Output",ExpressionUUID->"2d5eab45-5287-4349-ae59-0
 Cell[CellGroupData[{
 Cell[21219, 723, 228, 4, 54, "Subtitle",ExpressionUUID->"c99c6205-d2d5-43fb-b2f7-a9e6c2056c60"],
 Cell[CellGroupData[{
-Cell[21472, 731, 943, 19, 193, "Input",ExpressionUUID->"64f35e3e-e66e-4142-bd76-49389c07eb48"],
+Cell[21472, 731, 158, 3, 55, "Subsection",ExpressionUUID->"25ddd2c4-38cc-4212-8d8e-1c75dbe049ed"],
 Cell[CellGroupData[{
-Cell[22440, 754, 269, 7, 25, "Print",ExpressionUUID->"66752b8c-ec9a-477f-89f1-c98d9d1260b0"],
-Cell[22712, 763, 294, 8, 25, "Print",ExpressionUUID->"52ee5fd8-a0a6-4ce8-8c98-c308dffd2816"],
-Cell[23009, 773, 304, 8, 25, "Print",ExpressionUUID->"782a8d92-f66c-4afd-bdde-0fde6bc78a35"],
-Cell[23316, 783, 312, 8, 25, "Print",ExpressionUUID->"4e9ead0a-5fa1-40e2-bf17-dec02da44691"],
-Cell[23631, 793, 323, 8, 25, "Print",ExpressionUUID->"a4977621-65f4-411c-9328-a479cb50120c"]
+Cell[21655, 738, 943, 19, 193, "Input",ExpressionUUID->"64f35e3e-e66e-4142-bd76-49389c07eb48"],
+Cell[CellGroupData[{
+Cell[22623, 761, 269, 7, 25, "Print",ExpressionUUID->"66752b8c-ec9a-477f-89f1-c98d9d1260b0"],
+Cell[22895, 770, 294, 8, 25, "Print",ExpressionUUID->"52ee5fd8-a0a6-4ce8-8c98-c308dffd2816"],
+Cell[23192, 780, 304, 8, 25, "Print",ExpressionUUID->"782a8d92-f66c-4afd-bdde-0fde6bc78a35"],
+Cell[23499, 790, 312, 8, 25, "Print",ExpressionUUID->"4e9ead0a-5fa1-40e2-bf17-dec02da44691"],
+Cell[23814, 800, 323, 8, 25, "Print",ExpressionUUID->"a4977621-65f4-411c-9328-a479cb50120c"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24003, 807, 5981, 115, 630, "Input",ExpressionUUID->"309a9648-bb32-4475-ad12-906da39ab1e2"],
-Cell[29987, 924, 668, 14, 48, "Print",ExpressionUUID->"b61333a9-ea47-4b5c-93b0-33ed15357d2c"]
+Cell[24198, 815, 200, 3, 55, "Subsection",ExpressionUUID->"dff49a59-7e0e-4014-ac4f-be2a14b20e2b"],
+Cell[CellGroupData[{
+Cell[24423, 822, 5981, 115, 630, "Input",ExpressionUUID->"309a9648-bb32-4475-ad12-906da39ab1e2"],
+Cell[30407, 939, 668, 14, 48, "Print",ExpressionUUID->"b61333a9-ea47-4b5c-93b0-33ed15357d2c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31124, 959, 220, 5, 55, "Subsection",ExpressionUUID->"ad16a7cb-cb8f-49d9-8453-dc251a1ef3b1"],
+Cell[CellGroupData[{
+Cell[31369, 968, 4228, 98, 722, "Input",ExpressionUUID->"6a23e8cb-9a4a-4fec-a12f-9aa214e8823d"],
+Cell[35600, 1068, 727, 14, 48, "Print",ExpressionUUID->"497341fc-0fe1-4b22-952c-71b440c4402a"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
