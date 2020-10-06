@@ -10,87 +10,418 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14958,        378]
-NotebookOptionsPosition[     12153,        330]
-NotebookOutlinePosition[     12488,        345]
-CellTagsIndexPosition[     12445,        342]
+NotebookDataLength[    109701,       1728]
+NotebookOptionsPosition[    108433,       1695]
+NotebookOutlinePosition[    108768,       1710]
+CellTagsIndexPosition[    108725,       1707]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Convert C# to Mathematica code", "Title",
- CellChangeTimes->{{3.810916840415443*^9, 
-  3.810916846719902*^9}},ExpressionUUID->"bb0b78ab-5810-4211-b26b-\
+Cell["C# Convertion to Mathematica Code", "Title",
+ CellChangeTimes->{{3.810916840415443*^9, 3.810916846719902*^9}, 
+   3.8109609021741657`*^9, {3.810961581600224*^9, 
+   3.810961589223626*^9}},ExpressionUUID->"bb0b78ab-5810-4211-b26b-\
 6e185b8069e3"],
 
 Cell[CellGroupData[{
 
-Cell["Code to translate", "Subsection",
- CellChangeTimes->{{3.810917196317853*^9, 
-  3.810917199293849*^9}},ExpressionUUID->"24d9dd65-895a-4153-ac52-\
-73cdbf3e551e"],
+Cell["ListPlot of 5000 values, A334672", "Subsection",
+ CellChangeTimes->{{3.810960594820005*^9, 3.810960601998373*^9}, {
+  3.810960877187386*^9, 
+  3.810960888396038*^9}},ExpressionUUID->"2fc26ae1-fcb8-42d1-8f21-\
+a554ce799a36"],
 
-Cell["\<\
-        for (int atBM = 2; atBM < 1000; atBM += 2)
-        {
-            int atRow = 0;
-            int atColumn = 2;
-            int didRepeat = 1; //first row always present
-
-            while (atRow < atBM - 1)
-            {
-                while (atColumn < atBM)
-                {
-                    atRow++;
-                    if (atColumn == atBM / 2 + 1)
-                    {
-                        atColumn = atBM;
-                    }
-                    else
-                    {
-                        atColumn = (atColumn - 1) * 2 + 1;
-                    }
-                }
-
-                if (atColumn > atBM)
-                {
-                    atColumn = 2 * atBM - atColumn + 1;
-                }
-                else
-                {
-                    atColumn = 2 * (atBM - atColumn + 1);
-                }
-
-                if (atColumn == 2)
-                {
-                    atRow++; 
-                    if (atRow < atBM)
-                    {
-                        didRepeat++;
-                    }
-                }
-            }
-            AddInput(didRepeat + \[OpenCurlyDoubleQuote], \
-\[OpenCurlyDoubleQuote], false);
-        }\
-\>", "Text",
+Cell[TextData[Cell[BoxData[
+ GraphicsBox[{{}, {
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      NCache[
+       Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[1.6], 
+     PointBox[CompressedData["
+1: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
+zOFcOYP6ZpHPHPovC/t58ALGdxH1B/ry7QvE//t7AH359sthXwQuhn2JWeu9
+1Kz2BM26Pl2LeOVmjXcF9Eqzzqsqc1murIZ9DTgErgPXm3V+N5g138Ji/+5v
+I/ybYN9s1v1bxKz50YL+a0W8NvRf1KzrhXbE64B/p8dX918x1Ndl1vnTbdb1
+Yg/s44jfa9b874PeD06YtZ8NmP0+JeyH0P4kxnsY9iNm/W76KPJPYf6NiX3/
+Po54E5iPabOeX02K/TvLU/CfRvsy0GeQ36xZ63cO9lnwPPp/AfNhEfaBX89v
+T4FZn48Wmr3+wUVmr39wCbgU/kHwWrPmZ7lZ+VeAK82+/ke8atRfAz2E9tdB
+r4d/g9m/d2iuzZWN8G8CNyNexKzriRazn/+hvW2wj0JvR/wOs+ZnJ9obg30X
+8u2G3gOOI14v9D5wv7ksVybMen9pAP07iHyGzH7+j/jDZp2PI9BHwSnwGHgc
+PGHW9Xga+qTYfydjyrqe90zDPgOeAc+i/XPgLOznxf47EAuYH4tm/92YU/n+
+BeBC8HKzfx/A7Of/Zu1XJWZ9/7HU7N+XRPy14HLErzBr/6+EfRXyq4ZeY/b9
+P/Q6s9c/6msw+/xHexsRrwncbNb6jiBei7k2V7aiPW2IFwW3m3W91YH6OmEf
+M2s+d5nLcmW3WeutR+zfU4mjv3oRvw/cD/sE4g8g30H4D4GTiDcMfQTzbdT5
+1+bKFPQxs/ajcbP22wnET4MnzU25cgrtm0b7MvCfAc8ivzm0N4v48/BfwPxa
+hB74bj4XmDXfC83yXw69CP7F0EvE/rsypdb1PClo1v64FvHKzfq7KRVm/x4b
+6qsy6/lbtdmf/yF+SOz3fepgXw/7BrOuj8LQG+HfBL0ZHDGX5coWs86vVrS3
+Df5Rs/aHdugdiN9p1vt1Mdh3gbvBPWbdb8TN2k97kX8fxqcf8RLgAfTfIPQh
+zMck7IfNut4ZwXiNwj+F+GOINw6eAKc9f/T8Z9K61usU4k/DPwN9Bv6z6L85
++GcxHvOwX0D8RbP/Dl5/vl5g1nwrNOt97eVm9W8R/IvBJWbtd6XQg2Y//4de
+Dq4AV4r9d6eqoFebtd/UiP17FyHr6o86+NebdR40QA+DG81e/9Cbzf7+IvQW
++LdiPNrMut6IQm9HvA7E64Qeg95l1vVht1nrpQf+cXCvWe+D9UHvx3xImLV/
+DMB+0Kz5PYT5kjRr/xtGviNmrYdRtDcF+zHwOPKZ8PzR+ZKGPon4U+Bp5JuB
+/4zY9w+z1mtz5RzGP4t484i3AF7E+g18T6Wurwu+l29fCF4OLjKrfcXgEtiX
+goPmsly5Fnq5WfOlAlxp9v2/Weuh2uzv/yC/kFnnVR3i1yOfBnBY7M9DG6E3
+mbW/NKP+iFn7Uwv8W83ar9rM/n1Ls5//IX6HWfO5E/Fj4C5wN7gH8ePo315w
+n1mfv/dDTyD+gFnzcxD6ENqThP0w7EfAo2b/PT/oY+jfcfTvBOzT4Emz9psp
+9Nc07DPgGdjPQp9D+7OYr/NmXW8vwH8R8QOnVfr5n9mf/5m9/sFF5tpcWWz2
++od9qdm/H2LWel0L+3Kz2luB+JWwr4J9tdh/x64G/iGz5k8d/OvN2h8bzGW5
+Moz6G8FN4Gb0bwTcYtZ+0Ip82xAvCr0dege4E/YxcBfmQ7dZ500P7OOI3wu9
+D+PdD/uEWe/3DmA+DZq1noYQP4l4w+AR8CjGN2X2/b9Z96Pj8J8Ap5HPJHgK
+PA3OoH0ziD8LngNnwfNmnWcLqG8R9QW+n68XmP17wGavf7P6rwh6sdnP/8wa
+/1LUFzTr8+G1Yr/vUG5d198VqK8SXIX41WbtLzViX1+FYF8H+3rno/OrAfZh
+s55XN0JvQv7NyDcCbgG3gtsQPwpux/h1QO8Ex8BdZp2P3WZdv/SYff+P/HpR
+fx/0fsyfBPQBs+6PBsX+u7xD1rU/JuE/bNb8HvH46fndKOxT1nX9OAZ9HP0z
+AU6jvZPwnzLr8+Np9F8G/jPon1nUN4f4WcSfh76A+IuIF0jkSv8dsSViz/8C
+s/pzqVn1FZoVb5lZ6385eIXZ1w/glWY9jyuGvgr1l5jVvtWwLzXrPFuDfINm
+7T9l0Nci3jr0T7lZ58V6sf8OegXy2+D+1vVIJerbiPqqzHpet8ms64Vq2G82
+a/7UQN8CDqH+WvjXwX4r7Ouhb4PegP7fjv4IQ9+B+daIeDtRXxN4l1nrqxn6
+brPu3yPQ94BbwHvNOs9aoe9Dvm1m7Z/7YR811+bKA/Bvh/1BcAf4kFl/Z7jT
+rOvbw7CPgY9g/LvQ3qMYv27PZ833Y4jXY9bnf8fN/ntPaO8JzO9e8EnY94FP
+ef3p/Y1+5HManACfwfoeQH+cRX2D8D+H/hnC/nce9knwBbPetxlGvIvIbwT+
+l8Cj4MvuH30fMAX9CngMfBX9MY58rqF/JuB/HZw263rvBuJPIt5N7LdTiHcL
+PI35d9vs38+G/R2zrn9moN/FepjFfL6HfOfgfx96FvvfA9jPw/4h1sOCOKbn
+849gv4jxeYz4gR/k17/E7PsBsZ9vLbVelisLYb9M7PW33LrqWwEuAq80a70U
+m3X9vAr2Jch/tdn3G7Bfg3hB6GXgtWZdb65De8thv97s55XQN4ArEW8j9Crw
+JrPmf7U5lCs3w77GrP1/i1nvh4TMmh+1aG8d4m0F14O3gRvQH9vNfn8C7d8B
+/0bwTsRrMus834Xxb4b/brO/f2HW+t0DvQX57UX9rWZdj+5DfW2Yn/uhR6Ef
+MOv+vR32B8EdZu1nh6B3gg+bdX0UQ3uOwL4L/XkUejf4GOZPD/rvuFnXQ3HM
+5xPebzQ/exH/JOL1QT8F7jfr/u809ATm4xn0xwDWx1n09yDyOQceAp83+/dr
+UN8F5DeM/C4i3gjm6yWzPn8bNQdz5WX4p9D/V9DeMYz/VY9Pba4cR77XwBPg
+6+A0+Abym4R+06y//zHlfPS+6C1x6kO5chr9exv7YQbx76D+GcfX86K76J9Z
+nIf34D+H+PcxXlnsHw/gP4/z8CHGcwHxH4EXzXo//rHPZ/3ebuCMSp0fS8wa
+7wKz8l1qVvxCs/pzGfTl4BVmPe8tEseUz0rYF5vV/lXQS8zqr9Vmv2/g+Loe
+WWPdvz+GeGXgtbBfZ9bziXLo681+Xxn5bYBeifo2wr4K+iZwtVnjtdms+VQD
++y1mnS8h6LXgOrPOp63Q681qzzazztMGs/av7fAPg3egvkboO83+fUXou8DN
+4lhrrtxt3Z+/Iv89Zn8eY9b47kX8VuS7D/Ha4L/f+Wg/iSKfA2at73boB8Ed
+4pTWzyHr/rwX9oeRfwz+R6B3gY+a/XwY+jFwj1nXG8fN6p+4WdfjJ5Bvr1nr
+/6RZ/dkH+1NmjUc/6jtt9vsnyPcMeADxzkIfBJ8T+/3YIejnES8JvoB8h+F/
+0ez3W8xq/yXYj0K/bFb/pcwanytmXT+Mob6riD9u1vy5Bn3CrOud68gnDb5h
+1vqeNGs/u4n4U+BbZo3vNPTb4IxZ6+0O8pmB/V2z+msW+j3wnFnje1/sv4+T
+ta7+eYD858EPzeqfBbPG55FZ47vo+vT5yWP4B36oUvNtiVn5F5jLcuVSs/qn
+EPbLzFrPy83q3xWwLwKvRPxi6KvM/n6xWeOx2qznZ6VmP/9H/CDilyHfteif
+dbAvR7z14Aqxfw96A/RKxN8Ivcqs57mb0N5q5LPZrOu9GrPmxxbYh8TBD+fK
+Wuh1yG8r+qce9tvADWZdH26HHgbvMOt6tBH6TuTThHx2wb4Z7d8N+4g4pPbv
+gX8L5vNejE8r7PdhfrbBfj/WUxT5HTDr/ct2xDuIeB2o/xC4E/EOo/9isD+C
++F2o/yj0brPuh4+Z9TyyB/GPwz+O/jiB+dLr8dH93kn0Vx/4FNZHP+o7jfYn
+UN8Z5DuA9p9FvEHYnwMPYf85b9bz9yTsL5j9e1bI7yLsR7y/qH8uQR8FX0Z/
+paBfQX1jyP8q7MexPq6ZdX8xAfvr4LRZ59EN1D8J+5tYv1MYj1uwn0b827DP
+IP87Zl3/zGC+3EX8WfTnPehzZj3vuo/5lIX9A7O/z4N8HyKfBfg/QnsX4f/Y
+60nfpwkM5PsvMas9BdCXmjW+hWbluwz2y83aH1ZALwKvNPv5P/JZZdbnESVm
+Pb9abdb5Vyr286o11n3+g8vM/j1y6OuQb7lZ47He7PeVoG+Af6VZz683mvX8
+tAr2m8z+/B/9v9m8J1fWwH+LWftLCO2tRX/XwX8r2lMPfRv8G6BvR/+Eoe8A
+N4J3gpvAuzB/ms3aL3bDPoJ89kBvgb4X86HVrPdH9sG/TRyJ5Mr90KPgA2Z9
+XtmO+g7CvsOs9X4I7e+E/WHMnxj0I+Au8FGz7se6Ee8Y+rsH+R/H/IlDPwHu
+9frVej+J+dUHPoV8+8GnwQnwGdQ/AP2s2d9Ph/052A+Bz5v998HNOm8uYL8c
+hv9F8Aj4EvIZNet66LJZz19TGM8rGL8xxL8KfRz6NfCEx0/723Xkl4b9DbPO
+y0nY34T9FPiWOKTf+5iGfhvxMtDvgGewH9+F/yz6455Zz8fmsD/fN+t9rizO
+rweofx798dD9qe8bLmC/eIR8FhHvMdZf4Ef5+hKzP/8363xYCr3Q/JZcuQz6
+crP2hxXQi8zKZ6XY98vF1jVfV4n9feIS5L/arOuTUuhrUF/QrPEoQ35rYb8O
+ejnirzdrvCugb4B/JfSN0KsQbxPsq9G/m6HXmLU/bjFrfoTAtfCvQz5boddD
+32bWedQAfTv8w+AdaG8j9J3i9MFc2YT8d6E/muG/G/lEzNqP95j9fSxzWa7c
+a67Nla1mrd99nr9aD22obz84Cj6AfNvRnwehd6D9h8zazzsxfw/DPwY+gvZ2
+Ib+j6K9ucUp//+8Y4vWAj4PjyP8E5msv7E+adb3Vh3xPId9+jM9pj4/eB0gg
+/hnwAPa/s9AHwedQ/xDm83mMRxL+F8DDGP+L4shHcuWI2/OBXHkJ/qPgy+AU
+4l9B/mMY76vQx+F/DTyB+q6D04h3A/ok5sdN2E/B/hbGexr2t2GfAd/B+Mxg
+/O9if5mF/z3wnNeHPu+7j/mdNet67wHm8zziPUR/LKB9jzDfFqE/Rv2Bsyp1
+f7PE7O8DmtWfS8WJT+bKQuvKb5lZ95fLzapvhdj340XWdb200qz2Fdten9+v
+sq72lKD+1eZQriyF/Rpw0Kz5WgZ9LeKvQ3vK0X/r4V8B/w1oXyXibTSX5coq
+jMcms+ZnNfpvM+qvQf1b4B+CXmvW/WMd9K3o33qz3t/dhvY1IN52s/++L+Lv
+MGt9NaL9O9G+JrOuB3chXrNZz6N3I37ErPWyB/4taM9ecKtZ5/0+tLcN+e5H
+/Cjm3wHYt2O8DqL/OhDvELgT/XcY8WKwP4L6u6AfBXejvccwf3vE/vvAxxE/
+Dj6B+L3gk7DvA58y6/qnH/6nwQn0/xnoA+CzGP9Bs+6/zmF+DWG8zns/03mQ
+xPy7gP1gGPVfdH/qfZYR6JcQbxTjfxnjlUJ9V+A/5vpacuVVxBtH/19DvAnE
+u4580+4PrZ8biDeJ8+em7XV/OIV4t8DTiHcbesas8/eO+a25cgb2dzG/Z9Ef
+91DfHPi+89f3ZbKI/wDzZx76Q+y/C4j/CLyI9f4Y8QI/Vqn1suTH+XoBeKnZ
+9//gZWJ/H2i5dd2/rzD79wMRf6XY308ptq71uQr1lYBXI14peA3sg9DLzP49
+AtivA5fDf73Z7//DfgPsK8EbwVVmjd8ms37Pqhr2m2FfY9bvI20R+/orBP9a
+tL/OrPW8Fe2pN2t/2wa9AfG3m3V/HUZ+O2DfiPmyE/k0eb5pP9hlXftzM/LZ
+bS7LlRHUtwf2LdD3Qm9Ff++DfZv7W59H7YceBR/A/GlHew/CvsOs/fwQ1ksn
+8j1s1vOxGOIdwfh3QT8K7kZ+x7Dee9Ce48gnjngnMD690E+ivj6z9u9T4sQT
+ubIf7T2N+ZRAf50RB+U/gPl6FvkMoj3noA+Bz8M+Cb4A+2GM70XYj8D+EvId
+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
+k4h/AfNlGP17EfWPoP2XkP8o1u9l6CnoV5D/GOq7inzHsR9dQ/smUN91+Kcx
+HjfQnkn43wRPgW+Zdf87jfi3YZ9BfXfQ/hnod8GziHcP/TmH/rgP+6zZv/+D
++PPwf4j5sSBORHLlI8RfxP7yGPMp8PN8+yVmxS8w+/w3+/k//JeZ/f4/4q2A
+fZHYzxNWQi82q/2rzGpPCexXg0vBaxAvCL0M+a+Fvs7sv/9r1ucL68W+PquA
+/wazz3+zzueNsK8ya31tgl4N3mz283/oW8zKLwS9FuNbB30r4tdD32b2+/9m
+7Y/b3T96vhO2rvm4w6zr50bksxP1NWE8d8G+2aznk7uRfwTx9oBbEG8vuBXt
+3Qe9DfH2Y/5E0T8HEK8d/gfN+r5Mh1n7zSHE7zTr/D2MeDHwEcy3LsQ7Cvtu
+rMdjZt3v9aB9x9E/cdR3AvF7zbo+Pwn/Ptifwvj2m/U89TTsE2J/3/+MdZ1P
+AxiPs2bN30Hkc877mX6Pash6Wa487/mv+/Mk8rmA9TAM/SLyG8H8v4R8RlHf
+Zegp9NcV6GPov6vQx8HXzPp7GhPYT6+jP9MY3xvOV+f1JOLfxHyfwvy5hf6a
+Rv/cNuv5QAb2dxB/Bvpd8Czi34M+h/zv4zzNwv4B7OfNun9/CPsF8COM5yL4
+Mfo/kMyV4SO58iliz68lZsV/qln7c4FZ8Z8G+6Xgp5t9/WAuy5XPMGs8l8H/
+meDl4GeZtV+tMKu9v4b2FcH/2fBfadZ8eI5Z41EM/+ci/1Wwfx7sS8yaP8+H
+vhr8AvRfKfQXgteAX4T2B83av19s1vVaGfxfIvbfy1mLeC9Ff62D/8swX8ox
+/i+H/Xqzzq9XoH8rMF6vRP9sQLxXob8rxX7e8mrks9Gs67PXmHV/XIV4r0V9
+m5DP66BXg18vTun82Az9DeAa8BtR3xb0z5sw3iHwm806f2rN2q/egvrqYP9W
+s/bzrcjnbcinHvHeDn0b9Hdg/jR4/LS+3gn/7WY9b3kX8gkj/rvRnh3YP94D
+/0b4vxf6TvD7sF6a4P9+zL9dZs3PD8C+GfPvgxjP3bD/EDgC/jDW7x73r9b7
+R6C3oH1PIN5ezIePQm+F/8cw3/bB/uMY3zb015MYr/3w/wTqi2K/+6T3tydz
+5QH4fwrcjvo+bdb1zkHYfwb1d7h/9feuPwv7Q2jv56B3It7noR92fL2v+wXM
+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
+      "]]}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
+      1.6]}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
+      1.6]}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{Automatic, 493.39182652223974`},
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 5000.}, {0, 39.5}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8109599456910963`*^9, 
+  3.810960124585993*^9},ExpressionUUID->"ca966521-9808-45e4-8c96-\
+d897c6c23d38"]], "Text",
  CellChangeTimes->{
-  3.8109168064409733`*^9, {3.810916855405905*^9, 3.810916888372064*^9}, {
-   3.810955114699099*^9, 
-   3.810955125205102*^9}},ExpressionUUID->"4b9a2508-508c-4cb5-90ca-\
-7dbc2679d84a"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.810916904408182*^9, 3.810916914321806*^9}, 
-   3.810917220227496*^9},ExpressionUUID->"b75ddafe-f0be-4555-99af-\
-1319cefa4e4d"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.8109172217445183`*^9, 
-  3.810917221753682*^9}},ExpressionUUID->"b13492f4-d70e-4eec-b2a4-\
-2281b7f91dc5"]
+  3.810960534018852*^9},ExpressionUUID->"dd3049a5-2478-4f83-b9f3-\
+113055411dc7"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -102,94 +433,102 @@ Cell["Mathematica code", "Subsection",
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{
-   RowBox[{"Do", "[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"(", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"atRow", "=", "0"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"atColumn", "=", "2"}], ";", "\n", "\t", 
-       RowBox[{"didRepeat", "=", "1"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"while", " ", "[", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"atRow", "<", 
-           RowBox[{"atBM", "-", "1"}]}], ")"}], ",", "\[IndentingNewLine]", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"while", " ", "[", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"atColumn", "<", "atBM"}], ")"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"(", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"atRow", "++"}], ";", "\[IndentingNewLine]", 
-               RowBox[{"if", " ", "[", "\[IndentingNewLine]", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"atColumn", " ", "==", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"atBM", "/", "2"}], "+", "1"}], ")"}]}], ")"}], 
-                 ",", "\n", "\t\t\t\t", 
-                 RowBox[{"(", "\[IndentingNewLine]", "\t\t", 
-                  RowBox[{"atColumn", "=", "atBM"}], "\[IndentingNewLine]", 
-                  "\t\t", ")"}], ",", "\[IndentingNewLine]", "\t\t", 
-                 RowBox[{"(", "\[IndentingNewLine]", 
-                  RowBox[{"atColumn", "=", 
+  RowBox[{"count", " ", "=", " ", "50"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rep", " ", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"(", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"atBM", " ", "=", " ", 
+       RowBox[{"k", "*", "2"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"atRow", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"atColumn", "=", "2"}], ";", "\n", "\t", 
+      RowBox[{"didRepeat", "=", "1"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"While", " ", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"atRow", "<", 
+          RowBox[{"atBM", "-", "1"}]}], ")"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"While", " ", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"atColumn", "<", "atBM"}], ")"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"(", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"atRow", "++"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"If", " ", "[", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"atColumn", " ", "==", 
+                  RowBox[{"(", 
                    RowBox[{
-                    RowBox[{
+                    RowBox[{"atBM", "/", "2"}], "+", "1"}], ")"}]}], ")"}], 
+                ",", "\n", "\t\t\t\t", 
+                RowBox[{"(", "\[IndentingNewLine]", "\t\t", 
+                 RowBox[{"atColumn", "=", "atBM"}], "\[IndentingNewLine]", 
+                 "\t\t", ")"}], ",", "\[IndentingNewLine]", "\t\t", 
+                RowBox[{"(", "\[IndentingNewLine]", 
+                 RowBox[{"atColumn", "=", 
+                  RowBox[{
+                   RowBox[{
                     RowBox[{"(", 
                     RowBox[{"atColumn", "-", "1"}], ")"}], "*", "2"}], "+", 
-                    "1"}]}], "\[IndentingNewLine]", ")"}]}], 
-                "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
-              ")"}]}], "]"}], ";", "\[IndentingNewLine]", 
-           RowBox[{"if", " ", "[", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"atColumn", ">", "atBM"}], ")"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"(", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"atColumn", "=", 
-                RowBox[{
-                 RowBox[{"2", "*", "atBM"}], "-", "atColumn", "+", "1"}]}], 
-               ";"}], "\[IndentingNewLine]", ")"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"(", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"atColumn", "=", 
-                RowBox[{"2", "*", 
-                 RowBox[{"(", 
-                  RowBox[{"atBM", "-", "atColumn", "+", "1"}], ")"}]}]}], 
-               ";"}], "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]", 
+                   "1"}]}], "\[IndentingNewLine]", ")"}]}], 
+               "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", ")"}]}],
             "]"}], ";", "\[IndentingNewLine]", 
-           RowBox[{"if", "[", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"atColumn", "==", "2"}], ")"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"(", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"atRow", "++"}], ";", "\[IndentingNewLine]", 
-               RowBox[{"if", "[", 
+          RowBox[{"If", " ", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"atColumn", ">", "atBM"}], ")"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"(", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"atColumn", "=", 
+               RowBox[{
+                RowBox[{"2", "*", "atBM"}], "-", "atColumn", "+", "1"}]}], 
+              ";"}], "\[IndentingNewLine]", ")"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"(", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"atColumn", "=", 
+               RowBox[{"2", "*", 
+                RowBox[{"(", 
+                 RowBox[{"atBM", "-", "atColumn", "+", "1"}], ")"}]}]}], 
+              ";"}], "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]", 
+           "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"atColumn", "==", "2"}], ")"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"(", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"atRow", "++"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"atRow", "<", "atBM"}], ")"}], ",", 
+                "\[IndentingNewLine]", 
                 RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"atRow", "<", "atBM"}], ")"}], ",", 
-                 "\[IndentingNewLine]", 
-                 RowBox[{
-                  RowBox[{"didRepeat", "++"}], ";"}]}], "\[IndentingNewLine]",
-                 "]"}]}], "\[IndentingNewLine]", ")"}]}], 
-            "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
-          ")"}]}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", "didRepeat", "]"}], ";"}], "\[IndentingNewLine]",
-       ")"}], ",", "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{"atBM", ",", "4", ",", "36", ",", "2"}], "}"}]}], 
-    "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]"}]], "Input",
+                 RowBox[{"didRepeat", "++"}], ";"}]}], "\[IndentingNewLine]", 
+               "]"}]}], "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]",
+            "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"rep", ",", "didRepeat"}], "]"}], ";"}], "\[IndentingNewLine]",
+      ")"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "count", ",", "1"}], "}"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", "rep", "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.810917242253249*^9, 3.810917263816389*^9}, {
    3.810917307850232*^9, 3.810917487205927*^9}, {3.810917775444386*^9, 
    3.810917780564262*^9}, {3.810917875512683*^9, 3.810917884170444*^9}, {
@@ -210,126 +549,1152 @@ Cell[BoxData[
    3.8109219817753973`*^9, 3.8109220622809973`*^9}, {3.810955271419965*^9, 
    3.8109553489397097`*^9}, {3.8109553851077747`*^9, 3.810955386309944*^9}, {
    3.8109554398115597`*^9, 3.8109554738976183`*^9}, {3.810955510333207*^9, 
-   3.810955522235527*^9}},ExpressionUUID->"15787e0b-ea47-4968-a399-\
-b22700a814cb"],
+   3.810955522235527*^9}, {3.810958082201426*^9, 3.8109581020526342`*^9}, {
+   3.810958798162079*^9, 3.8109590315171633`*^9}, {3.810960043132086*^9, 
+   3.810960043620343*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"15787e0b-ea47-4968-a399-b22700a814cb"],
 
-Cell[CellGroupData[{
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391258114*^9},
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "4", 
+   ",", "2", ",", "2", ",", "4", ",", "2", ",", "4", ",", "2", ",", "2", ",", 
+   "6", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "4", 
+   ",", "2", ",", "4", ",", "2", ",", "2", ",", "2", ",", "2", ",", "3", ",", 
+   "4", ",", "10", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "6",
+    ",", "4", ",", "2", ",", "2", ",", "2", ",", "10", ",", "2", ",", "2", 
+   ",", "2", ",", "3", ",", "2", ",", "9", ",", "2"}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.8109220554439287`*^9, 3.810955391258114*^9, 3.8109580730052*^9, 
+   3.810958105003783*^9, 3.810958798953137*^9, {3.8109588418975973`*^9, 
+   3.810958918659663*^9}, {3.810958978137813*^9, 3.8109590081644*^9}, 
+   3.810959451698881*^9, 3.810960045156773*^9, 3.8109617161823683`*^9},
  CellLabel->
   "During evaluation of \
-In[29]:=",ExpressionUUID->"44fec31a-9720-408c-9ae8-f49a0ba25a0e"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391266765*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"03f7a1a9-dd30-461f-9b85-530e89593181"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391271989*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"9ee208de-b761-47fb-9e38-537bde7e5083"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.8109553912752647`*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"2d52127c-dc95-4fbc-b49c-34c19377b1eb"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391278537*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"8a380221-0dc1-4045-9bb5-96eb0e595410"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.8109553912818937`*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"cd2b9d68-b011-42d7-a7da-67452e274fb7"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.8109553912851887`*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"fb6ddeab-c6fa-4b07-97df-e3eec24277aa"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.8109553912884903`*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"c52c3ad4-e2dc-4eed-a95d-4f159041f72d"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391291836*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"00e5488e-397d-4f23-8ca1-0677e4dac93e"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391295128*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"7d9548a3-11c5-4bf0-b2bf-18ecd0fc435e"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391298403*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"846a427c-b4f6-42e4-9124-f05295a2d0f2"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391301756*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"cb0db9ce-73dd-4a01-b036-43df180f13c6"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391305052*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"9b078d9f-e0c0-440c-af19-6538ccc1a2dd"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391308383*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"58d38918-6ae8-43c5-bf5e-8ca6e0498182"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.8109553913117723`*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"d45c8110-b2da-4a65-93db-0373b8336640"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391315073*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"5412d197-453d-4fa2-bfd0-219ae5af496f"],
-
-Cell[BoxData["2"], "Print",
- CellChangeTimes->{3.8109220554439287`*^9, 3.810955391318416*^9},
- CellLabel->
-  "During evaluation of \
-In[29]:=",ExpressionUUID->"c779c031-40c3-472e-9194-7e967c0c2bda"]
+In[18]:=",ExpressionUUID->"b85b934a-d619-41db-b576-abc18140ec02"]
 }, Open  ]]
 }, Open  ]],
 
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.810916665762589*^9, 
-  3.8109166673034077`*^9}},ExpressionUUID->"2678cbba-10fc-492b-85a5-\
-d59fddca77e6"],
+Cell[CellGroupData[{
 
-Cell[BoxData[""], "Input",ExpressionUUID->"1571fa46-1a3e-4569-bafb-c6b47c9806fb"]
+Cell["ListPlot of 5000 values", "Subsection",
+ CellChangeTimes->{{3.810960058926046*^9, 
+  3.810960065814131*^9}},ExpressionUUID->"4f640afb-58cf-4f3c-9ee0-\
+55056c7f4818"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "4", 
+    ",", "2", ",", "2", ",", "4", ",", "2", ",", "4", ",", "2", ",", "2", ",",
+     "6", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", 
+    "4", ",", "2", ",", "4", ",", "2", ",", "2", ",", "2", ",", "2", ",", "3",
+     ",", "4", ",", "10", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", 
+    ",", "6", ",", "4", ",", "2", ",", "2", ",", "2", ",", "10", ",", "2", 
+    ",", "2", ",", "2", ",", "3", ",", "2", ",", "9", ",", "2", ",", "2", ",",
+     "2", ",", "2", ",", "4", ",", "7", ",", "4", ",", "2", ",", "4", ",", 
+    "2", ",", "2", ",", "2", ",", "4", ",", "6", ",", "16", ",", "4", ",", 
+    "2", ",", "7", ",", "2", ",", "7", ",", "5", ",", "4", ",", "3", ",", "4",
+     ",", "2", ",", "2", ",", "2", ",", "4", ",", "2", ",", "14", ",", "2", 
+    ",", "3", ",", "5", ",", "12", ",", "2", ",", "7", ",", "2", ",", "2", 
+    ",", "5", ",", "2", ",", "2", ",", "4", ",", "2", ",", "2", ",", "2", ",",
+     "2", ",", "2", ",", "10", ",", "3", ",", "2", ",", "12", ",", "4", ",", 
+    "2", ",", "4", ",", "2", ",", "2", ",", "2", ",", "4", ",", "6", ",", "8",
+     ",", "4", ",", "2", ",", "2", ",", "12", ",", "19", ",", "4", ",", "2", 
+    ",", "2", ",", "5", ",", "2", ",", "2", ",", "4", ",", "2", ",", "2", ",",
+     "5", ",", "4", ",", "2", ",", "2", ",", "29", ",", "2", ",", "2", ",", 
+    "2", ",", "7", ",", "4", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2",
+     ",", "8", ",", "4", ",", "2", ",", "6", ",", "6", ",", "2", ",", "4", 
+    ",", "2", ",", "2", ",", "2", ",", "13", ",", "2", ",", "10", ",", "2", 
+    ",", "2", ",", "16", ",", "2", ",", "10", ",", "7", ",", "8", ",", "12", 
+    ",", "2", ",", "4", ",", "2", ",", "11", ",", "2", ",", "2", ",", "14", 
+    ",", "2", ",", "6", ",", "2", ",", "8", ",", "32", ",", "5", ",", "4", 
+    ",", "2", ",", "7", ",", "10", ",", "2", ",", "5", ",", "6", ",", "2", 
+    ",", "16", ",", "4", ",", "7", ",", "5", ",", "4", ",", "2", ",", "4", 
+    ",", "2", ",", "7", ",", "4", ",", "11", ",", "2", ",", "25", ",", "20", 
+    ",", "3", ",", "2", ",", "2", ",", "5", ",", "8", ",", "3", ",", "5", ",",
+     "2", ",", "4", ",", "2", ",", "35", ",", "2", ",", "2", ",", "5", ",", 
+    "2", ",", "2", ",", "13", ",", "2", ",", "2", ",", "12", ",", "2", ",", 
+    "2", ",", "4", ",", "4", ",", "2", ",", "2", ",", "2", ",", "2", ",", "4",
+     ",", "2", ",", "4", ",", "11", ",", "2", ",", "6", ",", "8", ",", "4", 
+    ",", "2", ",", "5", ",", "4", ",", "12", ",", "4", ",", "3", ",", "2", 
+    ",", "2", ",", "2", ",", "3", ",", "4", ",", "2", ",", "6", ",", "9", ",",
+     "5", ",", "2", ",", "4", ",", "2", ",", "2", ",", "14", ",", "3", ",", 
+    "2", ",", "13", ",", "7", ",", "2", ",", "52", ",", "4", ",", "2", ",", 
+    "4", ",", "2", ",", "2", ",", "2", ",", "4", ",", "2", ",", "7", ",", "2",
+     ",", "3", ",", "23", ",", "4", ",", "2", ",", "4", ",", "2", ",", "2", 
+    ",", "16", ",", "4", ",", "20", ",", "4", ",", "6", ",", "4", ",", "2", 
+    ",", "2", ",", "3", ",", "7", ",", "2", ",", "3", ",", "14", ",", "4", 
+    ",", "2", ",", "10", ",", "4", ",", "8", ",", "2", ",", "2", ",", "2", 
+    ",", "4", ",", "4", ",", "2", ",", "14", ",", "2", ",", "4", ",", "4", 
+    ",", "3", ",", "2", ",", "2", ",", "2", ",", "2", ",", "4", ",", "2", ",",
+     "18", ",", "4", ",", "5", ",", "23", ",", "10", ",", "7", ",", "2", ",", 
+    "2", ",", "4", ",", "32", ",", "16", ",", "2", ",", "2", ",", "11", ",", 
+    "2", ",", "18", ",", "10", ",", "2", ",", "2", ",", "4", ",", "2", ",", 
+    "2", ",", "6", ",", "4", ",", "2", ",", "16", ",", "4", ",", "3", ",", 
+    "4", ",", "8", ",", "2", ",", "23", ",", "2", ",", "2", ",", "10", ",", 
+    "7", ",", "2", ",", "2", ",", "39", ",", "2", ",", "12", ",", "4", ",", 
+    "2", ",", "11", ",", "3", ",", "4", ",", "21", ",", "4", ",", "2", ",", 
+    "2", ",", "12", ",", "2", ",", "21", ",", "2", ",", "2", ",", "16", ",", 
+    "4", ",", "9", ",", "10", ",", "4", ",", "2", ",", "14", ",", "2", ",", 
+    "2", ",", "4", ",", "6", ",", "2", ",", "2", ",", "3", ",", "2", ",", "8",
+     ",", "8", ",", "2", ",", "2", ",", "2", ",", "4", ",", "29", ",", "2", 
+    ",", "33", ",", "4", ",", "2", ",", "2", ",", "4", ",", "2", ",", "2", 
+    ",", "14", ",", "4", ",", "2", ",", "2", ",", "4", ",", "6", ",", "14", 
+    ",", "4", ",", "2", ",", "4", ",", "12", ",", "2", ",", "2", ",", "4", 
+    ",", "10", ",", "23", ",", "2", ",", "4", ",", "5", ",", "10", ",", "14", 
+    ",", "11", ",", "2", ",", "2", ",", "2", ",", "2", ",", "9", ",", "8", 
+    ",", "36", ",", "5", ",", "31", ",", "4", ",", "2", ",", "4", ",", "2", 
+    ",", "2", ",", "2", ",", "4", ",", "4", ",", "7", ",", "2", ",", "2", ",",
+     "4", ",", "2", ",", "3", ",", "25", ",", "2", ",", "7", ",", "10", ",", 
+    "3", ",", "7", ",", "7", ",", "2", ",", "2", ",", "5", ",", "2", ",", 
+    "19", ",", "19", ",", "4", ",", "6", ",", "5", ",", "3", ",", "2", ",", 
+    "11", ",", "4", ",", "2", ",", "2", ",", "7", ",", "2", ",", "13", ",", 
+    "6", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2",
+     ",", "14", ",", "16", ",", "2", ",", "10", ",", "2", ",", "2", ",", "12",
+     ",", "2", ",", "2", ",", "16", ",", "3", ",", "2", ",", "12", ",", "4", 
+    ",", "2", ",", "7", ",", "2", ",", "12", ",", "2", ",", "17", ",", "5", 
+    ",", "55", ",", "2", ",", "2", ",", "2", ",", "2", ",", "6", ",", "28", 
+    ",", "4", ",", "8", ",", "5", ",", "6", ",", "17", ",", "22", ",", "3", 
+    ",", "2", ",", "2", ",", "6", ",", "2", ",", "4", ",", "94", ",", "2", 
+    ",", "16", ",", "8", ",", "2", ",", "7", ",", "29", ",", "2", ",", "12", 
+    ",", "2", ",", "2", ",", "27", ",", "2", ",", "2", ",", "2", ",", "26", 
+    ",", "2", ",", "4", ",", "4", ",", "3", ",", "2", ",", "2", ",", "18", 
+    ",", "10", ",", "22", ",", "5", ",", "2", ",", "7", ",", "20", ",", "11", 
+    ",", "2", ",", "2", ",", "8", ",", "4", ",", "2", ",", "2", ",", "8", ",",
+     "4", ",", "5", ",", "4", ",", "2", ",", "7", ",", "2", ",", "2", ",", 
+    "31", ",", "3", ",", "3", ",", "8", ",", "2", ",", "2", ",", "4", ",", 
+    "4", ",", "57", ",", "16", ",", "26", ",", "2", ",", "2", ",", "19", ",", 
+    "4", ",", "4", ",", "4", ",", "2", ",", "16", ",", "3", ",", "3", ",", 
+    "4", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "33", ",", 
+    "2", ",", "2", ",", "17", ",", "4", ",", "26", ",", "23", ",", "57", ",", 
+    "3", ",", "2", ",", "2", ",", "2", ",", "20", ",", "4", ",", "40", ",", 
+    "2", ",", "2", ",", "2", ",", "7", ",", "2", ",", "6", ",", "10", ",", 
+    "3", ",", "2", ",", "4", ",", "11", ",", "2", ",", "5", ",", "4", ",", 
+    "2", ",", "20", ",", "2", ",", "2", ",", "2", ",", "2", ",", "5", ",", 
+    "21", ",", "4", ",", "2", ",", "2", ",", "2", ",", "4", ",", "8", ",", 
+    "2", ",", "4", ",", "5", ",", "2", ",", "4", ",", "2", ",", "4", ",", "2",
+     ",", "9", ",", "2", ",", "2", ",", "10", ",", "2", ",", "36", ",", "2", 
+    ",", "5", ",", "11", ",", "4", ",", "2", ",", "2", ",", "22", ",", "4", 
+    ",", "2", ",", "8", ",", "5", ",", "3", ",", "4", ",", "4", ",", "2", ",",
+     "10", ",", "4", ",", "2", ",", "2", ",", "33", ",", "16", ",", "13", ",",
+     "2", ",", "12", ",", "4", ",", "2", ",", "2", ",", "32", ",", "4", ",", 
+    "2", ",", "4", ",", "2", ",", "18", ",", "11", ",", "4", ",", "2", ",", 
+    "13", ",", "2", ",", "2", ",", "8", ",", "2", ",", "2", ",", "2", ",", 
+    "106", ",", "2", ",", "7", ",", "4", ",", "3", ",", "4", ",", "6", ",", 
+    "26", ",", "28", ",", "4", ",", "3", ",", "8", ",", "11", ",", "13", ",", 
+    "4", ",", "4", ",", "17", ",", "2", ",", "2", ",", "3", ",", "7", ",", 
+    "2", ",", "2", ",", "2", ",", "18", ",", "2", ",", "14", ",", "3", ",", 
+    "2", ",", "40", ",", "2", ",", "7", ",", "22", ",", "8", ",", "2", ",", 
+    "4", ",", "2", ",", "2", ",", "5", ",", "2", ",", "2", ",", "16", ",", 
+    "4", ",", "2", ",", "21", ",", "11", ",", "6", ",", "11", ",", "4", ",", 
+    "2", ",", "4", ",", "2", ",", "2", ",", "41", ",", "4", ",", "2", ",", 
+    "8", ",", "2", ",", "2", ",", "10", ",", "28", ",", "13", ",", "100", ",",
+     "4", ",", "2", ",", "5", ",", "2", ",", "2", ",", "26", ",", "7", ",", 
+    "2", ",", "12", ",", "2", ",", "2", ",", "4", ",", "22", ",", "2", ",", 
+    "17", ",", "3", ",", "4", ",", "7", ",", "6", ",", "8", ",", "5", ",", 
+    "2", ",", "2", ",", "77", ",", "2", ",", "2", ",", "6", ",", "45", ",", 
+    "2", ",", "13", ",", "2", ",", "2", ",", "13", ",", "12", ",", "2", ",", 
+    "4", ",", "2", ",", "16", ",", "9", ",", "13", ",", "3", ",", "13", ",", 
+    "3", ",", "9", ",", "5", ",", "4", ",", "2", ",", "53", ",", "12", ",", 
+    "3", ",", "2", ",", "2", ",", "30", ",", "4", ",", "8", ",", "2", ",", 
+    "5", ",", "4", ",", "4", ",", "7", ",", "2", ",", "2", ",", "2", ",", "2",
+     ",", "3", ",", "4", ",", "3", ",", "6", ",", "28", ",", "4", ",", "6", 
+    ",", "4", ",", "4", ",", "7", ",", "5", ",", "4", ",", "2", ",", "13", 
+    ",", "2", ",", "2", ",", "5", ",", "2", ",", "8", ",", "70", ",", "2", 
+    ",", "2", ",", "2", ",", "16", ",", "6", ",", "11", ",", "4", ",", "2", 
+    ",", "2", ",", "28", ",", "2", ",", "7", ",", "47", ",", "2", ",", "2", 
+    ",", "10", ",", "3", ",", "4", ",", "16", ",", "36", ",", "4", ",", "3", 
+    ",", "2", ",", "10", ",", "39", ",", "2", ",", "11", ",", "2", ",", "9", 
+    ",", "23", ",", "10", ",", "3", ",", "2", ",", "11", ",", "4", ",", "7", 
+    ",", "4", ",", "2", ",", "14", ",", "2", ",", "17", ",", "10", ",", "2", 
+    ",", "2", ",", "16", ",", "2", ",", "13", ",", "4", ",", "2", ",", "49", 
+    ",", "7", ",", "4", ",", "2", ",", "7", ",", "6", ",", "2", ",", "8", ",",
+     "2", ",", "2", ",", "12", ",", "2", ",", "2", ",", "13", ",", "2", ",", 
+    "30", ",", "13", ",", "2", ",", "3", ",", "100", ",", "2", ",", "2", ",", 
+    "7", ",", "4", ",", "4", ",", "76", ",", "3", ",", "2", ",", "31", ",", 
+    "4", ",", "4", ",", "2", ",", "2", ",", "3", ",", "13", ",", "33", ",", 
+    "2", ",", "11", ",", "7", ",", "2", ",", "5", ",", "4", ",", "66", ",", 
+    "2", ",", "2", ",", "4", ",", "4", ",", "3", ",", "9", ",", "2", ",", "2",
+     ",", "2", ",", "26", ",", "2", ",", "32", ",", "4", ",", "8", ",", "2", 
+    ",", "13", ",", "18", ",", "2", ",", "4", ",", "2", ",", "2", ",", "4", 
+    ",", "32", ",", "2", ",", "40", ",", "4", ",", "7", ",", "9", ",", "2", 
+    ",", "2", ",", "2", ",", "4", ",", "53", ",", "20", ",", "4", ",", "13", 
+    ",", "2", ",", "6", ",", "2", ",", "33", ",", "2", ",", "2", ",", "121", 
+    ",", "3", ",", "2", ",", "7", ",", "8", ",", "20", ",", "8", ",", "5", 
+    ",", "2", ",", "4", ",", "11", ",", "2", ",", "2", ",", "2", ",", "2", 
+    ",", "8", ",", "2", ",", "2", ",", "17", ",", "2", ",", "2", ",", "7", 
+    ",", "10", ",", "2", ",", "5", ",", "24", ",", "2", ",", "34", ",", "2", 
+    ",", "3", ",", "8", ",", "2", ",", "3", ",", "4", ",", "10", ",", "11", 
+    ",", "29", ",", "2", ",", "2", ",", "4", ",", "12", ",", "2", ",", "2", 
+    ",", "4", ",", "2", ",", "8", ",", "15", ",", "2", ",", "4", ",", "82", 
+    ",", "4", ",", "34", ",", "3", ",", "2", ",", "4", ",", "2", ",", "2", 
+    ",", "4", ",", "4", ",", "2", ",", "171", ",", "2", ",", "2", ",", "2", 
+    ",", "2", ",", "2", ",", "2", ",", "23", ",", "2", ",", "4", ",", "2", 
+    ",", "2", ",", "2", ",", "5", ",", "5", ",", "23", ",", "2", ",", "2", 
+    ",", "5", ",", "7", ",", "2", ",", "11", ",", "9", ",", "14", ",", "30", 
+    ",", "2", ",", "30", ",", "4", ",", "29", ",", "6", ",", "16", ",", "2", 
+    ",", "3", ",", "4", ",", "2", ",", "4", ",", "5", ",", "2", ",", "7", ",",
+     "60", ",", "6", ",", "2", ",", "26", ",", "11", ",", "8", ",", "12", ",",
+     "2", ",", "2", ",", "26", ",", "4", ",", "2", ",", "7", ",", "36", ",", 
+    "5", ",", "2", ",", "2", ",", "5", ",", "34", ",", "2", ",", "6", ",", 
+    "16", ",", "4", ",", "4", ",", "11", ",", "4", ",", "17", ",", "2", ",", 
+    "2", ",", "10", ",", "10", ",", "2", ",", "6", ",", "5", ",", "3", ",", 
+    "2", ",", "8", ",", "2", ",", "31", ",", "27", ",", "12", ",", "2", ",", 
+    "4", ",", "4", ",", "5", ",", "11", ",", "2", ",", "3", ",", "13", ",", 
+    "2", ",", "2", ",", "5", ",", "4", ",", "2", ",", "4", ",", "3", ",", "2",
+     ",", "2", ",", "2", ",", "12", ",", "10", ",", "17", ",", "3", ",", "10",
+     ",", "2", ",", "2", ",", "27", ",", "4", ",", "18", ",", "2", ",", "2", 
+    ",", "2", ",", "26", ",", "3", ",", "2", ",", "13", ",", "7", ",", "3", 
+    ",", "5", ",", "4", ",", "2", ",", "39", ",", "32", ",", "2", ",", "7", 
+    ",", "2", ",", "4", ",", "128", ",", "2", ",", "3", ",", "7", ",", "6", 
+    ",", "4", ",", "36", ",", "4", ",", "6", ",", "12", ",", "2", ",", "12", 
+    ",", "2", ",", "4", ",", "10", ",", "25", ",", "4", ",", "2", ",", "2", 
+    ",", "59", ",", "2", ",", "11", ",", "10", ",", "2", ",", "16", ",", "10",
+     ",", "2", ",", "10", ",", "50", ",", "11", ",", "4", ",", "2", ",", "2", 
+    ",", "7", ",", "2", ",", "2", ",", "20", ",", "2", ",", "6", ",", "8", 
+    ",", "4", ",", "7", ",", "4", ",", "4", ",", "7", ",", "4", ",", "2", ",",
+     "2", ",", "5", ",", "12", ",", "2", ",", "7", ",", "3", ",", "7", ",", 
+    "4", ",", "4", ",", "16", ",", "7", ",", "2", ",", "2", ",", "47", ",", 
+    "2", ",", "2", ",", "12", ",", "7", ",", "87", ",", "2", ",", "10", ",", 
+    "6", ",", "9", ",", "21", ",", "17", ",", "14", ",", "13", ",", "12", ",",
+     "4", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "10", ",", 
+    "4", ",", "6", ",", "9", ",", "3", ",", "2", ",", "52", ",", "2", ",", 
+    "2", ",", "10", ",", "4", ",", "2", ",", "28", ",", "2", ",", "2", ",", 
+    "84", ",", "2", ",", "16", ",", "70", ",", "8", ",", "2", ",", "2", ",", 
+    "2", ",", "11", ",", "4", ",", "2", ",", "7", ",", "30", ",", "6", ",", 
+    "2", ",", "4", ",", "8", ",", "2", ",", "31", ",", "2", ",", "2", ",", 
+    "4", ",", "6", ",", "7", ",", "2", ",", "10", ",", "2", ",", "4", ",", 
+    "2", ",", "2", ",", "6", ",", "2", ",", "2", ",", "128", ",", "2", ",", 
+    "4", ",", "11", ",", "4", ",", "17", ",", "46", ",", "4", ",", "2", ",", 
+    "13", ",", "2", ",", "8", ",", "7", ",", "4", ",", "2", ",", "4", ",", 
+    "2", ",", "9", ",", "73", ",", "2", ",", "2", ",", "2", ",", "7", ",", 
+    "19", ",", "10", ",", "6", ",", "7", ",", "2", ",", "2", ",", "2", ",", 
+    "8", ",", "4", ",", "2", ",", "4", ",", "5", ",", "4", ",", "37", ",", 
+    "4", ",", "4", ",", "18", ",", "7", ",", "8", ",", "4", ",", "3", ",", 
+    "15", ",", "31", ",", "4", ",", "2", ",", "7", ",", "5", ",", "2", ",", 
+    "2", ",", "4", ",", "3", ",", "73", ",", "12", ",", "9", ",", "14", ",", 
+    "28", ",", "2", ",", "112", ",", "9", ",", "4", ",", "5", ",", "11", ",", 
+    "4", ",", "7", ",", "8", ",", "2", ",", "2", ",", "6", ",", "2", ",", 
+    "55", ",", "2", ",", "2", ",", "4", ",", "130", ",", "10", ",", "10", ",",
+     "2", ",", "2", ",", "11", ",", "2", ",", "2", ",", "4", ",", "2", ",", 
+    "2", ",", "5", ",", "14", ",", "6", ",", "16", ",", "2", ",", "2", ",", 
+    "10", ",", "3", ",", "18", ",", "10", ",", "4", ",", "2", ",", "4", ",", 
+    "24", ",", "2", ",", "4", ",", "2", ",", "8", ",", "16", ",", "2", ",", 
+    "11", ",", "10", ",", "47", ",", "28", ",", "39", ",", "2", ",", "2", ",",
+     "10", ",", "4", ",", "2", ",", "2", ",", "16", ",", "2", ",", "8", ",", 
+    "2", ",", "6", ",", "43", ",", "16", ",", "2", ",", "4", ",", "2", ",", 
+    "24", ",", "2", ",", "4", ",", "2", ",", "63", ",", "2", ",", "2", ",", 
+    "34", ",", "2", ",", "3", ",", "7", ",", "2", ",", "2", ",", "32", ",", 
+    "2", ",", "2", ",", "11", ",", "11", ",", "3", ",", "2", ",", "4", ",", 
+    "6", ",", "35", ",", "23", ",", "3", ",", "4", ",", "12", ",", "16", ",", 
+    "7", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "52", ",", 
+    "25", ",", "2", ",", "49", ",", "2", ",", "2", ",", "10", ",", "2", ",", 
+    "17", ",", "5", ",", "4", ",", "2", ",", "7", ",", "9", ",", "2", ",", 
+    "2", ",", "2", ",", "3", ",", "8", ",", "2", ",", "2", ",", "2", ",", "2",
+     ",", "2", ",", "33", ",", "49", ",", "8", ",", "10", ",", "2", ",", "2", 
+    ",", "7", ",", "2", ",", "7", ",", "4", ",", "3", ",", "2", ",", "7", ",",
+     "17", ",", "19", ",", "2", ",", "2", ",", "2", ",", "4", ",", "2", ",", 
+    "2", ",", "11", ",", "7", ",", "6", ",", "68", ",", "2", ",", "46", ",", 
+    "42", ",", "4", ",", "2", ",", "4", ",", "7", ",", "2", ",", "2", ",", 
+    "17", ",", "3", ",", "4", ",", "4", ",", "2", ",", "16", ",", "4", ",", 
+    "2", ",", "8", ",", "10", ",", "11", ",", "51", ",", "20", ",", "2", ",", 
+    "10", ",", "6", ",", "5", ",", "10", ",", "2", ",", "2", ",", "2", ",", 
+    "4", ",", "8", ",", "2", ",", "4", ",", "6", ",", "7", ",", "3", ",", "4",
+     ",", "64", ",", "2", ",", "8", ",", "20", ",", "2", ",", "2", ",", "16", 
+    ",", "4", ",", "2", ",", "94", ",", "4", ",", "2", ",", "2", ",", "4", 
+    ",", "19", ",", "8", ",", "18", ",", "2", ",", "5", ",", "2", ",", "52", 
+    ",", "9", ",", "2", ",", "2", ",", "2", ",", "2", ",", "23", ",", "10", 
+    ",", "149", ",", "2", ",", "10", ",", "112", ",", "3", ",", "4", ",", "2",
+     ",", "8", ",", "12", ",", "3", ",", "2", ",", "55", ",", "4", ",", "32", 
+    ",", "24", ",", "4", ",", "2", ",", "7", ",", "2", ",", "2", ",", "17", 
+    ",", "11", ",", "2", ",", "8", ",", "9", ",", "2", ",", "88", ",", "4", 
+    ",", "18", ",", "73", ",", "2", ",", "5", ",", "13", ",", "159", ",", "2",
+     ",", "11", ",", "2", ",", "4", ",", "16", ",", "2", ",", "2", ",", "7", 
+    ",", "3", ",", "2", ",", "5", ",", "26", ",", "4", ",", "4", ",", "2", 
+    ",", "2", ",", "2", ",", "4", ",", "4", ",", "54", ",", "3", ",", "3", 
+    ",", "32", ",", "4", ",", "2", ",", "4", ",", "5", ",", "4", ",", "2", 
+    ",", "18", ",", "36", ",", "4", ",", "4", ",", "2", ",", "46", ",", "7", 
+    ",", "3", ",", "46", ",", "3", ",", "2", ",", "13", ",", "5", ",", "2", 
+    ",", "4", ",", "2", ",", "2", ",", "5", ",", "2", ",", "2", ",", "9", ",",
+     "29", ",", "18", ",", "4", ",", "6", ",", "2", ",", "20", ",", "2", ",", 
+    "2", ",", "2", ",", "2", ",", "2", ",", "48", ",", "2", ",", "67", ",", 
+    "14", ",", "2", ",", "2", ",", "2", ",", "4", ",", "4", ",", "2", ",", 
+    "93", ",", "3", ",", "28", ",", "2", ",", "2", ",", "2", ",", "5", ",", 
+    "17", ",", "16", ",", "22", ",", "3", ",", "2", ",", "2", ",", "17", ",", 
+    "8", ",", "2", ",", "5", ",", "2", ",", "11", ",", "2", ",", "4", ",", 
+    "8", ",", "10", ",", "16", ",", "2", ",", "2", ",", "7", ",", "10", ",", 
+    "36", ",", "5", ",", "2", ",", "2", ",", "19", ",", "7", ",", "2", ",", 
+    "48", ",", "9", ",", "6", ",", "57", ",", "4", ",", "2", ",", "2", ",", 
+    "4", ",", "6", ",", "7", ",", "2", ",", "2", ",", "4", ",", "2", ",", "3",
+     ",", "37", ",", "3", ",", "29", ",", "46", ",", "2", ",", "2", ",", "96",
+     ",", "6", ",", "7", ",", "2", ",", "2", ",", "3", ",", "4", ",", "6", 
+    ",", "2", ",", "10", ",", "2", ",", "2", ",", "8", ",", "10", ",", "8", 
+    ",", "2", ",", "8", ",", "97", ",", "25", ",", "14", ",", "2", ",", "116",
+     ",", "6", ",", "8", ",", "34", ",", "4", ",", "2", ",", "59", ",", "4", 
+    ",", "2", ",", "26", ",", "2", ",", "4", ",", "2", ",", "2", ",", "9", 
+    ",", "20", ",", "6", ",", "2", ",", "5", ",", "2", ",", "9", ",", "27", 
+    ",", "2", ",", "2", ",", "2", ",", "12", ",", "11", ",", "20", ",", "8", 
+    ",", "2", ",", "2", ",", "4", ",", "2", ",", "10", ",", "4", ",", "13", 
+    ",", "26", ",", "10", ",", "2", ",", "4", ",", "4", ",", "4", ",", "43", 
+    ",", "3", ",", "2", ",", "4", ",", "2", ",", "3", ",", "8", ",", "4", ",",
+     "12", ",", "8", ",", "2", ",", "15", ",", "2", ",", "6", ",", "60", ",", 
+    "13", ",", "2", ",", "2", ",", "7", ",", "2", ",", "3", ",", "2", ",", 
+    "2", ",", "2", ",", "101", ",", "2", ",", "25", ",", "41", ",", "15", ",",
+     "2", ",", "29", ",", "2", ",", "2", ",", "4", ",", "2", ",", "31", ",", 
+    "2", ",", "4", ",", "6", ",", "16", ",", "6", ",", "2", ",", "4", ",", 
+    "2", ",", "4", ",", "28", ",", "10", ",", "2", ",", "2", ",", "21", ",", 
+    "2", ",", "7", ",", "11", ",", "2", ",", "12", ",", "3", ",", "5", ",", 
+    "10", ",", "8", ",", "4", ",", "10", ",", "10", ",", "2", ",", "35", ",", 
+    "2", ",", "4", ",", "4", ",", "5", ",", "2", ",", "67", ",", "36", ",", 
+    "16", ",", "5", ",", "2", ",", "2", ",", "13", ",", "17", ",", "2", ",", 
+    "2", ",", "2", ",", "4", ",", "4", ",", "2", ",", "2", ",", "9", ",", "2",
+     ",", "7", ",", "7", ",", "32", ",", "6", ",", "5", ",", "4", ",", "20", 
+    ",", "7", ",", "2", ",", "2", ",", "63", ",", "2", ",", "15", ",", "4", 
+    ",", "25", ",", "2", ",", "40", ",", "3", ",", "12", ",", "4", ",", "10", 
+    ",", "2", ",", "2", ",", "2", ",", "2", ",", "4", ",", "5", ",", "5", ",",
+     "38", ",", "5", ",", "2", ",", "13", ",", "2", ",", "10", ",", "13", ",",
+     "2", ",", "2", ",", "19", ",", "2", ",", "3", ",", "12", ",", "2", ",", 
+    "2", ",", "8", ",", "4", ",", "2", ",", "2", ",", "4", ",", "2", ",", 
+    "10", ",", "7", ",", "96", ",", "2", ",", "4", ",", "5", ",", "7", ",", 
+    "2", ",", "2", ",", "36", ",", "4", ",", "2", ",", "11", ",", "6", ",", 
+    "2", ",", "10", ",", "4", ",", "2", ",", "10", ",", "162", ",", "4", ",", 
+    "13", ",", "10", ",", "17", ",", "9", ",", "2", ",", "2", ",", "2", ",", 
+    "7", ",", "7", ",", "25", ",", "4", ",", "2", ",", "4", ",", "2", ",", 
+    "2", ",", "4", ",", "4", ",", "5", ",", "16", ",", "4", ",", "2", ",", 
+    "4", ",", "11", ",", "2", ",", "30", ",", "36", ",", "8", ",", "4", ",", 
+    "2", ",", "2", ",", "2", ",", "10", ",", "3", ",", "14", ",", "2", ",", 
+    "2", ",", "4", ",", "4", ",", "4", ",", "4", ",", "8", ",", "2", ",", "2",
+     ",", "2", ",", "2", ",", "20", ",", "4", ",", "8", ",", "4", ",", "3", 
+    ",", "2", ",", "10", ",", "2", ",", "16", ",", "11", ",", "4", ",", "50", 
+    ",", "49", ",", "29", ",", "2", ",", "2", ",", "4", ",", "6", ",", "67", 
+    ",", "4", ",", "6", ",", "39", ",", "4", ",", "18", ",", "4", ",", "29", 
+    ",", "2", ",", "2", ",", "2", ",", "2", ",", "4", ",", "4", ",", "3", ",",
+     "4", ",", "4", ",", "4", ",", "19", ",", "15", ",", "12", ",", "2", ",", 
+    "3", ",", "2", ",", "10", ",", "2", ",", "31", ",", "113", ",", "25", ",",
+     "2", ",", "8", ",", "47", ",", "2", ",", "33", ",", "2", ",", "4", ",", 
+    "4", ",", "3", ",", "2", ",", "23", ",", "12", ",", "3", ",", "10", ",", 
+    "4", ",", "2", ",", "23", ",", "2", ",", "3", ",", "4", ",", "316", ",", 
+    "6", ",", "8", ",", "23", ",", "4", ",", "16", ",", "16", ",", "2", ",", 
+    "2", ",", "58", ",", "2", ",", "23", ",", "3", ",", "2", ",", "5", ",", 
+    "4", ",", "50", ",", "4", ",", "2", ",", "6", ",", "14", ",", "69", ",", 
+    "3", ",", "166", ",", "4", ",", "2", ",", "27", ",", "7", ",", "2", ",", 
+    "10", ",", "2", ",", "2", ",", "4", ",", "10", ",", "2", ",", "4", ",", 
+    "2", ",", "4", ",", "5", ",", "3", ",", "5", ",", "8", ",", "4", ",", "2",
+     ",", "2", ",", "12", ",", "2", ",", "34", ",", "2", ",", "2", ",", "2", 
+    ",", "11", ",", "2", ",", "4", ",", "15", ",", "2", ",", "36", ",", "4", 
+    ",", "2", ",", "2", ",", "2", ",", "176", ",", "13", ",", "2", ",", "2", 
+    ",", "10", ",", "11", ",", "3", ",", "71", ",", "2", ",", "22", ",", "31",
+     ",", "4", ",", "7", ",", "7", ",", "4", ",", "4", ",", "73", ",", "2", 
+    ",", "2", ",", "2", ",", "6", ",", "10", ",", "4", ",", "2", ",", "3", 
+    ",", "16", ",", "2", ",", "2", ",", "24", ",", "3", ",", "6", ",", "2", 
+    ",", "2", ",", "2", ",", "85", ",", "2", ",", "2", ",", "2", ",", "10", 
+    ",", "6", ",", "4", ",", "2", ",", "2", ",", "48", ",", "10", ",", "4", 
+    ",", "14", ",", "2", ",", "2", ",", "22", ",", "17", ",", "2", ",", "19", 
+    ",", "2", ",", "11", ",", "31", ",", "4", ",", "2", ",", "4", ",", "5", 
+    ",", "2", ",", "4", ",", "7", ",", "61", ",", "4", ",", "6", ",", "2", 
+    ",", "5", ",", "4", ",", "63", ",", "9", ",", "4", ",", "73", ",", "2", 
+    ",", "2", ",", "2", ",", "16", ",", "29", ",", "2", ",", "5", ",", "11", 
+    ",", "2", ",", "29", ",", "2", ",", "2", ",", "25", ",", "4", ",", "2", 
+    ",", "7", ",", "2", ",", "2", ",", "4", ",", "2", ",", "2", ",", "14", 
+    ",", "32", ",", "2", ",", "13", ",", "92", ",", "6", ",", "25", ",", "2", 
+    ",", "2", ",", "2", ",", "2", ",", "7", ",", "10", ",", "4", ",", "2", 
+    ",", "2", ",", "7", ",", "34", ",", "11", ",", "2", ",", "3", ",", "31", 
+    ",", "3", ",", "4", ",", "7", ",", "23", ",", "2", ",", "5", ",", "2", 
+    ",", "5", ",", "20", ",", "2", ",", "2", ",", "17", ",", "2", ",", "2", 
+    ",", "12", ",", "7", ",", "2", ",", "11", ",", "2", ",", "2", ",", "25", 
+    ",", "4", ",", "15", ",", "14", ",", "94", ",", "2", ",", "4", ",", "2", 
+    ",", "2", ",", "46", ",", "2", ",", "10", ",", "7", ",", "6", ",", "17", 
+    ",", "4", ",", "4", ",", "4", ",", "18", ",", "7", ",", "2", ",", "10", 
+    ",", "4", ",", "3", ",", "21", ",", "8", ",", "4", ",", "14", ",", "6", 
+    ",", "11", ",", "37", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", 
+    ",", "4", ",", "2", ",", "104", ",", "55", ",", "127", ",", "7", ",", 
+    "13", ",", "2", ",", "4", ",", "66", ",", "6", ",", "9", ",", "4", ",", 
+    "2", ",", "3", ",", "23", ",", "4", ",", "16", ",", "8", ",", "2", ",", 
+    "2", ",", "52", ",", "77", ",", "32", ",", "11", ",", "3", ",", "2", ",", 
+    "13", ",", "2", ",", "2", ",", "30", ",", "78", ",", "2", ",", "16", ",", 
+    "2", ",", "4", ",", "7", ",", "74", ",", "6", ",", "2", ",", "2", ",", 
+    "6", ",", "58", ",", "6", ",", "3", ",", "4", ",", "3", ",", "2", ",", 
+    "4", ",", "2", ",", "2", ",", "11", ",", "23", ",", "2", ",", "20", ",", 
+    "2", ",", "2", ",", "5", ",", "2", ",", "3", ",", "31", ",", "10", ",", 
+    "2", ",", "2", ",", "5", ",", "2", ",", "11", ",", "2", ",", "2", ",", 
+    "196", ",", "4", ",", "3", ",", "7", ",", "6", ",", "2", ",", "5", ",", 
+    "3", ",", "6", ",", "66", ",", "4", ",", "8", ",", "4", ",", "4", ",", 
+    "79", ",", "10", ",", "4", ",", "2", ",", "79", ",", "2", ",", "2", ",", 
+    "19", ",", "2", ",", "2", ",", "12", ",", "3", ",", "29", ",", "4", ",", 
+    "16", ",", "6", ",", "4", ",", "5", ",", "3", ",", "7", ",", "2", ",", 
+    "2", ",", "5", ",", "2", ",", "2", ",", "57", ",", "2", ",", "5", ",", 
+    "5", ",", "3", ",", "2", ",", "10", ",", "4", ",", "2", ",", "4", ",", 
+    "6", ",", "12", ",", "21", ",", "10", ",", "2", ",", "76", ",", "2", ",", 
+    "18", ",", "4", ",", "4", ",", "11", ",", "23", ",", "2", ",", "2", ",", 
+    "7", ",", "2", ",", "2", ",", "8", ",", "4", ",", "2", ",", "12", ",", 
+    "2", ",", "2", ",", "5", ",", "45", ",", "18", ",", "7", ",", "7", ",", 
+    "11", ",", "10", ",", "6", ",", "114", ",", "11", ",", "3", ",", "2", ",",
+     "9", ",", "4", ",", "2", ",", "29", ",", "8", ",", "2", ",", "2", ",", 
+    "4", ",", "2", ",", "7", ",", "12", ",", "24", ",", "5", ",", "4", ",", 
+    "2", ",", "8", ",", "3", ",", "2", ",", "4", ",", "4", ",", "82", ",", 
+    "4", ",", "3", ",", "4", ",", "176", ",", "12", ",", "2", ",", "52", ",", 
+    "10", ",", "2", ",", "137", ",", "2", ",", "3", ",", "8", ",", "2", ",", 
+    "2", ",", "13", ",", "2", ",", "2", ",", "32", ",", "2", ",", "3", ",", 
+    "8", ",", "2", ",", "10", ",", "8", ",", "138", ",", "2", ",", "29", ",", 
+    "4", ",", "2", ",", "7", ",", "4", ",", "9", ",", "10", ",", "28", ",", 
+    "7", ",", "4", ",", "2", ",", "2", ",", "28", ",", "3", ",", "2", ",", 
+    "4", ",", "7", ",", "4", ",", "17", ",", "60", ",", "2", ",", "4", ",", 
+    "9", ",", "13", ",", "105", ",", "10", ",", "10", ",", "12", ",", "4", 
+    ",", "3", ",", "13", ",", "2", ",", "7", ",", "4", ",", "2", ",", "2", 
+    ",", "5", ",", "84", ",", "2", ",", "31", ",", "13", ",", "2", ",", "106",
+     ",", "2", ",", "2", ",", "10", ",", "2", ",", "13", ",", "5", ",", "2", 
+    ",", "29", ",", "20", ",", "2", ",", "2", ",", "11", ",", "13", ",", "2", 
+    ",", "8", ",", "4", ",", "2", ",", "11", ",", "4", ",", "29", ",", "21", 
+    ",", "3", ",", "2", ",", "10", ",", "2", ",", "15", ",", "7", ",", "2", 
+    ",", "6", ",", "4", ",", "3", ",", "2", ",", "11", ",", "4", ",", "117", 
+    ",", "2", ",", "10", ",", "2", ",", "20", ",", "6", ",", "2", ",", "17", 
+    ",", "2", ",", "2", ",", "16", ",", "10", ",", "62", ",", "14", ",", "52",
+     ",", "37", ",", "4", ",", "4", ",", "5", ",", "4", ",", "2", ",", "3", 
+    ",", "29", ",", "3", ",", "2", ",", "34", ",", "25", ",", "2", ",", "7", 
+    ",", "6", ",", "144", ",", "2", ",", "31", ",", "5", ",", "10", ",", "2", 
+    ",", "3", ",", "2", ",", "10", ",", "2", ",", "29", ",", "2", ",", "2", 
+    ",", "2", ",", "2", ",", "2", ",", "16", ",", "8", ",", "2", ",", "29", 
+    ",", "2", ",", "29", ",", "4", ",", "50", ",", "2", ",", "131", ",", "2", 
+    ",", "2", ",", "22", ",", "4", ",", "2", ",", "11", ",", "16", ",", "2", 
+    ",", "7", ",", "2", ",", "2", ",", "2", ",", "23", ",", "7", ",", "8", 
+    ",", "4", ",", "3", ",", "4", ",", "4", ",", "63", ",", "10", ",", "10", 
+    ",", "2", ",", "2", ",", "2", ",", "2", ",", "4", ",", "2", ",", "18", 
+    ",", "4", ",", "2", ",", "2", ",", "13", ",", "21", ",", "17", ",", "2", 
+    ",", "2", ",", "2", ",", "4", ",", "12", ",", "30", ",", "23", ",", "8", 
+    ",", "2", ",", "8", ",", "2", ",", "2", ",", "35", ",", "4", ",", "2", 
+    ",", "15", ",", "4", ",", "2", ",", "2", ",", "89", ",", "2", ",", "4", 
+    ",", "2", ",", "2", ",", "25", ",", "4", ",", "8", ",", "19", ",", "6", 
+    ",", "27", ",", "14", ",", "2", ",", "15", ",", "43", ",", "22", ",", "8",
+     ",", "2", ",", "3", ",", "2", ",", "4", ",", "5", ",", "4", ",", "38", 
+    ",", "4", ",", "7", ",", "4", ",", "3", ",", "82", ",", "30", ",", "97", 
+    ",", "2", ",", "20", ",", "2", ",", "3", ",", "27", ",", "4", ",", "3", 
+    ",", "4", ",", "2", ",", "6", ",", "2", ",", "4", ",", "2", ",", "4", ",",
+     "6", ",", "2", ",", "7", ",", "2", ",", "10", ",", "8", ",", "8", ",", 
+    "2", ",", "4", ",", "2", ",", "4", ",", "11", ",", "4", ",", "2", ",", 
+    "2", ",", "6", ",", "2", ",", "365", ",", "8", ",", "7", ",", "2", ",", 
+    "4", ",", "13", ",", "25", ",", "9", ",", "36", ",", "14", ",", "39", ",",
+     "4", ",", "4", ",", "4", ",", "2", ",", "11", ",", "2", ",", "8", ",", 
+    "23", ",", "3", ",", "2", ",", "2", ",", "9", ",", "4", ",", "13", ",", 
+    "123", ",", "2", ",", "2", ",", "2", ",", "8", ",", "10", ",", "2", ",", 
+    "50", ",", "9", ",", "4", ",", "14", ",", "47", ",", "2", ",", "2", ",", 
+    "5", ",", "2", ",", "2", ",", "4", ",", "6", ",", "3", ",", "2", ",", "2",
+     ",", "11", ",", "155", ",", "110", ",", "2", ",", "2", ",", "2", ",", 
+    "11", ",", "4", ",", "13", ",", "4", ",", "11", ",", "11", ",", "2", ",", 
+    "2", ",", "4", ",", "2", ",", "8", ",", "4", ",", "2", ",", "14", ",", 
+    "4", ",", "2", ",", "2", ",", "3", ",", "5", ",", "7", ",", "2", ",", "2",
+     ",", "67", ",", "10", ",", "17", ",", "9", ",", "2", ",", "8", ",", "4", 
+    ",", "6", ",", "4", ",", "10", ",", "29", ",", "5", ",", "14", ",", "282",
+     ",", "2", ",", "31", ",", "10", ",", "37", ",", "19", ",", "8", ",", 
+    "74", ",", "4", ",", "2", ",", "32", ",", "4", ",", "4", ",", "11", ",", 
+    "4", ",", "2", ",", "10", ",", "29", ",", "4", ",", "2", ",", "8", ",", 
+    "10", ",", "9", ",", "5", ",", "3", ",", "19", ",", "4", ",", "2", ",", 
+    "3", ",", "2", ",", "16", ",", "2", ",", "32", ",", "48", ",", "8", ",", 
+    "16", ",", "13", ",", "2", ",", "7", ",", "5", ",", "4", ",", "96", ",", 
+    "2", ",", "60", ",", "7", ",", "6", ",", "2", ",", "8", ",", "8", ",", 
+    "38", ",", "16", ",", "4", ",", "2", ",", "11", ",", "4", ",", "3", ",", 
+    "13", ",", "2", ",", "2", ",", "5", ",", "3", ",", "2", ",", "4", ",", 
+    "2", ",", "2", ",", "16", ",", "9", ",", "121", ",", "4", ",", "4", ",", 
+    "2", ",", "2", ",", "4", ",", "4", ",", "23", ",", "2", ",", "2", ",", 
+    "11", ",", "2", ",", "2", ",", "8", ",", "22", ",", "7", ",", "13", ",", 
+    "66", ",", "6", ",", "10", ",", "2", ",", "194", ",", "2", ",", "6", ",", 
+    "5", ",", "16", ",", "10", ",", "6", ",", "162", ",", "5", ",", "4", ",", 
+    "10", ",", "6", ",", "2", ",", "39", ",", "4", ",", "14", ",", "82", ",", 
+    "2", ",", "2", ",", "4", ",", "2", ",", "17", ",", "42", ",", "2", ",", 
+    "9", ",", "5", ",", "4", ",", "4", ",", "70", ",", "2", ",", "7", ",", 
+    "2", ",", "32", ",", "4", ",", "4", ",", "3", ",", "2", ",", "23", ",", 
+    "2", ",", "2", ",", "4", ",", "4", ",", "71", ",", "30", ",", "5", ",", 
+    "2", ",", "85", ",", "11", ",", "4", ",", "4", ",", "2", ",", "2", ",", 
+    "4", ",", "2", ",", "6", ",", "4", ",", "4", ",", "2", ",", "7", ",", "4",
+     ",", "2", ",", "2", ",", "2", ",", "3", ",", "26", ",", "2", ",", "3", 
+    ",", "100", ",", "37", ",", "2", ",", "6", ",", "10", ",", "4", ",", "13",
+     ",", "4", ",", "2", ",", "25", ",", "100", ",", "2", ",", "5", ",", "10",
+     ",", "83", ",", "8", ",", "4", ",", "9", ",", "2", ",", "4", ",", "2", 
+    ",", "4", ",", "3", ",", "2", ",", "53", ",", "2", ",", "2", ",", "7", 
+    ",", "10", ",", "2", ",", "16", ",", "11", ",", "4", ",", "20", ",", "2", 
+    ",", "6", ",", "2", ",", "2", ",", "10", ",", "30", ",", "7", ",", "4", 
+    ",", "2", ",", "9", ",", "2", ",", "10", ",", "17", ",", "173", ",", "20",
+     ",", "5", ",", "11", ",", "169", ",", "25", ",", "2", ",", "4", ",", "2",
+     ",", "2", ",", "4", ",", "4", ",", "2", ",", "16", ",", "4", ",", "2", 
+    ",", "25", ",", "2", ",", "51", ",", "64", ",", "4", ",", "2", ",", "19", 
+    ",", "2", ",", "11", ",", "47", ",", "4", ",", "9", ",", "12", ",", "2", 
+    ",", "2", ",", "40", ",", "2", ",", "18", ",", "4", ",", "3", ",", "2", 
+    ",", "23", ",", "2", ",", "2", ",", "8", ",", "35", ",", "2", ",", "25", 
+    ",", "10", ",", "2", ",", "4", ",", "15", ",", "7", ",", "2", ",", "2", 
+    ",", "2", ",", "257", ",", "2", ",", "6", ",", "2", ",", "28", ",", "2", 
+    ",", "8", ",", "19", ",", "2", ",", "4", ",", "5", ",", "2", ",", "10", 
+    ",", "4", ",", "2", ",", "4", ",", "24", ",", "7", ",", "7", ",", "2", 
+    ",", "5", ",", "21", ",", "2", ",", "15", ",", "10", ",", "4", ",", "16", 
+    ",", "2", ",", "40", ",", "2", ",", "11", ",", "6", ",", "3", ",", "63", 
+    ",", "7", ",", "32", ",", "8", ",", "29", ",", "2", ",", "2", ",", "4", 
+    ",", "6", ",", "37", ",", "2", ",", "31", ",", "2", ",", "4", ",", "18", 
+    ",", "347", ",", "2", ",", "2", ",", "38", ",", "6", ",", "20", ",", "7", 
+    ",", "2", ",", "2", ",", "10", ",", "4", ",", "2", ",", "37", ",", "16", 
+    ",", "2", ",", "25", ",", "2", ",", "8", ",", "12", ",", "4", ",", "7", 
+    ",", "4", ",", "4", ",", "2", ",", "4", ",", "4", ",", "7", ",", "5", ",",
+     "17", ",", "4", ",", "7", ",", "85", ",", "2", ",", "8", ",", "2", ",", 
+    "6", ",", "10", ",", "3", ",", "10", ",", "4", ",", "2", ",", "2", ",", 
+    "13", ",", "2", ",", "2", ",", "32", ",", "2", ",", "2", ",", "9", ",", 
+    "7", ",", "5", ",", "2", ",", "4", ",", "2", ",", "7", ",", "4", ",", "3",
+     ",", "10", ",", "2", ",", "15", ",", "4", ",", "10", ",", "4", ",", "12",
+     ",", "2", ",", "2", ",", "11", ",", "11", ",", "2", ",", "2", ",", "2", 
+    ",", "3", ",", "21", ",", "36", ",", "2", ",", "2", ",", "45", ",", "2", 
+    ",", "8", ",", "4", ",", "8", ",", "14", ",", "2", ",", "12", ",", "25", 
+    ",", "2", ",", "10", ",", "24", ",", "54", ",", "2", ",", "4", ",", "2", 
+    ",", "6", ",", "16", ",", "3", ",", "2", ",", "7", ",", "16", ",", "2", 
+    ",", "2", ",", "4", ",", "3", ",", "7", ",", "2", ",", "2", ",", "15", 
+    ",", "2", ",", "2", ",", "108", ",", "2", ",", "2", ",", "10", ",", "7", 
+    ",", "17", ",", "7", ",", "4", ",", "3", ",", "2", ",", "2", ",", "2", 
+    ",", "7", ",", "2", ",", "91", ",", "8", ",", "2", ",", "2", ",", "181", 
+    ",", "6", ",", "22", ",", "11", ",", "4", ",", "8", ",", "4", ",", "11", 
+    ",", "71", ",", "5", ",", "4", ",", "4", ",", "9", ",", "10", ",", "2", 
+    ",", "2", ",", "16", ",", "18", ",", "4", ",", "4", ",", "5", ",", "2", 
+    ",", "2", ",", "47", ",", "15", ",", "3", ",", "14", ",", "46", ",", "38",
+     ",", "2", ",", "410", ",", "8", ",", "16", ",", "2", ",", "9", ",", "2", 
+    ",", "28", ",", "6", ",", "2", ",", "79", ",", "2", ",", "2", ",", "8", 
+    ",", "2", ",", "2", ",", "74", ",", "6", ",", "165", ",", "4", ",", "2", 
+    ",", "2", ",", "2", ",", "79", ",", "2", ",", "82", ",", "5", ",", "23", 
+    ",", "31", ",", "4", ",", "5", ",", "7", ",", "6", ",", "2", ",", "5", 
+    ",", "19", ",", "2", ",", "74", ",", "56", ",", "8", ",", "20", ",", "4", 
+    ",", "5", ",", "4", ",", "8", ",", "2", ",", "10", ",", "2", ",", "2", 
+    ",", "111", ",", "6", ",", "2", ",", "14", ",", "2", ",", "2", ",", "4", 
+    ",", "2", ",", "2", ",", "80", ",", "2", ",", "2", ",", "10", ",", "43", 
+    ",", "4", ",", "38", ",", "3", ",", "164", ",", "13", ",", "2", ",", "3", 
+    ",", "2", ",", "9", ",", "10", ",", "9", ",", "4", ",", "2", ",", "38", 
+    ",", "2", ",", "2", ",", "11", ",", "19", ",", "8", ",", "4", ",", "22", 
+    ",", "41", ",", "13", ",", "41", ",", "2", ",", "51", ",", "7", ",", "2", 
+    ",", "4", ",", "4", ",", "17", ",", "2", ",", "7", ",", "2", ",", "4", 
+    ",", "2", ",", "18", ",", "11", ",", "4", ",", "4", ",", "65", ",", "2", 
+    ",", "2", ",", "2", ",", "4", ",", "2", ",", "73", ",", "2", ",", "7", 
+    ",", "2", ",", "2", ",", "16", ",", "7", ",", "2", ",", "114", ",", "38", 
+    ",", "4", ",", "3", ",", "4", ",", "4", ",", "2", ",", "2", ",", "4", ",",
+     "2", ",", "20", ",", "6", ",", "2", ",", "4", ",", "2", ",", "4", ",", 
+    "8", ",", "5", ",", "2", ",", "5", ",", "19", ",", "132", ",", "19", ",", 
+    "4", ",", "2", ",", "33", ",", "2", ",", "2", ",", "4", ",", "2", ",", 
+    "2", ",", "9", ",", "23", ",", "3", ",", "4", ",", "2", ",", "17", ",", 
+    "13", ",", "2", ",", "15", ",", "35", ",", "11", ",", "9", ",", "2", ",", 
+    "119", ",", "6", ",", "9", ",", "2", ",", "2", ",", "27", ",", "2", ",", 
+    "6", ",", "10", ",", "3", ",", "7", ",", "5", ",", "32", ",", "2", ",", 
+    "19", ",", "2", ",", "2", ",", "34", ",", "4", ",", "26", ",", "7", ",", 
+    "2", ",", "4", ",", "4", ",", "28", ",", "2", ",", "29", ",", "11", ",", 
+    "2", ",", "2", ",", "4", ",", "29", ",", "8", ",", "2", ",", "2", ",", 
+    "5", ",", "2", ",", "53", ",", "50", ",", "2", ",", "2", ",", "2", ",", 
+    "32", ",", "7", ",", "291", ",", "4", ",", "2", ",", "16", ",", "2", ",", 
+    "9", ",", "4", ",", "8", ",", "4", ",", "4", ",", "14", ",", "2", ",", 
+    "19", ",", "17", ",", "2", ",", "4", ",", "8", ",", "3", ",", "4", ",", 
+    "2", ",", "15", ",", "8", ",", "2", ",", "2", ",", "4", ",", "10", ",", 
+    "2", ",", "2", ",", "12", ",", "2", ",", "235", ",", "2", ",", "2", ",", 
+    "16", ",", "3", ",", "3", ",", "4", ",", "6", ",", "2", ",", "11", ",", 
+    "4", ",", "2", ",", "118", ",", "2", ",", "2", ",", "5", ",", "2", ",", 
+    "35", ",", "8", ",", "22", ",", "2", ",", "39", ",", "4", ",", "89", ",", 
+    "4", ",", "2", ",", "8", ",", "13", ",", "6", ",", "2", ",", "13", ",", 
+    "19", ",", "2", ",", "14", ",", "5", ",", "2", ",", "10", ",", "47", ",", 
+    "11", ",", "20", ",", "4", ",", "2", ",", "10", ",", "2", ",", "11", ",", 
+    "17", ",", "3", ",", "8", ",", "198", ",", "8", ",", "2", ",", "2", ",", 
+    "6", ",", "2", ",", "22", ",", "3", ",", "3", ",", "4", ",", "7", ",", 
+    "4", ",", "2", ",", "46", ",", "16", ",", "106", ",", "4", ",", "2", ",", 
+    "32", ",", "6", ",", "36", ",", "29", ",", "32", ",", "14", ",", "26", 
+    ",", "6", ",", "21", ",", "109", ",", "4", ",", "257", ",", "18", ",", 
+    "2", ",", "2", ",", "2", ",", "4", ",", "2", ",", "4", ",", "10", ",", 
+    "2", ",", "40", ",", "2", ",", "6", ",", "7", ",", "4", ",", "2", ",", 
+    "12", ",", "2", ",", "2", ",", "32", ",", "6", ",", "2", ",", "2", ",", 
+    "25", ",", "2", ",", "7", ",", "3", ",", "3", ",", "2", ",", "10", ",", 
+    "4", ",", "16", ",", "4", ",", "2", ",", "10", ",", "173", ",", "17", ",",
+     "4", ",", "4", ",", "5", ",", "11", ",", "2", ",", "2", ",", "4", ",", 
+    "74", ",", "122", ",", "101", ",", "23", ",", "2", ",", "20", ",", "2", 
+    ",", "52", ",", "4", ",", "10", ",", "3", ",", "4", ",", "29", ",", "2", 
+    ",", "8", ",", "2", ",", "6", ",", "27", ",", "4", ",", "3", ",", "14", 
+    ",", "7", ",", "16", ",", "7", ",", "85", ",", "2", ",", "2", ",", "2", 
+    ",", "2", ",", "10", ",", "31", ",", "8", ",", "16", ",", "3", ",", "105",
+     ",", "4", ",", "3", ",", "2", ",", "43", ",", "4", ",", "2", ",", "7", 
+    ",", "2", ",", "2", ",", "7", ",", "13", ",", "3", ",", "205", ",", "3", 
+    ",", "2", ",", "5", ",", "4", ",", "18", ",", "4", ",", "11", ",", "2", 
+    ",", "4", ",", "6", ",", "2", ",", "206", ",", "4", ",", "2", ",", "8", 
+    ",", "4", ",", "2", ",", "10", ",", "57", ",", "6", ",", "2", ",", "5", 
+    ",", "29", ",", "13", ",", "2", ",", "30", ",", "5", ",", "2", ",", "2", 
+    ",", "25", ",", "12", ",", "2", ",", "4", ",", "2", ",", "34", ",", "89", 
+    ",", "9", ",", "2", ",", "2", ",", "13", ",", "2", ",", "34", ",", "2", 
+    ",", "2", ",", "125", ",", "2", ",", "5", ",", "4", ",", "42", ",", "16", 
+    ",", "2", ",", "2", ",", "3", ",", "32", ",", "6", ",", "2", ",", "13", 
+    ",", "2", ",", "66", ",", "23", ",", "8", ",", "2", ",", "5", ",", "12", 
+    ",", "2", ",", "13", ",", "2", ",", "2", ",", "4", ",", "2", ",", "4", 
+    ",", "4", ",", "4", ",", "3", ",", "126", ",", "2", ",", "2", ",", "4", 
+    ",", "2", ",", "32", ",", "2", ",", "11", ",", "3", ",", "7", ",", "2", 
+    ",", "2", ",", "8", ",", "42", ",", "3", ",", "12", ",", "3", ",", "2", 
+    ",", "4", ",", "2", ",", "2", ",", "4", ",", "2", ",", "2", ",", "39", 
+    ",", "2", ",", "8", ",", "2", ",", "8", ",", "2", ",", "16", ",", "2", 
+    ",", "2", ",", "8", ",", "10", ",", "106", ",", "10", ",", "17", ",", "2",
+     ",", "7", ",", "2", ",", "13", ",", "317", ",", "2", ",", "6", ",", "83",
+     ",", "4", ",", "12", ",", "13", ",", "10", ",", "11", ",", "39", ",", 
+    "4", ",", "2", ",", "2", ",", "17", ",", "3", ",", "7", ",", "7", ",", 
+    "26", ",", "31", ",", "2", ",", "2", ",", "11", ",", "4", ",", "6", ",", 
+    "4", ",", "28", ",", "2", ",", "10", ",", "20", ",", "2", ",", "5", ",", 
+    "4", ",", "26", ",", "23", ",", "2", ",", "8", ",", "10", ",", "2", ",", 
+    "2", ",", "37", ",", "4", ",", "2", ",", "46", ",", "6", ",", "2", ",", 
+    "4", ",", "10", ",", "3", ",", "77", ",", "4", ",", "2", ",", "10", ",", 
+    "2", ",", "2", ",", "4", ",", "13", ",", "74", ",", "7", ",", "2", ",", 
+    "3", ",", "13", ",", "2", ",", "2", ",", "14", ",", "4", ",", "2", ",", 
+    "29", ",", "26", ",", "56", ",", "70", ",", "3", ",", "20", ",", "2", ",",
+     "2", ",", "15", ",", "59", ",", "11", ",", "2", ",", "16", ",", "3", ",",
+     "2", ",", "10", ",", "2", ",", "6", ",", "32", ",", "7", ",", "2", ",", 
+    "10", ",", "6", ",", "3", ",", "10", ",", "4", ",", "6", ",", "65", ",", 
+    "4", ",", "2", ",", "2", ",", "2", ",", "12", ",", "55", ",", "8", ",", 
+    "44", ",", "5", ",", "2", ",", "2", ",", "4", ",", "2", ",", "5", ",", 
+    "4", ",", "58", ",", "7", ",", "19", ",", "19", ",", "6", ",", "14", ",", 
+    "10", ",", "2", ",", "10", ",", "79", ",", "2", ",", "4", ",", "2", ",", 
+    "2", ",", "44", ",", "10", ",", "2", ",", "11", ",", "10", ",", "32", ",",
+     "7", ",", "3", ",", "5", ",", "11", ",", "12", ",", "19", ",", "10", ",",
+     "4", ",", "2", ",", "16", ",", "2", ",", "16", ",", "7", ",", "10", ",", 
+    "11", ",", "20", ",", "5", ",", "2", ",", "11", ",", "44", ",", "4", ",", 
+    "2", ",", "2", ",", "2", ",", "25", ",", "44", ",", "2", ",", "4", ",", 
+    "7", ",", "4", ",", "4", ",", "2", ",", "16", ",", "5", ",", "2", ",", 
+    "17", ",", "4", ",", "5", ",", "12", ",", "133", ",", "2", ",", "8", ",", 
+    "19", ",", "2", ",", "12", ",", "10", ",", "4", ",", "2", ",", "25", ",", 
+    "12", ",", "2", ",", "89", ",", "2", ",", "5", ",", "8", ",", "2", ",", 
+    "2", ",", "2", ",", "5", ",", "2", ",", "25", ",", "2", ",", "6", ",", 
+    "40", ",", "37", ",", "2", ",", "26", ",", "15", ",", "2", ",", "20", ",",
+     "2", ",", "2", ",", "7", ",", "2", ",", "36", ",", "2", ",", "4", ",", 
+    "2", ",", "7", ",", "2", ",", "3", ",", "32", ",", "35", ",", "19", ",", 
+    "23", ",", "4", ",", "2", ",", "5", ",", "4", ",", "18", ",", "7", ",", 
+    "2", ",", "2", ",", "4", ",", "4", ",", "3", ",", "4", ",", "2", ",", "6",
+     ",", "32", ",", "3", ",", "2", ",", "24", ",", "16", ",", "6", ",", "14",
+     ",", "2", ",", "2", ",", "20", ",", "6", ",", "2", ",", "8", ",", "31", 
+    ",", "32", ",", "4", ",", "20", ",", "2", ",", "13", ",", "4", ",", "2", 
+    ",", "7", ",", "30", ",", "2", ",", "169", ",", "11", ",", "3", ",", "34",
+     ",", "4", ",", "97", ",", "9", ",", "39", ",", "2", ",", "19", ",", "2", 
+    ",", "11", ",", "5", ",", "4", ",", "39", ",", "4", ",", "7", ",", "4", 
+    ",", "30", ",", "4", ",", "4", ",", "136", ",", "25", ",", "3", ",", "13",
+     ",", "45", ",", "4", ",", "16", ",", "20", ",", "2", ",", "5", ",", "28",
+     ",", "2", ",", "16", ",", "2", ",", "2", ",", "5", ",", "2", ",", "4", 
+    ",", "10", ",", "2", ",", "4", ",", "46", ",", "2", ",", "2", ",", "7", 
+    ",", "7", ",", "3", ",", "586", ",", "11", ",", "2", ",", "23", ",", "7", 
+    ",", "2", ",", "2", ",", "4", ",", "9", ",", "20", ",", "2", ",", "2", 
+    ",", "2", ",", "6", ",", "3", ",", "11", ",", "2", ",", "6", ",", "16", 
+    ",", "46", ",", "2", ",", "20", ",", "46", ",", "2", ",", "5", ",", "2", 
+    ",", "2", ",", "4", ",", "2", ",", "2", ",", "2", ",", "11", ",", "8", 
+    ",", "12", ",", "2", ",", "138", ",", "11", ",", "16", ",", "2", ",", "7",
+     ",", "9", ",", "2", ",", "14", ",", "20", ",", "6", ",", "4", ",", "2", 
+    ",", "5", ",", "70", ",", "9", ",", "15", ",", "58", ",", "5", ",", "2", 
+    ",", "4", ",", "2", ",", "2", ",", "99", ",", "2", ",", "2", ",", "2", 
+    ",", "4", ",", "6", ",", "8", ",", "8", ",", "19", ",", "10", ",", "2", 
+    ",", "19", ",", "13", ",", "4", ",", "6", ",", "2", ",", "6", ",", "2", 
+    ",", "7", ",", "47", ",", "6", ",", "54", ",", "4", ",", "2", ",", "19", 
+    ",", "3", ",", "4", ",", "2", ",", "4", ",", "4", ",", "11", ",", "2", 
+    ",", "9", ",", "68", ",", "2", ",", "5", ",", "8", ",", "2", ",", "2", 
+    ",", "2", ",", "16", ",", "140", ",", "16", ",", "4", ",", "2", ",", "13",
+     ",", "2", ",", "4", ",", "10", ",", "2", ",", "6", ",", "9", ",", "3", 
+    ",", "2", ",", "4", ",", "12", ",", "234", ",", "2", ",", "2", ",", "3", 
+    ",", "25", ",", "2", ",", "4", ",", "94", ",", "2", ",", "6", ",", "2", 
+    ",", "4", ",", "2", ",", "118", ",", "68", ",", "47", ",", "19", ",", "2",
+     ",", "5", ",", "5", ",", "11", ",", "3", ",", "16", ",", "4", ",", "2", 
+    ",", "16", ",", "4", ",", "2", ",", "11", ",", "26", ",", "19", ",", "5", 
+    ",", "2", ",", "2", ",", "4", ",", "36", ",", "2", ",", "118", ",", "4", 
+    ",", "2", ",", "9", ",", "9", ",", "2", ",", "20", ",", "2", ",", "11", 
+    ",", "142", ",", "2", ",", "2", ",", "32", ",", "2", ",", "2", ",", "22", 
+    ",", "2", ",", "3", ",", "12", ",", "4", ",", "21", ",", "7", ",", "28", 
+    ",", "39", ",", "2", ",", "18", ",", "10", ",", "10", ",", "6", ",", "2", 
+    ",", "2", ",", "4", ",", "11", ",", "27", ",", "10", ",", "2", ",", "4", 
+    ",", "4", ",", "6", ",", "44", ",", "44", ",", "2", ",", "2", ",", "11", 
+    ",", "2", ",", "4", ",", "2", ",", "8", ",", "23", ",", "3", ",", "2", 
+    ",", "52", ",", "10", ",", "48", ",", "35", ",", "2", ",", "2", ",", "19",
+     ",", "12", ",", "17", ",", "2", ",", "3", ",", "6", ",", "4", ",", "2", 
+    ",", "7", ",", "2", ",", "4", ",", "52", ",", "7", ",", "4", ",", "4", 
+    ",", "10", ",", "19", ",", "2", ",", "11", ",", "2", ",", "6", ",", "31", 
+    ",", "2", ",", "2", ",", "16", ",", "15", ",", "4", ",", "16", ",", "3", 
+    ",", "2", ",", "19", ",", "2", ",", "2", ",", "7", ",", "5", ",", "2", 
+    ",", "66", ",", "4", ",", "3", ",", "4", ",", "2", ",", "2", ",", "4", 
+    ",", "4", ",", "2", ",", "218", ",", "21", ",", "19", ",", "4", ",", "4", 
+    ",", "2", ",", "12", ",", "4", ",", "8", ",", "19", ",", "2", ",", "6", 
+    ",", "2", ",", "2", ",", "9", ",", "32", ",", "2", ",", "28", ",", "23", 
+    ",", "42", ",", "2", ",", "16", ",", "3", ",", "2", ",", "10", ",", "16", 
+    ",", "2", ",", "58", ",", "3", ",", "146", ",", "14", ",", "63", ",", "2",
+     ",", "7", ",", "3", ",", "2", ",", "9", ",", "80", ",", "12", ",", "4", 
+    ",", "4", ",", "2", ",", "5", ",", "92", ",", "4", ",", "4", ",", "49", 
+    ",", "2", ",", "8", ",", "7", ",", "3", ",", "34", ",", "2", ",", "2", 
+    ",", "2", ",", "23", ",", "17", ",", "4", ",", "2", ",", "2", ",", "2", 
+    ",", "2", ",", "7", ",", "13", ",", "8", ",", "3", ",", "9", ",", "10", 
+    ",", "3", ",", "148", ",", "11", ",", "30", ",", "4", ",", "4", ",", "3", 
+    ",", "4", ",", "2", ",", "5", ",", "43", ",", "4", ",", "90", ",", "38", 
+    ",", "5", ",", "2", ",", "4", ",", "10", ",", "2", ",", "55", ",", "35", 
+    ",", "2", ",", "37", ",", "6", ",", "8", ",", "47", ",", "28", ",", "2", 
+    ",", "12", ",", "2", ",", "2", ",", "4", ",", "6", ",", "2", ",", "13", 
+    ",", "39", ",", "2", ",", "4", ",", "6", ",", "2", ",", "40", ",", "2", 
+    ",", "6", ",", "64", ",", "2", ",", "2", ",", "5", ",", "2", ",", "2", 
+    ",", "10", ",", "2", ",", "7", ",", "23", ",", "30", ",", "2", ",", "10", 
+    ",", "13", ",", "2", ",", "16", ",", "4", ",", "2", ",", "28", ",", "2", 
+    ",", "2", ",", "50", ",", "2", ",", "16", ",", "19", ",", "11", ",", "2", 
+    ",", "20", ",", "3", ",", "2", ",", "250", ",", "2", ",", "12", ",", "25",
+     ",", "6", ",", "2", ",", "7", ",", "8", ",", "18", ",", "14", ",", "6", 
+    ",", "7", ",", "103", ",", "2", ",", "8", ",", "31", ",", "10", ",", "2", 
+    ",", "22", ",", "251", ",", "4", ",", "11", ",", "2", ",", "2", ",", "7", 
+    ",", "16", ",", "2", ",", "5", ",", "10", ",", "3", ",", "76", ",", "2", 
+    ",", "2", ",", "2", ",", "4", ",", "7", ",", "46", ",", "22", ",", "15", 
+    ",", "5", ",", "2", ",", "2", ",", "4", ",", "4", ",", "6", ",", "152", 
+    ",", "38", ",", "2", ",", "4", ",", "113", ",", "4", ",", "2", ",", "3", 
+    ",", "2", ",", "64", ",", "4", ",", "2", ",", "8", ",", "4", ",", "2", 
+    ",", "8", ",", "28", ",", "4", ",", "23", ",", "4", ",", "2", ",", "4", 
+    ",", "4", ",", "20", ",", "4", ",", "12", ",", "14", ",", "4", ",", "17", 
+    ",", "2", ",", "61", ",", "4", ",", "3", ",", "7", ",", "28", ",", "33", 
+    ",", "2", ",", "2", ",", "42", ",", "70", ",", "2", ",", "8", ",", "2", 
+    ",", "4", ",", "2", ",", "51", ",", "8", ",", "21", ",", "13", ",", "2", 
+    ",", "32", ",", "4", ",", "10", ",", "2", ",", "2", ",", "2", ",", "2", 
+    ",", "13", ",", "2", ",", "6", ",", "5", ",", "10", ",", "13", ",", "4", 
+    ",", "2", ",", "17", ",", "5", ",", "3", ",", "9", ",", "7", ",", "329", 
+    ",", "5", ",", "140", ",", "2", ",", "3", ",", "8", ",", "8", ",", "2", 
+    ",", "22", ",", "26", ",", "2", ",", "11", ",", "4", ",", "3", ",", "4", 
+    ",", "4", ",", "3", ",", "31", ",", "23", ",", "12", ",", "16", ",", "10",
+     ",", "30", ",", "10", ",", "2", ",", "4", ",", "2", ",", "4", ",", "3", 
+    ",", "23", ",", "23", ",", "24", ",", "11", ",", "3", ",", "2", ",", "8", 
+    ",", "4", ",", "3", ",", "2", ",", "25", ",", "2", ",", "7", ",", "4", 
+    ",", "2", ",", "2", ",", "2", ",", "19", ",", "20", ",", "3", ",", "2", 
+    ",", "130", ",", "19", ",", "2", ",", "4", ",", "373", ",", "2", ",", 
+    "259", ",", "4", ",", "4", ",", "10", ",", "156", ",", "10", ",", "8", 
+    ",", "3", ",", "2", ",", "4", ",", "12", ",", "30", ",", "2", ",", "6", 
+    ",", "9", ",", "4", ",", "2", ",", "2", ",", "12", ",", "6", ",", "2", 
+    ",", "2", ",", "10", ",", "2", ",", "61", ",", "4", ",", "2", ",", "10", 
+    ",", "41", ",", "43", ",", "21", ",", "2", ",", "3", ",", "4", ",", "7", 
+    ",", "5", ",", "2", ",", "2", ",", "7", ",", "9", ",", "8", ",", "8", ",",
+     "2", ",", "4", ",", "6", ",", "27", ",", "15", ",", "9", ",", "2", ",", 
+    "2", ",", "2", ",", "34", ",", "3", ",", "2", ",", "4", ",", "2", ",", 
+    "2", ",", "210", ",", "5", ",", "32", ",", "23", ",", "2", ",", "48", ",",
+     "4", ",", "2", ",", "2", ",", "5", ",", "263", ",", "2", ",", "198", ",",
+     "2", ",", "10", ",", "2", ",", "23", ",", "18", ",", "7", ",", "4", ",", 
+    "2", ",", "2", ",", "33", ",", "2", ",", "226", ",", "10", ",", "6", ",", 
+    "44", ",", "2", ",", "3", ",", "4", ",", "8", ",", "6", ",", "2", ",", 
+    "4", ",", "4", ",", "34", ",", "2", ",", "53", ",", "13", ",", "2", ",", 
+    "6", ",", "4", ",", "31", ",", "3", ",", "11", ",", "2", ",", "16", ",", 
+    "13", ",", "2", ",", "2", ",", "30", ",", "53", ",", "2", ",", "91", ",", 
+    "4", ",", "3", ",", "25", ",", "2", ",", "3", ",", "20", ",", "8", ",", 
+    "4", ",", "2", ",", "4", ",", "13", ",", "18", ",", "32", ",", "2", ",", 
+    "5", ",", "3", ",", "6", ",", "8", ",", "6", ",", "2", ",", "2", ",", 
+    "20", ",", "6", ",", "10", ",", "4", ",", "2", ",", "2", ",", "6", ",", 
+    "9", ",", "7", ",", "2", ",", "18", ",", "161", ",", "2", ",", "3", ",", 
+    "58", ",", "2", ",", "2", ",", "4", ",", "4", ",", "12", ",", "10", ",", 
+    "2", ",", "2", ",", "5", ",", "14", ",", "3", ",", "121", ",", "4", ",", 
+    "27", ",", "95", ",", "6", ",", "11", ",", "32", ",", "7", ",", "44", ",",
+     "38", ",", "2", ",", "2", ",", "39", ",", "65", ",", "2", ",", "16", ",",
+     "5", ",", "2", ",", "25", ",", "10", ",", "9", ",", "2", ",", "3", ",", 
+    "2", ",", "7", ",", "20", ",", "2", ",", "24", ",", "2", ",", "2", ",", 
+    "19", ",", "4", ",", "2", ",", "2", ",", "3", ",", "23", ",", "4", ",", 
+    "2", ",", "2", ",", "58", ",", "6", ",", "3", ",", "25", ",", "4", ",", 
+    "2", ",", "16", ",", "24", ",", "2", ",", "32", ",", "6", ",", "55", ",", 
+    "47", ",", "2", ",", "2", ",", "50", ",", "6", ",", "28", ",", "4", ",", 
+    "2", ",", "4", ",", "8", ",", "2", ",", "2", ",", "10", ",", "4", ",", 
+    "2", ",", "10", ",", "2", ",", "53", ",", "12", ",", "2", ",", "2", ",", 
+    "13", ",", "3", ",", "2", ",", "8", ",", "4", ",", "2", ",", "193", ",", 
+    "10", ",", "2", ",", "72", ",", "2", ",", "3", ",", "28", ",", "2", ",", 
+    "2", ",", "47", ",", "26", ",", "2", ",", "82", ",", "3", ",", "2", ",", 
+    "10", ",", "19", ",", "2", ",", "43", ",", "2", ",", "4", ",", "4", ",", 
+    "2", ",", "4", ",", "2", ",", "4", ",", "30", ",", "33", ",", "4", ",", 
+    "28", ",", "13", ",", "3", ",", "12", ",", "64", ",", "3", ",", "2", ",", 
+    "4", ",", "2", ",", "2", ",", "8", ",", "24", ",", "2", ",", "12", ",", 
+    "4", ",", "2", ",", "4", ",", "15", ",", "24", ",", "7", ",", "74", ",", 
+    "2", ",", "5", ",", "6", ",", "2", ",", "16", ",", "33", ",", "199", ",", 
+    "166", ",", "28", ",", "4", ",", "10", ",", "29", ",", "2", ",", "13", 
+    ",", "4", ",", "25", ",", "7", ",", "3", ",", "2", ",", "2", ",", "2", 
+    ",", "32", ",", "8", ",", "7", ",", "9", ",", "4", ",", "2", ",", "6", 
+    ",", "21", ",", "4", ",", "3", ",", "2", ",", "12", ",", "2", ",", "19", 
+    ",", "2", ",", "9", ",", "4", ",", "28", ",", "8", ",", "56", ",", "143", 
+    ",", "49", ",", "2", ",", "2", ",", "3", ",", "11", ",", "11", ",", "2", 
+    ",", "5", ",", "3", ",", "2", ",", "72", ",", "99"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.810959844326223*^9, {3.810959932941215*^9, 3.810959944091754*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"77a6fc7d-5b89-4d66-a7bd-a4bcf48b6cfc"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      NCache[
+       Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[1.6], 
+     PointBox[CompressedData["
+1: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
+zOFcOYP6ZpHPHPovC/t58ALGdxH1B/ry7QvE//t7AH359sthXwQuhn2JWeu9
+1Kz2BM26Pl2LeOVmjXcF9Eqzzqsqc1murIZ9DTgErgPXm3V+N5g138Ji/+5v
+I/ybYN9s1v1bxKz50YL+a0W8NvRf1KzrhXbE64B/p8dX918x1Ndl1vnTbdb1
+Yg/s44jfa9b874PeD06YtZ8NmP0+JeyH0P4kxnsY9iNm/W76KPJPYf6NiX3/
+Po54E5iPabOeX02K/TvLU/CfRvsy0GeQ36xZ63cO9lnwPPp/AfNhEfaBX89v
+T4FZn48Wmr3+wUVmr39wCbgU/kHwWrPmZ7lZ+VeAK82+/ke8atRfAz2E9tdB
+r4d/g9m/d2iuzZWN8G8CNyNexKzriRazn/+hvW2wj0JvR/wOs+ZnJ9obg30X
+8u2G3gOOI14v9D5wv7ksVybMen9pAP07iHyGzH7+j/jDZp2PI9BHwSnwGHgc
+PGHW9Xga+qTYfydjyrqe90zDPgOeAc+i/XPgLOznxf47EAuYH4tm/92YU/n+
+BeBC8HKzfx/A7Of/Zu1XJWZ9/7HU7N+XRPy14HLErzBr/6+EfRXyq4ZeY/b9
+P/Q6s9c/6msw+/xHexsRrwncbNb6jiBei7k2V7aiPW2IFwW3m3W91YH6OmEf
+M2s+d5nLcmW3WeutR+zfU4mjv3oRvw/cD/sE4g8g30H4D4GTiDcMfQTzbdT5
+1+bKFPQxs/ajcbP22wnET4MnzU25cgrtm0b7MvCfAc8ivzm0N4v48/BfwPxa
+hB74bj4XmDXfC83yXw69CP7F0EvE/rsypdb1PClo1v64FvHKzfq7KRVm/x4b
+6qsy6/lbtdmf/yF+SOz3fepgXw/7BrOuj8LQG+HfBL0ZHDGX5coWs86vVrS3
+Df5Rs/aHdugdiN9p1vt1Mdh3gbvBPWbdb8TN2k97kX8fxqcf8RLgAfTfIPQh
+zMck7IfNut4ZwXiNwj+F+GOINw6eAKc9f/T8Z9K61usU4k/DPwN9Bv6z6L85
++GcxHvOwX0D8RbP/Dl5/vl5g1nwrNOt97eVm9W8R/IvBJWbtd6XQg2Y//4de
+Dq4AV4r9d6eqoFebtd/UiP17FyHr6o86+NebdR40QA+DG81e/9Cbzf7+IvQW
++LdiPNrMut6IQm9HvA7E64Qeg95l1vVht1nrpQf+cXCvWe+D9UHvx3xImLV/
+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
+a67Nla1mrd99nr9aD22obz84Cj6AfNvRnwehd6D9h8zazzsxfw/DPwY+gvZ2
+Ib+j6K9ucUp//+8Y4vWAj4PjyP8E5msv7E+adb3Vh3xPId9+jM9pj4/eB0gg
+/hnwAPa/s9AHwedQ/xDm83mMRxL+F8DDGP+L4shHcuWI2/OBXHkJ/qPgy+AU
+4l9B/mMY76vQx+F/DTyB+q6D04h3A/ok5sdN2E/B/hbGexr2t2GfAd/B+Mxg
+/O9if5mF/z3wnNeHPu+7j/mdNet67wHm8zziPUR/LKB9jzDfFqE/Rv2Bsyp1
+f7PE7O8DmtWfS8WJT+bKQuvKb5lZ95fLzapvhdj340XWdb200qz2Fdten9+v
+sq72lKD+1eZQriyF/Rpw0Kz5WgZ9LeKvQ3vK0X/r4V8B/w1oXyXibTSX5coq
+jMcms+ZnNfpvM+qvQf1b4B+CXmvW/WMd9K3o33qz3t/dhvY1IN52s/++L+Lv
+MGt9NaL9O9G+JrOuB3chXrNZz6N3I37ErPWyB/4taM9ecKtZ5/0+tLcN+e5H
+/Cjm3wHYt2O8DqL/OhDvELgT/XcY8WKwP4L6u6AfBXejvccwf3vE/vvAxxE/
+Dj6B+L3gk7DvA58y6/qnH/6nwQn0/xnoA+CzGP9Bs+6/zmF+DWG8zns/03mQ
+xPy7gP1gGPVfdH/qfZYR6JcQbxTjfxnjlUJ9V+A/5vpacuVVxBtH/19DvAnE
+u4580+4PrZ8biDeJ8+em7XV/OIV4t8DTiHcbesas8/eO+a25cgb2dzG/Z9Ef
+91DfHPi+89f3ZbKI/wDzZx76Q+y/C4j/CLyI9f4Y8QI/Vqn1suTH+XoBeKnZ
+9//gZWJ/H2i5dd2/rzD79wMRf6XY308ptq71uQr1lYBXI14peA3sg9DLzP49
+AtivA5fDf73Z7//DfgPsK8EbwVVmjd8ms37Pqhr2m2FfY9bvI20R+/orBP9a
+tL/OrPW8Fe2pN2t/2wa9AfG3m3V/HUZ+O2DfiPmyE/k0eb5pP9hlXftzM/LZ
+bS7LlRHUtwf2LdD3Qm9Ff++DfZv7W59H7YceBR/A/GlHew/CvsOs/fwQ1ksn
+8j1s1vOxGOIdwfh3QT8K7kZ+x7Dee9Ce48gnjngnMD690E+ivj6z9u9T4sQT
+ubIf7T2N+ZRAf50RB+U/gPl6FvkMoj3noA+Bz8M+Cb4A+2GM70XYj8D+EvId
+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
+k4h/AfNlGP17EfWPoP2XkP8o1u9l6CnoV5D/GOq7inzHsR9dQ/smUN91+Kcx
+HjfQnkn43wRPgW+Zdf87jfi3YZ9BfXfQ/hnod8GziHcP/TmH/rgP+6zZv/+D
++PPwf4j5sSBORHLlI8RfxP7yGPMp8PN8+yVmxS8w+/w3+/k//JeZ/f4/4q2A
+fZHYzxNWQi82q/2rzGpPCexXg0vBaxAvCL0M+a+Fvs7sv/9r1ucL68W+PquA
+/wazz3+zzueNsK8ya31tgl4N3mz283/oW8zKLwS9FuNbB30r4tdD32b2+/9m
+7Y/b3T96vhO2rvm4w6zr50bksxP1NWE8d8G+2aznk7uRfwTx9oBbEG8vuBXt
+3Qe9DfH2Y/5E0T8HEK8d/gfN+r5Mh1n7zSHE7zTr/D2MeDHwEcy3LsQ7Cvtu
+rMdjZt3v9aB9x9E/cdR3AvF7zbo+Pwn/Ptifwvj2m/U89TTsE2J/3/+MdZ1P
+AxiPs2bN30Hkc877mX6Pash6Wa487/mv+/Mk8rmA9TAM/SLyG8H8v4R8RlHf
+Zegp9NcV6GPov6vQx8HXzPp7GhPYT6+jP9MY3xvOV+f1JOLfxHyfwvy5hf6a
+Rv/cNuv5QAb2dxB/Bvpd8Czi34M+h/zv4zzNwv4B7OfNun9/CPsF8COM5yL4
+Mfo/kMyV4SO58iliz68lZsV/qln7c4FZ8Z8G+6Xgp5t9/WAuy5XPMGs8l8H/
+meDl4GeZtV+tMKu9v4b2FcH/2fBfadZ8eI5Z41EM/+ci/1Wwfx7sS8yaP8+H
+vhr8AvRfKfQXgteAX4T2B83av19s1vVaGfxfIvbfy1mLeC9Ff62D/8swX8ox
+/i+H/Xqzzq9XoH8rMF6vRP9sQLxXob8rxX7e8mrks9Gs67PXmHV/XIV4r0V9
+m5DP66BXg18vTun82Az9DeAa8BtR3xb0z5sw3iHwm806f2rN2q/egvrqYP9W
+s/bzrcjnbcinHvHeDn0b9Hdg/jR4/LS+3gn/7WY9b3kX8gkj/rvRnh3YP94D
+/0b4vxf6TvD7sF6a4P9+zL9dZs3PD8C+GfPvgxjP3bD/EDgC/jDW7x73r9b7
+R6C3oH1PIN5ezIePQm+F/8cw3/bB/uMY3zb015MYr/3w/wTqi2K/+6T3tydz
+5QH4fwrcjvo+bdb1zkHYfwb1d7h/9feuPwv7Q2jv56B3It7noR92fL2v+wXM
+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
+      "]]}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
+      1.6]}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
+      1.6]}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{Automatic, 493.39182652223974`},
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 5000.}, {0, 39.5}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8109599456910963`*^9, 3.810960124585993*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"61f53446-827f-4c9b-b644-9056fa7d2ad8"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{808, 911},
-WindowMargins->{{Automatic, 264}, {Automatic, -6}},
+WindowSize->{989, 1166},
+WindowMargins->{{Automatic, 387}, {Automatic, 2}},
 FrontEndVersion->"12.0 for Linux ARM (32-bit) (June 23, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -345,39 +1710,24 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 173, 3, 99, "Title",ExpressionUUID->"bb0b78ab-5810-4211-b26b-6e185b8069e3"],
+Cell[580, 22, 251, 4, 99, "Title",ExpressionUUID->"bb0b78ab-5810-4211-b26b-6e185b8069e3"],
 Cell[CellGroupData[{
-Cell[778, 29, 165, 3, 55, "Subsection",ExpressionUUID->"24d9dd65-895a-4153-ac52-73cdbf3e551e"],
-Cell[946, 34, 1406, 48, 996, "Text",ExpressionUUID->"4b9a2508-508c-4cb5-90ca-7dbc2679d84a"],
-Cell[2355, 84, 175, 3, 31, "Input",ExpressionUUID->"b75ddafe-f0be-4555-99af-1319cefa4e4d"],
-Cell[2533, 89, 154, 3, 31, InheritFromParent,ExpressionUUID->"b13492f4-d70e-4eec-b2a4-2281b7f91dc5"]
+Cell[856, 30, 229, 4, 55, "Subsection",ExpressionUUID->"2fc26ae1-fcb8-42d1-8f21-a554ce799a36"],
+Cell[1088, 36, 22279, 387, 508, "Text",ExpressionUUID->"dd3049a5-2478-4f83-b9f3-113055411dc7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2724, 97, 164, 3, 55, "Subsection",ExpressionUUID->"1bf39efe-202b-4a4f-8e34-326fcc8d23a9"],
+Cell[23404, 428, 164, 3, 55, "Subsection",ExpressionUUID->"1bf39efe-202b-4a4f-8e34-326fcc8d23a9"],
 Cell[CellGroupData[{
-Cell[2913, 104, 5498, 109, 1021, "Input",ExpressionUUID->"15787e0b-ea47-4968-a399-b22700a814cb"],
-Cell[CellGroupData[{
-Cell[8436, 217, 198, 4, 25, "Print",ExpressionUUID->"44fec31a-9720-408c-9ae8-f49a0ba25a0e"],
-Cell[8637, 223, 198, 4, 25, "Print",ExpressionUUID->"03f7a1a9-dd30-461f-9b85-530e89593181"],
-Cell[8838, 229, 198, 4, 25, "Print",ExpressionUUID->"9ee208de-b761-47fb-9e38-537bde7e5083"],
-Cell[9039, 235, 200, 4, 25, "Print",ExpressionUUID->"2d52127c-dc95-4fbc-b49c-34c19377b1eb"],
-Cell[9242, 241, 198, 4, 25, "Print",ExpressionUUID->"8a380221-0dc1-4045-9bb5-96eb0e595410"],
-Cell[9443, 247, 200, 4, 25, "Print",ExpressionUUID->"cd2b9d68-b011-42d7-a7da-67452e274fb7"],
-Cell[9646, 253, 200, 4, 25, "Print",ExpressionUUID->"fb6ddeab-c6fa-4b07-97df-e3eec24277aa"],
-Cell[9849, 259, 200, 4, 25, "Print",ExpressionUUID->"c52c3ad4-e2dc-4eed-a95d-4f159041f72d"],
-Cell[10052, 265, 198, 4, 25, "Print",ExpressionUUID->"00e5488e-397d-4f23-8ca1-0677e4dac93e"],
-Cell[10253, 271, 198, 4, 25, "Print",ExpressionUUID->"7d9548a3-11c5-4bf0-b2bf-18ecd0fc435e"],
-Cell[10454, 277, 198, 4, 25, "Print",ExpressionUUID->"846a427c-b4f6-42e4-9124-f05295a2d0f2"],
-Cell[10655, 283, 198, 4, 25, "Print",ExpressionUUID->"cb0db9ce-73dd-4a01-b036-43df180f13c6"],
-Cell[10856, 289, 198, 4, 25, "Print",ExpressionUUID->"9b078d9f-e0c0-440c-af19-6538ccc1a2dd"],
-Cell[11057, 295, 198, 4, 25, "Print",ExpressionUUID->"58d38918-6ae8-43c5-bf5e-8ca6e0498182"],
-Cell[11258, 301, 200, 4, 25, "Print",ExpressionUUID->"d45c8110-b2da-4a65-93db-0373b8336640"],
-Cell[11461, 307, 198, 4, 25, "Print",ExpressionUUID->"5412d197-453d-4fa2-bfd0-219ae5af496f"],
-Cell[11662, 313, 198, 4, 25, "Print",ExpressionUUID->"c779c031-40c3-472e-9194-7e967c0c2bda"]
+Cell[23593, 435, 5926, 119, 1090, "Input",ExpressionUUID->"15787e0b-ea47-4968-a399-b22700a814cb"],
+Cell[29522, 556, 991, 17, 48, "Print",ExpressionUUID->"b85b934a-d619-41db-b576-abc18140ec02"]
 }, Open  ]]
 }, Open  ]],
-Cell[11887, 321, 154, 3, 31, "Input",ExpressionUUID->"2678cbba-10fc-492b-85a5-d59fddca77e6"],
-Cell[12044, 326, 81, 0, 31, "Input",ExpressionUUID->"1571fa46-1a3e-4569-bafb-c6b47c9806fb"]
+Cell[CellGroupData[{
+Cell[30562, 579, 171, 3, 55, "Subsection",ExpressionUUID->"4f640afb-58cf-4f3c-9ee0-55056c7f4818"],
+Cell[CellGroupData[{
+Cell[30758, 586, 55460, 719, 3873, "Input",ExpressionUUID->"77a6fc7d-5b89-4d66-a7bd-a4bcf48b6cfc"],
+Cell[86221, 1307, 22172, 383, 510, "Output",ExpressionUUID->"61f53446-827f-4c9b-b644-9056fa7d2ad8"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
