@@ -1,7 +1,14 @@
-The Mathematics of Pervect Shuffles. Advances In Applied Mathematics 4, 175-196 (1983)
-Persi Diaconis, R. L. Graham, William M. Kantor
+Reference
+P. Levy, Sur quelque classes de permutations: Compositio Math. 8, 1950, p. 1-48.
+Persi Diaconis, R. L. Graham, William M. Kantor, Advances In Applied Mathematics 4: The Mathematics of Perfect Shuffles. Academic Press. Inc, 1983 p. 175-196
 
-18. P. Levy, Sur quelque classes de permutations, Compositio Math. 8 (1950), l-48.
 
 Rob Calderbank and Neil Sloane provided the first corroboration that for n = 12,
 c = M,,. 
+
+Cf. A003558,A330090,A330091 (milk shuffle)
+A019567 (mongean shuffle)
+A294673 ("inside out" permutation)
+
+(In comments)
+Also, the order of the so-called "milk shuffle" of a deck of n cards, which maps cards (1,2,...,n) to (1,n,2,n-1,3,n-2,...).  See the paper of Lévy.
