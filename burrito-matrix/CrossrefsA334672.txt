@@ -1,0 +1,7 @@
+The Mathematics of Pervect Shuffles. Advances In Applied Mathematics 4, 175-196 (1983)
+Persi Diaconis, R. L. Graham, William M. Kantor
+
+18. P. Levy, Sur quelque classes de permutations, Compositio Math. 8 (1950), l-48.
+
+Rob Calderbank and Neil Sloane provided the first corroboration that for n = 12,
+c = M,,. 
