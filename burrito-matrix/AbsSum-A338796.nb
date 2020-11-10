@@ -1,0 +1,204 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7425,        194]
+NotebookOptionsPosition[      6656,        171]
+NotebookOutlinePosition[      6991,        186]
+CellTagsIndexPosition[      6948,        183]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["A338796", "Title",
+ CellChangeTimes->{{3.813984466980667*^9, 
+  3.813984486343564*^9}},ExpressionUUID->"d96d11b3-a790-41aa-8624-\
+8d935f1d6b10"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Abs sum of traveldistance in identity number of Burrito Matrix A338796\
+\>", "Subsection",
+ CellChangeTimes->{{3.813984538733987*^9, 
+  3.813984574875102*^9}},ExpressionUUID->"53eedf12-26cf-404d-8911-\
+f9a133e6bdd5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"count", " ", "=", " ", "200"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AbsSumTravelIdNumber", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"(", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"a", " ", "=", " ", 
+       RowBox[{"Range", "[", 
+        RowBox[{"1", ",", "k"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"m", " ", "=", 
+       RowBox[{"{", "a", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Do", "[", 
+       RowBox[{
+        RowBox[{"(", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"c", " ", "=", 
+           RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"b", " ", "=", " ", 
+           RowBox[{"Partition", "[", 
+            RowBox[{"a", ",", 
+             RowBox[{"k", "/", "2"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"d", " ", "=", " ", 
+           RowBox[{"Reverse", "[", 
+            RowBox[{"b", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Do", "[", 
+           RowBox[{
+            RowBox[{"(", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"c", ",", 
+                RowBox[{"{", 
+                 RowBox[{"b", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"1", ",", "l"}], "]"}], "]"}], "}"}]}], "]"}], ";",
+               "\[IndentingNewLine]", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"c", ",", 
+                RowBox[{"{", 
+                 RowBox[{"d", "[", 
+                  RowBox[{"[", "l", "]"}], "]"}], "}"}]}], "]"}], ";"}], 
+             "\[IndentingNewLine]", ")"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"l", ",", "1", ",", 
+              RowBox[{"k", "/", "2"}], ",", "1"}], "}"}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"a", " ", "=", " ", 
+           RowBox[{"Flatten", "[", "c", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"m", ",", "a"}], "]"}], ";"}], "\[IndentingNewLine]", 
+         ")"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", "1", ",", 
+          RowBox[{"k", "-", "1"}], ",", "1"}], "}"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"idNumber", " ", "=", " ", 
+       RowBox[{"m", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "2"}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"absSum", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Do", "[", 
+       RowBox[{
+        RowBox[{"(", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"absSum", " ", "+=", " ", 
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"idNumber", "[", 
+              RowBox[{"[", "q", "]"}], "]"}], " ", "-", " ", 
+             RowBox[{"idNumber", "[", 
+              RowBox[{"[", 
+               RowBox[{"q", "+", "1"}], "]"}], "]"}]}], "]"}]}], ";"}], 
+         "\[IndentingNewLine]", ")"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"q", ",", "1", ",", 
+          RowBox[{
+           RowBox[{"Length", "[", "idNumber", "]"}], "-", "1"}], ",", "1"}], 
+         "}"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"AbsSumTravelIdNumber", ",", " ", "absSum"}], "]"}], ";"}], 
+     "\[IndentingNewLine]", ")"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "8", ",", "count", ",", "2"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", "AbsSumTravelIdNumber", "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.813984581335545*^9, {3.813984613050559*^9, 3.813984647942945*^9}},
+ CellLabel->
+  "In[207]:=",ExpressionUUID->"d8a16878-bc8f-4d56-9ef2-9f606af61b56"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "23", ",", "30", ",", "44", ",", "68", ",", "84", ",", "99", ",", "144", 
+   ",", "150", ",", "184", ",", "204", ",", "264", ",", "290", ",", "330", 
+   ",", "374", ",", "420", ",", "497", ",", "520", ",", "574", ",", "671", 
+   ",", "633", ",", "794", ",", "648", ",", "884", ",", "954", ",", "1080", 
+   ",", "1122", ",", "1248", ",", "1176", ",", "1116", ",", "1430", ",", 
+   "1577", ",", "1610", ",", "1785", ",", "1833", ",", "1880", ",", "1945", 
+   ",", "2183", ",", "2214", ",", "2324", ",", "2069", ",", "2550", ",", 
+   "2670", ",", "2880", ",", "3069", ",", "3040", ",", "2112", ",", "3300", 
+   ",", "3571", ",", "3662", ",", "3710", ",", "4145", ",", "3132", ",", 
+   "4332", ",", "4294", ",", "4529", ",", "4525", ",", "4760", ",", "4989", 
+   ",", "4699", ",", "4870", ",", "4031", ",", "5008", ",", "5764", ",", 
+   "5028", ",", "6120", ",", "6237", ",", "5576", ",", "7254", ",", "7014", 
+   ",", "6588", ",", "7212", ",", "7389", ",", "7799", ",", "7110", ",", 
+   "8060", ",", "7020", ",", "8566", ",", "8622", ",", "8856", ",", "8294", 
+   ",", "9326", ",", "7728", ",", "9901", ",", "10034", ",", "8369", ",", 
+   "10547", ",", "10740", ",", "11195", ",", "11224", ",", "11547", ",", 
+   "12069", ",", "11970", ",", "12224", ",", "7218", ",", "13069", ",", 
+   "13267", ",", "11418"}], "}"}]], "Print",
+ CellChangeTimes->{{3.8139846288043823`*^9, 3.813984657698269*^9}},
+ CellLabel->
+  "During evaluation of \
+In[207]:=",ExpressionUUID->"524734c2-d307-4a17-bc30-0a4436a0ae0d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Alternative programSS", "Subsection",
+ CellChangeTimes->{{3.8139847761724367`*^9, 
+  3.813984788238364*^9}},ExpressionUUID->"7c00f499-92eb-4250-a3d6-\
+a9eab533f584"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 69}, {116, Automatic}},
+FrontEndVersion->"12.0 for Linux ARM (32-bit) (June 23, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 150, 3, 99, "Title",ExpressionUUID->"d96d11b3-a790-41aa-8624-8d935f1d6b10"],
+Cell[CellGroupData[{
+Cell[755, 29, 226, 5, 55, "Subsection",ExpressionUUID->"53eedf12-26cf-404d-8911-f9a133e6bdd5"],
+Cell[CellGroupData[{
+Cell[1006, 38, 3893, 97, 584, "Input",ExpressionUUID->"d8a16878-bc8f-4d56-9ef2-9f606af61b56"],
+Cell[4902, 137, 1540, 24, 158, "Print",ExpressionUUID->"524734c2-d307-4a17-bc30-0a4436a0ae0d"]
+}, Open  ]]
+}, Open  ]],
+Cell[6469, 165, 171, 3, 55, "Subsection",ExpressionUUID->"7c00f499-92eb-4250-a3d6-a9eab533f584"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

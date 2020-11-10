@@ -1,0 +1,24 @@
+count = 200;
+AbsSumTravelIdNumber = {};
+Do[(
+   a = Range[1, k];
+   m = {a};
+   Do[(
+     c = {};
+     b = Partition[a, k/2];
+     d = Reverse[b[[2]]];
+     Do[(
+       AppendTo[c, {b[[1, l]]}];
+       AppendTo[c, {d[[l]]}];
+       ), {l, 1, k/2, 1}];
+     a = Flatten[c];
+     AppendTo[m, a];
+     ), {n, 1, k - 1, 1}];
+   idNumber = m[[All, 2]];
+   absSum = 0;
+   Do[(
+     absSum += Abs[idNumber[[q]] - idNumber[[q + 1]]];
+     ), {q, 1, Length[idNumber] - 1, 1}];
+   AppendTo[AbsSumTravelIdNumber, absSum];
+   ), {k, 8, count, 2}];
+Print[AbsSumTravelIdNumber];
