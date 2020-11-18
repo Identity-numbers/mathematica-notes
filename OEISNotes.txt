@@ -1,0 +1,11 @@
+Notes on OEIS resources.
+
+Interesting profile:
+https://oeis.org/wiki/User:Ilya_Gutkovskiy
+
+Transforms
+https://oeis.org/transforms.txt
+
+TRANSFORMATIONS OF INTEGER SEQUENCES
+            (MATHEMATICA VERSION)
+https://oeis.org/seqtranslib.txt
