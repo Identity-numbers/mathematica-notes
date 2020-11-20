@@ -1,0 +1,1615 @@
+Upward Calculation ======================= 
+
+Run on following numbers: 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 
+
+Required subtractive operations: 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 6, 4, 3, 3, 2, 2, 2, 2, 0, 21, 11, 7, 6, 5, 4, 3, 3, 3, 0, 31, 16, 11, 8, 7, 6, 5, 4, 4, 0, 41, 21, 14, 11, 9, 7, 6, 6, 5, 0, 51, 26, 17, 13, 11, 9, 8, 7, 6, 0, 61, 31, 21, 16, 13, 11, 9, 8, 7, 0, 71, 36, 24, 18, 15, 12, 11, 9, 8, 0, 81, 41, 27, 21, 17, 14, 12, 11, 9, 0, 91, 46, 31, 23, 19, 16, 13, 12, 11, 0, 101, 51, 34, 26, 21, 17, 15, 13, 12, 11, 11, 11, 11, 8, 9, 7, 8, 7, 6, 6, 21, 11, 7, 6, 5, 7, 6, 6, 5, 4, 11, 6, 4, 11, 9, 7, 6, 6, 5, 3, 21, 11, 7, 6, 5, 4, 3, 3, 3, 3, 51, 26, 17, 13, 11, 9, 8, 7, 6, 2, 41, 21, 14, 11, 9, 7, 6, 6, 5, 2, 31, 16, 11, 8, 7, 6, 5, 4, 4, 2, 21, 11, 7, 6, 5, 4, 3, 3, 3, 2, 11, 6, 4, 3, 3, 2, 2, 2, 2, 0, 201, 101, 67, 51, 41, 34, 29, 26, 23, 21, 21, 21, 17, 16, 15, 14, 13, 12, 12, 11, 21, 11, 14, 11, 9, 11, 9, 8, 9, 7, 21, 11, 7, 13, 11, 9, 8, 7, 6, 6, 41, 21, 14, 11, 9, 7, 6, 6, 5, 5, 51, 26, 17, 13, 11, 9, 8, 7, 6, 4, 21, 11, 7, 6, 5, 4, 12, 11, 9, 3, 61, 31, 21, 16, 13, 11, 9, 8, 7, 3, 41, 21, 14, 11, 9, 7, 6, 6, 5, 3, 21, 11, 7, 6, 5, 4, 3, 3, 3, 0, 301, 151, 101, 76, 61, 51, 43, 38, 34, 31, 31, 26, 24, 23, 21, 21, 19, 18, 17, 16, 21, 21, 14, 16, 13, 14, 12, 13, 12, 11, 31, 16, 11, 16, 13, 11, 9, 12, 11, 8, 21, 11, 21, 16, 13, 11, 9, 8, 7, 7, 51, 26, 17, 13, 11, 9, 8, 7, 6, 6, 61, 31, 21, 16, 13, 11, 9, 8, 7, 5, 21, 11, 7, 6, 5, 16, 13, 12, 11, 4, 61, 31, 21, 16, 13, 11, 9, 8, 7, 4, 31, 16, 11, 8, 7, 6, 5, 4, 4, 0, 
+
+Lowest possible remainder: 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 0, 1, 2, 0, 4, 3, 2, 1, 20, 0, 0, 2, 0, 0, 2, 6, 4, 2, 30, 0, 0, 0, 2, 0, 0, 2, 6, 3, 40, 0, 0, 1, 0, 0, 4, 5, 0, 4, 50, 0, 0, 2, 2, 0, 2, 1, 2, 5, 60, 0, 0, 0, 0, 0, 0, 4, 4, 6, 70, 0, 0, 1, 2, 0, 4, 0, 6, 7, 80, 0, 0, 2, 0, 0, 2, 3, 0, 8, 90, 0, 0, 0, 2, 0, 0, 6, 2, 0, 100, 0, 0, 1, 0, 0, 4, 2, 4, 1, 0, 0, 0, 0, 2, 0, 4, 1, 2, 5, 0, 0, 0, 2, 0, 0, 4, 5, 0, 4, 10, 0, 0, 1, 0, 0, 4, 5, 0, 4, 20, 0, 0, 2, 0, 0, 2, 6, 4, 2, 0, 0, 0, 2, 2, 0, 2, 1, 2, 5, 40, 0, 0, 1, 0, 0, 4, 5, 0, 4, 30, 0, 0, 0, 2, 0, 0, 2, 6, 3, 20, 0, 0, 2, 0, 0, 2, 6, 4, 2, 10, 0, 0, 1, 2, 0, 4, 3, 2, 1, 200, 0, 0, 2, 0, 0, 2, 4, 0, 2, 0, 0, 0, 2, 0, 0, 2, 6, 2, 1, 0, 0, 0, 1, 0, 0, 0, 4, 4, 8, 20, 0, 0, 2, 2, 0, 2, 1, 2, 5, 0, 0, 0, 1, 0, 0, 4, 5, 0, 4, 0, 0, 0, 2, 2, 0, 2, 1, 2, 5, 20, 0, 0, 2, 0, 0, 2, 3, 0, 8, 60, 0, 0, 0, 0, 0, 0, 4, 4, 6, 40, 0, 0, 1, 0, 0, 4, 5, 0, 4, 20, 0, 0, 2, 0, 0, 2, 6, 4, 2, 300, 0, 0, 0, 0, 0, 0, 6, 4, 3, 0, 0, 0, 1, 2, 0, 0, 4, 4, 6, 0, 0, 0, 1, 0, 0, 2, 3, 4, 1, 0, 0, 0, 0, 0, 0, 0, 4, 2, 0, 20, 0, 0, 0, 0, 0, 0, 4, 4, 6, 0, 0, 0, 2, 2, 0, 2, 1, 2, 5, 0, 0, 0, 0, 0, 0, 0, 4, 4, 6, 20, 0, 0, 2, 0, 0, 0, 6, 2, 0, 60, 0, 0, 0, 0, 0, 0, 4, 4, 6, 30, 0, 0, 0, 2, 0, 0, 2, 6, 3, 400, 
+
+Did hit a perfect zero?:  
+False, False, False, False, False, False, False, False, False, False, True, True, False, False, True, False, False, False, False, False, True, True, False, True, True, False, False, False, False, False, True, True, True, False, True, True, False, False, False, False, True, True, False, True, True, False, False, True, False, False, True, True, False, False, True, False, False, False, False, False, True, True, True, True, True, True, False, False, False, False, True, True, False, False, True, False, True, False, False, False, True, True, False, True, True, False, False, True, False, False, True, True, True, False, True, True, False, False, True, False, True, True, False, True, True, False, False, False, False, True, True, True, True, False, True, False, False, False, False, True, True, True, False, True, True, False, False, True, False, False, True, True, False, True, True, False, False, True, False, False, True, True, False, True, True, False, False, False, False, True, True, True, False, False, True, False, False, False, False, False, True, True, False, True, True, False, False, True, False, False, True, True, True, False, True, True, False, False, False, False, True, True, False, True, True, False, False, False, False, False, True, True, False, False, True, False, False, False, False, False, True, True, False, True, True, False, False, True, False, True, True, True, False, True, True, False, False, False, False, True, True, True, False, True, True, True, False, False, False, False, True, True, False, False, True, False, False, False, False, True, True, True, False, True, True, False, False, True, False, True, True, True, False, False, True, False, False, False, False, False, True, True, False, True, True, False, False, True, False, False, True, True, True, True, True, True, False, False, False, False, True, True, False, True, True, False, False, True, False, False, True, True, False, True, True, False, False, False, False, False, True, True, True, True, True, True, False, False, False, True, True, True, False, False, True, True, False, False, False, True, True, True, False, True, True, False, False, False, False, True, True, True, True, True, True, True, False, False, True, False, True, True, True, True, True, True, False, False, False, True, True, True, False, False, True, False, False, False, False, True, True, True, True, True, True, True, False, False, False, False, True, True, False, True, True, True, False, False, True, False, True, True, True, True, True, True, False, False, False, False, True, True, True, False, True, True, False, False, False, False, 
+
+Subtraction chain:  
+Did hit zero = False
+Number of iterations = 0, 
+1
+
+Did hit zero = False
+Number of iterations = 0, 
+2
+
+Did hit zero = False
+Number of iterations = 0, 
+3
+
+Did hit zero = False
+Number of iterations = 0, 
+4
+
+Did hit zero = False
+Number of iterations = 0, 
+5
+
+Did hit zero = False
+Number of iterations = 0, 
+6
+
+Did hit zero = False
+Number of iterations = 0, 
+7
+
+Did hit zero = False
+Number of iterations = 0, 
+8
+
+Did hit zero = False
+Number of iterations = 0, 
+9
+
+Did hit zero = False
+Number of iterations = 0, 
+10
+
+Did hit zero = True
+Number of iterations = 11, 
+11-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 6, 
+12-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 4, 
+13-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 3, 
+14-4-4-4
+
+Did hit zero = True
+Number of iterations = 3, 
+15-5-5-5
+
+Did hit zero = False
+Number of iterations = 2, 
+16-6-6
+
+Did hit zero = False
+Number of iterations = 2, 
+17-7-7
+
+Did hit zero = False
+Number of iterations = 2, 
+18-8-8
+
+Did hit zero = False
+Number of iterations = 2, 
+19-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+20
+
+Did hit zero = True
+Number of iterations = 21, 
+21-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+22-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+23-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 6, 
+24-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 5, 
+25-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 4, 
+26-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 3, 
+27-7-7-7
+
+Did hit zero = False
+Number of iterations = 3, 
+28-8-8-8
+
+Did hit zero = False
+Number of iterations = 3, 
+29-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+30
+
+Did hit zero = True
+Number of iterations = 31, 
+31-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 16, 
+32-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 11, 
+33-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 8, 
+34-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 7, 
+35-5-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 6, 
+36-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 5, 
+37-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 4, 
+38-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 4, 
+39-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+40
+
+Did hit zero = True
+Number of iterations = 41, 
+41-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 21, 
+42-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 14, 
+43-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 11, 
+44-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 9, 
+45-5-5-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 7, 
+46-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 6, 
+47-7-7-7-7-7-7
+
+Did hit zero = True
+Number of iterations = 6, 
+48-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 5, 
+49-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+50
+
+Did hit zero = True
+Number of iterations = 51, 
+51-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 26, 
+52-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 17, 
+53-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 13, 
+54-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 11, 
+55-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 9, 
+56-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 8, 
+57-7-7-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 7, 
+58-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 6, 
+59-9-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+60
+
+Did hit zero = True
+Number of iterations = 61, 
+61-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 31, 
+62-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 21, 
+63-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 16, 
+64-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 13, 
+65-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 11, 
+66-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 9, 
+67-7-7-7-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 8, 
+68-8-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 7, 
+69-9-9-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+70
+
+Did hit zero = True
+Number of iterations = 71, 
+71-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 36, 
+72-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 24, 
+73-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 18, 
+74-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 15, 
+75-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 12, 
+76-6-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = True
+Number of iterations = 11, 
+77-7-7-7-7-7-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 9, 
+78-8-8-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 8, 
+79-9-9-9-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+80
+
+Did hit zero = True
+Number of iterations = 81, 
+81-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 41, 
+82-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 27, 
+83-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 21, 
+84-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 17, 
+85-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 14, 
+86-6-6-6-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 12, 
+87-7-7-7-7-7-7-7-7-7-7-7-7
+
+Did hit zero = True
+Number of iterations = 11, 
+88-8-8-8-8-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 9, 
+89-9-9-9-9-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+90
+
+Did hit zero = True
+Number of iterations = 91, 
+91-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 46, 
+92-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 31, 
+93-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 23, 
+94-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 19, 
+95-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 16, 
+96-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 13, 
+97-7-7-7-7-7-7-7-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 12, 
+98-8-8-8-8-8-8-8-8-8-8-8-8
+
+Did hit zero = True
+Number of iterations = 11, 
+99-9-9-9-9-9-9-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 0, 
+100
+
+Did hit zero = True
+Number of iterations = 101, 
+101-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 51, 
+102-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 34, 
+103-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 26, 
+104-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 21, 
+105-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 17, 
+106-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 15, 
+107-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 13, 
+108-8-8-8-8-8-8-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 12, 
+109-9-9-9-9-9-9-9-9-9-9-9-9
+
+Did hit zero = True
+Number of iterations = 11, 
+110-10-10-10-10-10-10-10-10-10-10-10
+
+Did hit zero = True
+Number of iterations = 11, 
+111-11-11-11-11-11-11-11-11-11-11-1
+
+Did hit zero = True
+Number of iterations = 11, 
+112-12-12-12-12-12-12-12-12-12-2-2
+
+Did hit zero = True
+Number of iterations = 11, 
+113-13-13-13-13-13-13-13-13-3-3-3
+
+Did hit zero = False
+Number of iterations = 8, 
+114-14-14-14-14-14-14-14-14
+
+Did hit zero = True
+Number of iterations = 9, 
+115-15-15-15-15-15-15-15-5-5
+
+Did hit zero = False
+Number of iterations = 7, 
+116-16-16-16-16-16-16-16
+
+Did hit zero = False
+Number of iterations = 8, 
+117-17-17-17-17-17-17-7-7
+
+Did hit zero = False
+Number of iterations = 7, 
+118-18-18-18-18-18-18-8
+
+Did hit zero = False
+Number of iterations = 6, 
+119-19-19-19-19-19-19
+
+Did hit zero = True
+Number of iterations = 6, 
+120-20-20-20-20-20-20
+
+Did hit zero = True
+Number of iterations = 21, 
+121-21-21-21-21-21-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+122-22-22-22-22-22-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+123-23-23-23-23-23-3-3
+
+Did hit zero = True
+Number of iterations = 6, 
+124-24-24-24-24-24-4
+
+Did hit zero = True
+Number of iterations = 5, 
+125-25-25-25-25-25
+
+Did hit zero = False
+Number of iterations = 7, 
+126-26-26-26-26-6-6-6
+
+Did hit zero = False
+Number of iterations = 6, 
+127-27-27-27-27-7-7
+
+Did hit zero = True
+Number of iterations = 6, 
+128-28-28-28-28-8-8
+
+Did hit zero = False
+Number of iterations = 5, 
+129-29-29-29-29-9
+
+Did hit zero = False
+Number of iterations = 4, 
+130-30-30-30-30
+
+Did hit zero = True
+Number of iterations = 11, 
+131-31-31-31-31-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 6, 
+132-32-32-32-32-2-2
+
+Did hit zero = False
+Number of iterations = 4, 
+133-33-33-33-33
+
+Did hit zero = True
+Number of iterations = 11, 
+134-34-34-34-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 9, 
+135-35-35-35-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 7, 
+136-36-36-36-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 6, 
+137-37-37-37-7-7-7
+
+Did hit zero = True
+Number of iterations = 6, 
+138-38-38-38-8-8-8
+
+Did hit zero = False
+Number of iterations = 5, 
+139-39-39-39-9-9
+
+Did hit zero = False
+Number of iterations = 3, 
+140-40-40-40
+
+Did hit zero = True
+Number of iterations = 21, 
+141-41-41-41-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+142-42-42-42-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+143-43-43-43-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 6, 
+144-44-44-44-4-4-4
+
+Did hit zero = True
+Number of iterations = 5, 
+145-45-45-45-5-5
+
+Did hit zero = False
+Number of iterations = 4, 
+146-46-46-46-6
+
+Did hit zero = False
+Number of iterations = 3, 
+147-47-47-47
+
+Did hit zero = False
+Number of iterations = 3, 
+148-48-48-48
+
+Did hit zero = False
+Number of iterations = 3, 
+149-49-49-49
+
+Did hit zero = True
+Number of iterations = 3, 
+150-50-50-50
+
+Did hit zero = True
+Number of iterations = 51, 
+151-51-51-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 26, 
+152-52-52-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 17, 
+153-53-53-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 13, 
+154-54-54-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 11, 
+155-55-55-5-5-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 9, 
+156-56-56-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 8, 
+157-57-57-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 7, 
+158-58-58-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 6, 
+159-59-59-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 2, 
+160-60-60
+
+Did hit zero = True
+Number of iterations = 41, 
+161-61-61-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 21, 
+162-62-62-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 14, 
+163-63-63-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 11, 
+164-64-64-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 9, 
+165-65-65-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 7, 
+166-66-66-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 6, 
+167-67-67-7-7-7-7
+
+Did hit zero = True
+Number of iterations = 6, 
+168-68-68-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 5, 
+169-69-69-9-9-9
+
+Did hit zero = False
+Number of iterations = 2, 
+170-70-70
+
+Did hit zero = True
+Number of iterations = 31, 
+171-71-71-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 16, 
+172-72-72-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 11, 
+173-73-73-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 8, 
+174-74-74-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 7, 
+175-75-75-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 6, 
+176-76-76-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 5, 
+177-77-77-7-7-7
+
+Did hit zero = False
+Number of iterations = 4, 
+178-78-78-8-8
+
+Did hit zero = False
+Number of iterations = 4, 
+179-79-79-9-9
+
+Did hit zero = False
+Number of iterations = 2, 
+180-80-80
+
+Did hit zero = True
+Number of iterations = 21, 
+181-81-81-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+182-82-82-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+183-83-83-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 6, 
+184-84-84-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 5, 
+185-85-85-5-5-5
+
+Did hit zero = False
+Number of iterations = 4, 
+186-86-86-6-6
+
+Did hit zero = False
+Number of iterations = 3, 
+187-87-87-7
+
+Did hit zero = False
+Number of iterations = 3, 
+188-88-88-8
+
+Did hit zero = False
+Number of iterations = 3, 
+189-89-89-9
+
+Did hit zero = False
+Number of iterations = 2, 
+190-90-90
+
+Did hit zero = True
+Number of iterations = 11, 
+191-91-91-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 6, 
+192-92-92-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 4, 
+193-93-93-3-3
+
+Did hit zero = False
+Number of iterations = 3, 
+194-94-94-4
+
+Did hit zero = True
+Number of iterations = 3, 
+195-95-95-5
+
+Did hit zero = False
+Number of iterations = 2, 
+196-96-96
+
+Did hit zero = False
+Number of iterations = 2, 
+197-97-97
+
+Did hit zero = False
+Number of iterations = 2, 
+198-98-98
+
+Did hit zero = False
+Number of iterations = 2, 
+199-99-99
+
+Did hit zero = False
+Number of iterations = 0, 
+200
+
+Did hit zero = True
+Number of iterations = 201, 
+201-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 101, 
+202-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 67, 
+203-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 51, 
+204-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 41, 
+205-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 34, 
+206-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 29, 
+207-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7
+
+Did hit zero = True
+Number of iterations = 26, 
+208-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 23, 
+209-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9
+
+Did hit zero = True
+Number of iterations = 21, 
+210-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10
+
+Did hit zero = True
+Number of iterations = 21, 
+211-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-1-1
+
+Did hit zero = True
+Number of iterations = 21, 
+212-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 17, 
+213-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-3
+
+Did hit zero = True
+Number of iterations = 16, 
+214-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-4
+
+Did hit zero = True
+Number of iterations = 15, 
+215-15-15-15-15-15-15-15-15-15-15-15-15-15-15-5
+
+Did hit zero = False
+Number of iterations = 14, 
+216-16-16-16-16-16-16-16-16-16-16-16-16-16-6
+
+Did hit zero = False
+Number of iterations = 13, 
+217-17-17-17-17-17-17-17-17-17-17-17-17-7
+
+Did hit zero = False
+Number of iterations = 12, 
+218-18-18-18-18-18-18-18-18-18-18-18-18
+
+Did hit zero = False
+Number of iterations = 12, 
+219-19-19-19-19-19-19-19-19-19-19-19-9
+
+Did hit zero = True
+Number of iterations = 11, 
+220-20-20-20-20-20-20-20-20-20-20-20
+
+Did hit zero = True
+Number of iterations = 21, 
+221-21-21-21-21-21-21-21-21-21-21-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+222-22-22-22-22-22-22-22-22-22-22-2
+
+Did hit zero = False
+Number of iterations = 14, 
+223-23-23-23-23-23-23-23-23-23-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 11, 
+224-24-24-24-24-24-24-24-24-24-4-4
+
+Did hit zero = True
+Number of iterations = 9, 
+225-25-25-25-25-25-25-25-25-25
+
+Did hit zero = True
+Number of iterations = 11, 
+226-26-26-26-26-26-26-26-26-6-6-6
+
+Did hit zero = False
+Number of iterations = 9, 
+227-27-27-27-27-27-27-27-27-7
+
+Did hit zero = False
+Number of iterations = 8, 
+228-28-28-28-28-28-28-28-28
+
+Did hit zero = False
+Number of iterations = 9, 
+229-29-29-29-29-29-29-29-9-9
+
+Did hit zero = False
+Number of iterations = 7, 
+230-30-30-30-30-30-30-30
+
+Did hit zero = True
+Number of iterations = 21, 
+231-31-31-31-31-31-31-31-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+232-32-32-32-32-32-32-32-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+233-33-33-33-33-33-33-33
+
+Did hit zero = False
+Number of iterations = 13, 
+234-34-34-34-34-34-34-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 11, 
+235-35-35-35-35-35-35-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 9, 
+236-36-36-36-36-36-36-6-6-6
+
+Did hit zero = False
+Number of iterations = 8, 
+237-37-37-37-37-37-37-7-7
+
+Did hit zero = False
+Number of iterations = 7, 
+238-38-38-38-38-38-38-8
+
+Did hit zero = False
+Number of iterations = 6, 
+239-39-39-39-39-39-39
+
+Did hit zero = True
+Number of iterations = 6, 
+240-40-40-40-40-40-40
+
+Did hit zero = True
+Number of iterations = 41, 
+241-41-41-41-41-41-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 21, 
+242-42-42-42-42-42-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 14, 
+243-43-43-43-43-43-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 11, 
+244-44-44-44-44-44-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 9, 
+245-45-45-45-45-45-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 7, 
+246-46-46-46-46-46-6-6
+
+Did hit zero = False
+Number of iterations = 6, 
+247-47-47-47-47-47-7
+
+Did hit zero = True
+Number of iterations = 6, 
+248-48-48-48-48-48-8
+
+Did hit zero = False
+Number of iterations = 5, 
+249-49-49-49-49-49
+
+Did hit zero = True
+Number of iterations = 5, 
+250-50-50-50-50-50
+
+Did hit zero = True
+Number of iterations = 51, 
+251-51-51-51-51-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 26, 
+252-52-52-52-52-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 17, 
+253-53-53-53-53-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 13, 
+254-54-54-54-54-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 11, 
+255-55-55-55-55-5-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 9, 
+256-56-56-56-56-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 8, 
+257-57-57-57-57-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 7, 
+258-58-58-58-58-8-8-8
+
+Did hit zero = False
+Number of iterations = 6, 
+259-59-59-59-59-9-9
+
+Did hit zero = False
+Number of iterations = 4, 
+260-60-60-60-60
+
+Did hit zero = True
+Number of iterations = 21, 
+261-61-61-61-61-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+262-62-62-62-62-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+263-63-63-63-63-3-3-3
+
+Did hit zero = True
+Number of iterations = 6, 
+264-64-64-64-64-4-4
+
+Did hit zero = True
+Number of iterations = 5, 
+265-65-65-65-65-5
+
+Did hit zero = False
+Number of iterations = 4, 
+266-66-66-66-66
+
+Did hit zero = False
+Number of iterations = 12, 
+267-67-67-67-7-7-7-7-7-7-7-7-7
+
+Did hit zero = True
+Number of iterations = 11, 
+268-68-68-68-8-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 9, 
+269-69-69-69-9-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 3, 
+270-70-70-70
+
+Did hit zero = True
+Number of iterations = 61, 
+271-71-71-71-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 31, 
+272-72-72-72-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 21, 
+273-73-73-73-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 16, 
+274-74-74-74-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 13, 
+275-75-75-75-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 11, 
+276-76-76-76-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 9, 
+277-77-77-77-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 8, 
+278-78-78-78-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 7, 
+279-79-79-79-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 3, 
+280-80-80-80
+
+Did hit zero = True
+Number of iterations = 41, 
+281-81-81-81-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 21, 
+282-82-82-82-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 14, 
+283-83-83-83-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 11, 
+284-84-84-84-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 9, 
+285-85-85-85-5-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 7, 
+286-86-86-86-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 6, 
+287-87-87-87-7-7-7
+
+Did hit zero = True
+Number of iterations = 6, 
+288-88-88-88-8-8-8
+
+Did hit zero = False
+Number of iterations = 5, 
+289-89-89-89-9-9
+
+Did hit zero = False
+Number of iterations = 3, 
+290-90-90-90
+
+Did hit zero = True
+Number of iterations = 21, 
+291-91-91-91-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+292-92-92-92-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+293-93-93-93-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 6, 
+294-94-94-94-4-4-4
+
+Did hit zero = True
+Number of iterations = 5, 
+295-95-95-95-5-5
+
+Did hit zero = False
+Number of iterations = 4, 
+296-96-96-96-6
+
+Did hit zero = False
+Number of iterations = 3, 
+297-97-97-97
+
+Did hit zero = False
+Number of iterations = 3, 
+298-98-98-98
+
+Did hit zero = False
+Number of iterations = 3, 
+299-99-99-99
+
+Did hit zero = False
+Number of iterations = 0, 
+300
+
+Did hit zero = True
+Number of iterations = 301, 
+301-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 151, 
+302-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 101, 
+303-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 76, 
+304-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 61, 
+305-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 51, 
+306-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 43, 
+307-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 38, 
+308-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 34, 
+309-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9-9
+
+Did hit zero = True
+Number of iterations = 31, 
+310-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10-10
+
+Did hit zero = True
+Number of iterations = 31, 
+311-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-11-1-1-1
+
+Did hit zero = True
+Number of iterations = 26, 
+312-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12-12
+
+Did hit zero = False
+Number of iterations = 24, 
+313-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13-13
+
+Did hit zero = False
+Number of iterations = 23, 
+314-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-14-4
+
+Did hit zero = True
+Number of iterations = 21, 
+315-15-15-15-15-15-15-15-15-15-15-15-15-15-15-15-15-15-15-15-15-15
+
+Did hit zero = True
+Number of iterations = 21, 
+316-16-16-16-16-16-16-16-16-16-16-16-16-16-16-16-16-16-16-16-6-6
+
+Did hit zero = False
+Number of iterations = 19, 
+317-17-17-17-17-17-17-17-17-17-17-17-17-17-17-17-17-17-17-7
+
+Did hit zero = False
+Number of iterations = 18, 
+318-18-18-18-18-18-18-18-18-18-18-18-18-18-18-18-18-18-8
+
+Did hit zero = False
+Number of iterations = 17, 
+319-19-19-19-19-19-19-19-19-19-19-19-19-19-19-19-19-9
+
+Did hit zero = True
+Number of iterations = 16, 
+320-20-20-20-20-20-20-20-20-20-20-20-20-20-20-20-20
+
+Did hit zero = True
+Number of iterations = 21, 
+321-21-21-21-21-21-21-21-21-21-21-21-21-21-21-21-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 21, 
+322-22-22-22-22-22-22-22-22-22-22-22-22-22-22-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 14, 
+323-23-23-23-23-23-23-23-23-23-23-23-23-23-23
+
+Did hit zero = True
+Number of iterations = 16, 
+324-24-24-24-24-24-24-24-24-24-24-24-24-24-4-4-4
+
+Did hit zero = True
+Number of iterations = 13, 
+325-25-25-25-25-25-25-25-25-25-25-25-25-25
+
+Did hit zero = False
+Number of iterations = 14, 
+326-26-26-26-26-26-26-26-26-26-26-26-26-6-6
+
+Did hit zero = False
+Number of iterations = 12, 
+327-27-27-27-27-27-27-27-27-27-27-27-27
+
+Did hit zero = False
+Number of iterations = 13, 
+328-28-28-28-28-28-28-28-28-28-28-28-8-8
+
+Did hit zero = False
+Number of iterations = 12, 
+329-29-29-29-29-29-29-29-29-29-29-29-9
+
+Did hit zero = True
+Number of iterations = 11, 
+330-30-30-30-30-30-30-30-30-30-30-30
+
+Did hit zero = True
+Number of iterations = 31, 
+331-31-31-31-31-31-31-31-31-31-31-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 16, 
+332-32-32-32-32-32-32-32-32-32-32-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 11, 
+333-33-33-33-33-33-33-33-33-33-33-3
+
+Did hit zero = True
+Number of iterations = 16, 
+334-34-34-34-34-34-34-34-34-34-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 13, 
+335-35-35-35-35-35-35-35-35-35-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 11, 
+336-36-36-36-36-36-36-36-36-36-6-6
+
+Did hit zero = False
+Number of iterations = 9, 
+337-37-37-37-37-37-37-37-37-37
+
+Did hit zero = False
+Number of iterations = 12, 
+338-38-38-38-38-38-38-38-38-8-8-8-8
+
+Did hit zero = True
+Number of iterations = 11, 
+339-39-39-39-39-39-39-39-39-9-9-9
+
+Did hit zero = False
+Number of iterations = 8, 
+340-40-40-40-40-40-40-40-40
+
+Did hit zero = True
+Number of iterations = 21, 
+341-41-41-41-41-41-41-41-41-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+342-42-42-42-42-42-42-42-42-2-2-2
+
+Did hit zero = True
+Number of iterations = 21, 
+343-43-43-43-43-43-43-43-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 16, 
+344-44-44-44-44-44-44-44-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 13, 
+345-45-45-45-45-45-45-45-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 11, 
+346-46-46-46-46-46-46-46-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 9, 
+347-47-47-47-47-47-47-47-7-7
+
+Did hit zero = False
+Number of iterations = 8, 
+348-48-48-48-48-48-48-48-8
+
+Did hit zero = False
+Number of iterations = 7, 
+349-49-49-49-49-49-49-49
+
+Did hit zero = True
+Number of iterations = 7, 
+350-50-50-50-50-50-50-50
+
+Did hit zero = True
+Number of iterations = 51, 
+351-51-51-51-51-51-51-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 26, 
+352-52-52-52-52-52-52-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 17, 
+353-53-53-53-53-53-53-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 13, 
+354-54-54-54-54-54-54-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 11, 
+355-55-55-55-55-55-55-5-5-5-5-5
+
+Did hit zero = False
+Number of iterations = 9, 
+356-56-56-56-56-56-56-6-6-6
+
+Did hit zero = False
+Number of iterations = 8, 
+357-57-57-57-57-57-57-7-7
+
+Did hit zero = False
+Number of iterations = 7, 
+358-58-58-58-58-58-58-8
+
+Did hit zero = False
+Number of iterations = 6, 
+359-59-59-59-59-59-59
+
+Did hit zero = True
+Number of iterations = 6, 
+360-60-60-60-60-60-60
+
+Did hit zero = True
+Number of iterations = 61, 
+361-61-61-61-61-61-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 31, 
+362-62-62-62-62-62-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 21, 
+363-63-63-63-63-63-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 16, 
+364-64-64-64-64-64-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 13, 
+365-65-65-65-65-65-5-5-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 11, 
+366-66-66-66-66-66-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 9, 
+367-67-67-67-67-67-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 8, 
+368-68-68-68-68-68-8-8-8
+
+Did hit zero = False
+Number of iterations = 7, 
+369-69-69-69-69-69-9-9
+
+Did hit zero = False
+Number of iterations = 5, 
+370-70-70-70-70-70
+
+Did hit zero = True
+Number of iterations = 21, 
+371-71-71-71-71-71-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 11, 
+372-72-72-72-72-72-2-2-2-2-2-2
+
+Did hit zero = False
+Number of iterations = 7, 
+373-73-73-73-73-73-3-3
+
+Did hit zero = True
+Number of iterations = 6, 
+374-74-74-74-74-74-4
+
+Did hit zero = True
+Number of iterations = 5, 
+375-75-75-75-75-75
+
+Did hit zero = True
+Number of iterations = 16, 
+376-76-76-76-76-6-6-6-6-6-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 13, 
+377-77-77-77-77-7-7-7-7-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 12, 
+378-78-78-78-78-8-8-8-8-8-8-8-8
+
+Did hit zero = True
+Number of iterations = 11, 
+379-79-79-79-79-9-9-9-9-9-9-9
+
+Did hit zero = False
+Number of iterations = 4, 
+380-80-80-80-80
+
+Did hit zero = True
+Number of iterations = 61, 
+381-81-81-81-81-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 31, 
+382-82-82-82-82-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 21, 
+383-83-83-83-83-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3
+
+Did hit zero = True
+Number of iterations = 16, 
+384-84-84-84-84-4-4-4-4-4-4-4-4-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 13, 
+385-85-85-85-85-5-5-5-5-5-5-5-5-5
+
+Did hit zero = True
+Number of iterations = 11, 
+386-86-86-86-86-6-6-6-6-6-6-6
+
+Did hit zero = False
+Number of iterations = 9, 
+387-87-87-87-87-7-7-7-7-7
+
+Did hit zero = False
+Number of iterations = 8, 
+388-88-88-88-88-8-8-8-8
+
+Did hit zero = False
+Number of iterations = 7, 
+389-89-89-89-89-9-9-9
+
+Did hit zero = False
+Number of iterations = 4, 
+390-90-90-90-90
+
+Did hit zero = True
+Number of iterations = 31, 
+391-91-91-91-91-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+Did hit zero = True
+Number of iterations = 16, 
+392-92-92-92-92-2-2-2-2-2-2-2-2-2-2-2-2
+
+Did hit zero = True
+Number of iterations = 11, 
+393-93-93-93-93-3-3-3-3-3-3-3
+
+Did hit zero = False
+Number of iterations = 8, 
+394-94-94-94-94-4-4-4-4
+
+Did hit zero = True
+Number of iterations = 7, 
+395-95-95-95-95-5-5-5
+
+Did hit zero = True
+Number of iterations = 6, 
+396-96-96-96-96-6-6
+
+Did hit zero = False
+Number of iterations = 5, 
+397-97-97-97-97-7
+
+Did hit zero = False
+Number of iterations = 4, 
+398-98-98-98-98
+
+Did hit zero = False
+Number of iterations = 4, 
+399-99-99-99-99
+
+Did hit zero = False
+Number of iterations = 0, 
+400
+
