@@ -1,0 +1,138 @@
+Greetings from The On-Line Encyclopedia of Integer Sequences! https://oeis.org/
+
+lookup 0 2 2 4 3 7 6 12 10 20 17 33 28 54 46 88 75 143 122 232 198 376 321 609 520 986 842 1596 1363 2583 2206 4180 3570
+
+a(n) = 0, 2, 2, 4, 3, 7, 6, 12, 10, 20, 17, 33, 28, 54, 46, 88, 75, 143, 122, 232, 198, 376, 321, 609, 520, 986, 842, 1596, 1363, 2583, 2206, 4180, 3570
+
+Note: Your sequence does not directly appear in the OEIS.
+If it is of general interest, please submit it at https://oeis.org/Submit.html.
+
+# Guesss
+
+Harm Derksen's program "guesss" identified this possible generating function
+for the sequence:
+
+x^4-2*x+(x^5-x^4+x^3-x^2-x+1)*F(x) = 0
+
+# Guessgf
+
+The gfun package's guessgf function identified these possible generating functions.
+Warning! These may only be approximations!
+
+ogf -(x^4-2*x)/(x^5-x^4+x^3-x^2-x+1)
+revogf RootOf(y+(-y-2)*_Z-y*_Z^2+y*_Z^3+(-y+1)*_Z^4+y*_Z^5)
+
+# Listtorec
+
+The gfun package's listtorec function identified these possible recurrences.
+Warning! These may only be approximations!
+
+ogf {a(n)-a(n+1)+a(n+2)-a(n+3)-a(n+4)+a(n+5), a(0) = 0, a(1) = 2, a(2) = 2, a(3) = 4, a(4) = 3}
+lgdogf {-a(n)+a(n+1)-a(n+2)+3*a(n+3)-a(n+4)+a(n+5)-2*a(n+6)-2*a(n+7)+2*a(n+8), a(0) = 1, a(1) = 3, a(2) = -1/2, a(3) = 7, a(4) = 1, a(5) = 33/4, a(6) = 1, a(7) = 15}
+
+# Listtoalgeq
+
+The gfun package's listtoalgeq function identified these possible algebraic
+equations satisfied by the generating function for the query sequence.
+Warning! These may only be approximations!
+
+ogf n^4-2*n+(n^5-n^4+n^3-n^2-n+1)*a(n)
+revogf n+(-n-2)*a(n)-n*a(n)^2+n*a(n)^3+(-n+1)*a(n)^4+n*a(n)^5
+
+# Transformations
+
+These sequences match transformations of the original query.
+
+T006 a(n) for odd n
+= 0, 2, 3, 6, 10, 17, 28, 46, 75, 122, 198, 321, 520, 842, 1363, 2206, 3570
+
+oeis.org/A001610 a(n) = a(n-1) + a(n-2) + 1, with a(0) = 0 and a(1) = 2.
+
+<0, 2, 3, 6, 10, 17, 28, 46, 75, 122, 198, 321, 520, 842, 1363, 2206,
+3570>, 5777, 9348, 15126, 24475, 39602, 64078, 103681, 167760,
+271442, 439203, 710646, 1149850, 1860497, 3010348, 4870846, 7881195,
+12752042, 20633238, 33385281, 54018520
+
+
+T007 a(n) for even n
+= 2, 4, 7, 12, 20, 33, 54, 88, 143, 232, 376, 609, 986, 1596, 2583, 4180
+
+oeis.org/A000071 a(n) = Fibonacci(n) - 1.
+
+0, 0, 1, <2, 4, 7, 12, 20, 33, 54, 88, 143, 232, 376, 609, 986, 1596,
+2583, 4180>, 6764, 10945, 17710, 28656, 46367, 75024, 121392, 196417,
+317810, 514228, 832039, 1346268, 2178308, 3524577, 5702886, 9227464,
+14930351, 24157816, 39088168
+
+
+# Transformations as Deltas
+
+The deltas of these sequences match transformations of the original query.
+
+T006 a(n) for odd n
+= 0, 2, 3, 6, 10, 17, 28, 46, 75, 122, 198, 321, 520, 842, 1363, 2206, 3570 (as deltas)
+
+oeis.org/A066982 a(n) = Lucas(n+1) - (n+1).
+
+<1, 1, 3, 6, 12, 22, 39, 67, 113, 188, 310, 508, 829, 1349, 2191,
+3554, 5760, 9330>, 15107, 24455, 39581, 64056, 103658, 167736,
+271417, 439177, 710619, 1149822, 1860468, 3010318, 4870815, 7881163,
+12752009, 20633204, 33385246, 54018484, 87403765, 141422285
+
+
+T007 a(n) for even n
+= 2, 4, 7, 12, 20, 33, 54, 88, 143, 232, 376, 609, 986, 1596, 2583, 4180 (as deltas)
+
+oeis.org/A001924 Apply partial sum operator twice to Fibonacci numbers.
+
+0, <1, 3, 7, 14, 26, 46, 79, 133, 221, 364, 596, 972, 1581, 2567,
+4163, 6746, 10926>, 17690, 28635, 46345, 75001, 121368, 196392,
+317784, 514201, 832011, 1346239, 2178278, 3524546, 5702854, 9227431,
+14930317, 24157781, 39088132, 63245948, 102334116, 165580101
+
+oeis.org/A000126 A nonlinear binomial sum.
+
+1, <2, 4, 8, 15, 27, 47, 80, 134, 222, 365, 597, 973, 1582, 2568,
+4164, 6747, 10927>, 17691, 28636, 46346, 75002, 121369, 196393,
+317785, 514202, 832012, 1346240, 2178279, 3524547, 5702855, 9227432,
+14930318, 24157782, 39088133, 63245949
+
+oeis.org/A065220 a(n) = Fibonacci(n) - n.
+
+0, 0, -1, -1, -1, <0, 2, 6, 13, 25, 45, 78, 132, 220, 363, 595, 971,
+1580, 2566, 4162, 6745, 10925>, 17689, 28634, 46344, 75000, 121367,
+196391, 317783, 514200, 832010, 1346238, 2178277, 3524545, 5702853,
+9227430, 14930316, 24157780, 39088131, 63245947, 102334115,
+165580100, 267914254
+
+oeis.org/A210673 a(n) = a(n-1)+a(n-2)+n-4, a(0)=0, a(1)=1.
+
+0, 1, -1, -1, -2, -2, -2, <-1, 1, 5, 12, 24, 44, 77, 131, 219, 362,
+594, 970, 1579, 2565, 4161, 6744, 10924>, 17688, 28633, 46343, 74999,
+121366, 196390, 317782, 514199, 832009, 1346237, 2178276, 3524544,
+5702852, 9227429, 14930315, 24157779, 39088130, 63245946
+
+
+In transformation descriptions,
+Sn(z) denotes the ordinary generating function with coefficients a(n), and
+En(z) denotes the exponential generating function with coefficients a(n).
+
+___________________________________________________________________________
+
+o You can look up sequences online at the OEIS web site https://oeis.org/
+o For an explanation of the format used in the OEIS,
+see https://oeis.org/wiki/Style_Sheet
+o If your sequence was not in the OEIS and is of general interest,
+please submit it using the submission form https://oeis.org/Submit.html
+o The email address <sequences@oeis.org> does a simple lookup in the
+On-Line Encyclopedia of Integer Sequences, a limited form of the search
+available on the web site.
+o If you send an empty message, you will be sent the help file.
+
+Sequentially yours,
+The On-Line Encyclopedia of Integer Sequences.
+Maintained by The OEIS Foundation Inc., https://oeisf.org.
+Please donate!
+
+P.S. This content is made available under the terms of
+The OEIS End-User License Agreement: https://oeis.org/LICENSE
