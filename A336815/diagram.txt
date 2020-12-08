@@ -16,3 +16,9 @@ Swinging ball adds own value to hit ball, and at other end on outward swing.
 |  17   |     (8)-----((4),(0),(8),(5))        |
 | ...   |                  ...                 | 
 +-------+--------------------------------------+
+
+
+With the swining balls added to the sum, the sequence follows:
+1,2,3,4,5,7,9,12,15,20,25,33,41,54,67,88,109,143,177,232...
+
+8,10,11,13,14,16,17,18,19,21
