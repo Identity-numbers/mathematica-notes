@@ -1,0 +1,102 @@
+Greetings from The On-Line Encyclopedia of Integer Sequences! https://oeis.org/
+
+lookup 0 3 4 7 7 13 15 23 24 39 44 65 68 107 120 175 183 285 319 463 484 751 840 1217 1272 1971 2204 3191 3335 5165 5775 8359
+
+a(n) = 0, 3, 4, 7, 7, 13, 15, 23, 24, 39, 44, 65, 68, 107, 120, 175, 183, 285, 319, 463, 484, 751, 840, 1217, 1272, 1971, 2204, 3191, 3335, 5165, 5775, 8359
+
+Note: Your sequence does not directly appear in the OEIS.
+If it is of general interest, please submit it at https://oeis.org/Submit.html.
+
+# Guesss
+
+Harm Derksen's program "guesss" identified this possible generating function
+for the sequence:
+
+x^8-x^7-x^6-3*x^5+3*x^3+x^2+3*x+(x^9-x^8-3*x^5+3*x^4+x-1)*F(x) = 0
+
+# Guessgf
+
+The gfun package's guessgf function identified these possible generating functions.
+Warning! These may only be approximations!
+
+ogf -(x^8-x^7-x^6-3*x^5+3*x^3+x^2+3*x)/(x^9-x^8-3*x^5+3*x^4+x-1)
+revogf RootOf(-y+(y+3)*_Z+_Z^2+3*_Z^3+3*y*_Z^4+(-3*y-3)*_Z^5-_Z^6-_Z^7+(-y+1)*_Z^8+y*_Z^9)
+
+# Listtorec
+
+The gfun package's listtorec function identified these possible recurrences.
+Warning! These may only be approximations!
+
+ogf {-a(n)+a(n+1)+3*a(n+4)-3*a(n+5)-a(n+8)+a(n+9), a(0) = 0, a(1) = 3, a(2) = 4, a(3) = 7, a(4) = 7, a(5) = 13, a(6) = 15, a(7) = 23, a(8) = 24}
+
+# Listtoalgeq
+
+The gfun package's listtoalgeq function identified these possible algebraic
+equations satisfied by the generating function for the query sequence.
+Warning! These may only be approximations!
+
+ogf n^8-n^7-n^6-3*n^5+3*n^3+n^2+3*n+(n^9-n^8-3*n^5+3*n^4+n-1)*a(n)
+revogf -n+(n+3)*a(n)+a(n)^2+3*a(n)^3+3*n*a(n)^4+(-3*n-3)*a(n)^5-a(n)^6-a(n)^7+(-n+1)*a(n)^8+n*a(n)^9
+
+# Transformations
+
+These sequences match transformations of the original query.
+
+T007 a(n) for even n
+= 3, 7, 13, 23, 39, 65, 107, 175, 285, 463, 751, 1217, 1971, 3191, 5165, 8359
+
+oeis.org/A154691 Expansion of (1+x+x^2) / ((1-x-x^2)*(1-x)).
+
+1, <3, 7, 13, 23, 39, 65, 107, 175, 285, 463, 751, 1217, 1971, 3191,
+5165, 8359>, 13527, 21889, 35419, 57311, 92733, 150047, 242783,
+392833, 635619, 1028455, 1664077, 2692535, 4356615, 7049153,
+11405771, 18454927, 29860701, 48315631, 78176335
+
+
+# Transformations as Deltas
+
+The deltas of these sequences match transformations of the original query.
+
+T007 a(n) for even n
+= 3, 7, 13, 23, 39, 65, 107, 175, 285, 463, 751, 1217, 1971, 3191, 5165, 8359 (as deltas)
+
+oeis.org/A192748 Constant term of the reduction by x^2->x+1 of the
+polynomial p(n,x) defined below in Comments.
+
+0, <1, 4, 11, 24, 47, 86, 151, 258, 433, 718, 1181, 1932, 3149, 5120,
+8311, 13476, 21835>, 35362, 57251, 92670, 149981, 242714, 392761,
+635544, 1028377, 1663996, 2692451, 4356528, 7049063, 11405678,
+18454831, 29860602, 48315529, 78176230
+
+oeis.org/A116730 Number of permutations of length n which avoid the patterns
+321, 1342, 1423.
+
+1, <2, 5, 12, 25, 48, 87, 152, 259, 434, 719, 1182, 1933, 3150, 5121,
+8312, 13477, 21836>, 35363, 57252, 92671, 149982, 242715, 392762,
+635545, 1028378, 1663997, 2692452, 4356529, 7049064, 11405679,
+18454832, 29860603, 48315530, 78176231, 126491862, 204668197
+
+
+In transformation descriptions,
+Sn(z) denotes the ordinary generating function with coefficients a(n), and
+En(z) denotes the exponential generating function with coefficients a(n).
+
+___________________________________________________________________________
+
+o You can look up sequences online at the OEIS web site https://oeis.org/
+o For an explanation of the format used in the OEIS,
+see https://oeis.org/wiki/Style_Sheet
+o If your sequence was not in the OEIS and is of general interest,
+please submit it using the submission form https://oeis.org/Submit.html
+o The email address <sequences@oeis.org> does a simple lookup in the
+On-Line Encyclopedia of Integer Sequences, a limited form of the search
+available on the web site.
+o If you send an empty message, you will be sent the help file.
+
+Sequentially yours,
+The On-Line Encyclopedia of Integer Sequences.
+Maintained by The OEIS Foundation Inc., https://oeisf.org.
+Please donate!
+
+P.S. This content is made available under the terms of
+The OEIS End-User License Agreement: https://oeis.org/LICENSE
