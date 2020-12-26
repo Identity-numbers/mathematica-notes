@@ -1,0 +1,17 @@
+Video lectures on subject;
+	
+	https://www.youtube.com/watch?v=lE4J339FJZY&ab_channel=UniversityofNotreDame
+
+web pages:
+
+	https://ncatlab.org/nlab/show/Frobenius+algebra
+
+
+Extras:
+
+	Hilbert-space:
+	https://www.youtube.com/watch?v=7zx3MT9FgT0&ab_channel=FacultyofKhan
+	
+	Tensor product:
+	https://www.youtube.com/watch?v=qHuUazkUcnU&ab_channel=mlbaker
+
