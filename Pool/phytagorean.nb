@@ -1,0 +1,113 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3531,        105]
+NotebookOptionsPosition[      2864,         83]
+NotebookOutlinePosition[      3200,         98]
+CellTagsIndexPosition[      3157,         95]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["PHYTAGOREAN", "Title",
+ CellChangeTimes->{{3.817034943257102*^9, 
+  3.81703494634533*^9}},ExpressionUUID->"c03e7dea-1278-443d-b71d-\
+fac8d50fd8c0"],
+
+Cell[CellGroupData[{
+
+Cell["Rotating inscribed squares", "Subsection",
+ CellChangeTimes->{{3.8170349873713713`*^9, 
+  3.817035000407425*^9}},ExpressionUUID->"0ed615a3-c857-4fad-81b2-\
+461ab46b5f20"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"#", "/", "2"}], ")"}], "^", "2"}]}], ")"}], " ", "&"}], ",",
+     "1", ",", "8"}], "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.817033614110066*^9, 3.8170336480702*^9}, {
+   3.817033679996128*^9, 3.817033702956461*^9}, {3.8170337357343483`*^9, 
+   3.8170337680450563`*^9}, {3.817033808456614*^9, 3.817033809721402*^9}, {
+   3.817033849370214*^9, 3.817033911780287*^9}, {3.817033944873748*^9, 
+   3.81703394973533*^9}, {3.817034027347023*^9, 3.817034085905477*^9}, {
+   3.817034130004469*^9, 3.817034166675866*^9}, 3.817034204211481*^9, {
+   3.8170344506718597`*^9, 3.817034480380453*^9}, {3.817034649877987*^9, 
+   3.817034767688917*^9}, {3.817034797774714*^9, 3.817034845918767*^9}},
+ CellLabel->
+  "In[149]:=",ExpressionUUID->"03ab8142-bd6b-45d4-86c8-8cdd62058bf7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", 
+   FractionBox["1", "2"], ",", 
+   FractionBox["1", "8"], ",", 
+   FractionBox["1", "128"], ",", 
+   FractionBox["1", "32768"], ",", 
+   FractionBox["1", "2147483648"], ",", 
+   FractionBox["1", "9223372036854775808"], ",", 
+   FractionBox["1", "170141183460469231731687303715884105728"], ",", 
+   FractionBox["1", 
+    "5789604461865809771178549250434395392663499233282028201972879200395656481\
+9968"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.8170340469755793`*^9, 3.817034086833467*^9, {3.8170341378678017`*^9, 
+   3.817034167318502*^9}, 3.8170342047517023`*^9, {3.817034451962578*^9, 
+   3.8170344818280573`*^9}, {3.81703465629421*^9, 3.8170346796665688`*^9}, {
+   3.817034747870232*^9, 3.817034768315548*^9}, {3.817034801212995*^9, 
+   3.817034816539694*^9}, 3.817034848553068*^9},
+ CellLabel->
+  "Out[149]=",ExpressionUUID->"cc2a4a94-38ab-4591-af51-5e539bb25083"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1105, 911},
+WindowMargins->{{Automatic, 366}, {39, Automatic}},
+FrontEndVersion->"12.0 for Linux ARM (32-bit) (June 23, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 153, 3, 99, "Title",ExpressionUUID->"c03e7dea-1278-443d-b71d-fac8d50fd8c0"],
+Cell[CellGroupData[{
+Cell[758, 29, 176, 3, 55, "Subsection",ExpressionUUID->"0ed615a3-c857-4fad-81b2-461ab46b5f20"],
+Cell[CellGroupData[{
+Cell[959, 36, 940, 20, 31, "Input",ExpressionUUID->"03ab8142-bd6b-45d4-86c8-8cdd62058bf7"],
+Cell[1902, 58, 922, 20, 94, "Output",ExpressionUUID->"cc2a4a94-38ab-4591-af51-5e539bb25083"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
